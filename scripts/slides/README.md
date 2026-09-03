@@ -72,11 +72,12 @@ After inspection, use scripts/slides/PROCESSING_PROMPT.md or ask:
     07 Sources/Slides/Incoming/file.pdf
     в базу знаний.
 
-The technical files in Processed are internal extraction artifacts. Do not link them from Home, Sources, or knowledge MOC pages.
+The technical files in Processed are extraction artifacts. They must be public-safe and are intentionally tracked by Git, but they should not be linked from Home, Sources, or knowledge MOC pages.
 
 ## Security and storage
 
 - Keep all parsing and conversion local.
 - Do not print presentation contents to public logs.
-- Do not automatically push the Vault to a public repository.
-- Original presentation binaries can make Git history large. Choose a storage strategy explicitly before committing many files.
+- Only public-safe presentation material may enter this Vault; keep confidential, internal, restricted, and private PoC material outside it.
+- Original presentation binaries, PDF exports, and Processed outputs are intentionally tracked in the public repository.
+- Run `scripts/public_preflight.sh` before committing. Do not add a file of 50 MiB or more to regular Git without a separate Git LFS or external-storage decision.

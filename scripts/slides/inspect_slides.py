@@ -82,12 +82,12 @@ def clean_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
 
 def inspect_pdf_with_pymupdf(source: Path) -> tuple[dict[str, Any], str]:
     try:
-        import fitz  # type: ignore
+        import pymupdf  # type: ignore
     except ImportError as exc:
         raise InspectionError("PyMuPDF is not installed") from exc
 
     try:
-        document = fitz.open(source)
+        document = pymupdf.open(source)
     except Exception as exc:
         raise InspectionError(f"PyMuPDF could not open {source.name}: {exc}") from exc
 

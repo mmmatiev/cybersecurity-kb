@@ -3,17 +3,16 @@ type: source
 source_type: slides
 processing_status: unprocessed
 area: []
-title:
-author:
-organization:
-event:
-year:
-url:
-file:
-original_file:
 ---
 
 # {{title}}
+
+## Provenance
+
+- Source file:
+- Author or organization:
+- Event and year:
+- URL:
 
 ## Summary
 

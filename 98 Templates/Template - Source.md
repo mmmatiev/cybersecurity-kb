@@ -1,13 +1,16 @@
 ---
 type: source
-source_type:
 area: []
-url:
-author:
-published:
 ---
 
 # {{title}}
+
+## Provenance
+
+- Source type:
+- Author or organization:
+- Published:
+- URL:
 
 ## Summary
 

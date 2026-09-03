@@ -1,7 +1,6 @@
 ---
 type: lab
 area: []
-platform:
 ---
 
 # {{title}}

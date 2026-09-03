@@ -25,6 +25,7 @@
 - Source binaries and the Incoming, Original, PDF, Processed, and Attachments directories are intentionally tracked by Git.
 - Deleting sensitive material after a push does not remove it from published Git history.
 - Before every commit, verify that ignored credential files are not tracked, scan tracked files for credential-shaped assignments and private-key markers without printing matched values, and check the size of newly added files.
+- The repository uses the tracked `.githooks/pre-commit` hook for these checks. After cloning, enable it with `git config core.hooksPath .githooks`.
 - Do not add a file of 50 MiB or more to regular Git without a separate decision about Git LFS or external storage. GitHub blocks regular Git objects larger than 100 MiB, and Git LFS is not currently installed. See [GitHub repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits).
 - The public GitHub repository is the versioned backup. iCloud provides file synchronization for the Vault; it is not a substitute for version history. Time Machine is not currently configured.
 

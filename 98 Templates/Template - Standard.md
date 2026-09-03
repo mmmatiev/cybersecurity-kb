@@ -1,8 +1,6 @@
 ---
 type: standard
 area: []
-organization:
-version:
 ---
 
 # {{title}}

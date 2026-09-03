@@ -2,5 +2,6 @@
   "alwaysUpdateLinks": true,
   "openBehavior": "",
   "newFileLocation": "folder",
-  "newFileFolderPath": "00 Inbox"
+  "newFileFolderPath": "00 Inbox",
+  "attachmentFolderPath": "90 Attachments"
 }

@@ -1,7 +1,6 @@
 ---
 type: case
 area: []
-case_type:
 ---
 
 # {{title}}
