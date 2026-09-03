@@ -1,0 +1,16 @@
+.DS_Store
+.trash/
+
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Local REST API configuration may contain an API key.
+.obsidian/plugins/obsidian-local-rest-api/data.json
+
+# Public source binaries, attachments, Incoming files, and generated slide
+# outputs are intentionally tracked by Git.
+
+# Local Python tooling.
+.venv/
+__pycache__/
+*.pyc

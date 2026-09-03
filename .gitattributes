@@ -1,0 +1,3 @@
+# Preserve the vendored Obsidian plugin bundle byte-for-byte. Its upstream
+# distribution contains trailing whitespace.
+.obsidian/plugins/obsidian-local-rest-api/main.js -whitespace
