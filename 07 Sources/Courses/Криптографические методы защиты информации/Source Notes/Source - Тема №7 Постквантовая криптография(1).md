@@ -19,17 +19,20 @@ processing_status: processed
 - Исходный SHA-256: `b544886df0c611db9634dff1d17983589c82ad480123deefbfca99d8b6c76a98`.
 - Публичный SHA-256: `b544886df0c611db9634dff1d17983589c82ad480123deefbfca99d8b6c76a98`.
 - Санитаризация: Публичная копия побайтно совпадает с оригиналом; санитаризация не требовалась.
+- Даты из свойств DOCX: создан `2025-04-19`, изменён `2025-04-19`. Это дата файла, а не гарантия актуальности всех упомянутых сведений.
 
 ## Матрица покрытия
 
 | Страницы или раздел | Disposition | Что учтено |
 |---|---|---|
-| Квантовые вычисления и алгоритмы | [[Quantum Computing for Cryptography]] — review | Модель квантовых вычислений и влияние алгоритмов Шора и Гровера. |
-| Постквантовая миграция | [[Post-Quantum Cryptography]] — review | Классы стойких задач и переходные риски. |
-| Хэш-подписи | [[Hash-Based Signatures]] — review | Lamport, WOTS, Merkle и SPHINCS+ как семейство одной канонической заметки. |
-| Кодовые схемы | [[Code-Based Cryptography]] | McEliece и Niederreiter как разделы кодовой криптографии. |
-| Решётки | [[Lattice-Based Cryptography]] — review | LWE, SIS, Kyber и Dilithium как связанные конструкции. |
-| Многомерные схемы | [[Multivariate Cryptography]] | Криптосистемы на многомерных полиномиальных задачах. |
-| Параметры и статусы стандартизации | source-only dated/review | Все изменяемые сведения привязаны к срезу 2024 года. |
+| абз. 1–8 | [[Post-Quantum Cryptography]] | Мотивация и границы постквантовой криптографии. |
+| абз. 9–32 | [[Quantum Computing for Cryptography]] | Алгоритмы Шора и Гровера и их влияние на криптографические задачи. |
+| абз. 33–47 | [[Quantum Computing for Cryptography]] — dated/review | Состояние разработки квантовых компьютеров из DOCX, созданного в апреле 2025 года. |
+| абз. 48–61 | [[Post-Quantum Cryptography]] — dated/review | Семейства алгоритмов и состояние стандартизации на момент подготовки DOCX. |
+| абз. 62–93 | [[Hash-Based Signatures]] | Lamport, WOTS, Merkle и SPHINCS+ внутри одной канонической заметки. |
+| абз. 94–120 | [[Code-Based Cryptography]] | McEliece и Niederreiter внутри кодового семейства. |
+| абз. 121–151 | [[Lattice-Based Cryptography]] | SVP/CVP, LWE, SIS, Kyber и Dilithium внутри решёточного семейства. |
+| абз. 152–157 | [[Multivariate Cryptography]] | Схемы на трудности решения многомерных нелинейных систем. |
+| абз. 158–170 | source-only dated/review | Постквантовые блокчейны и изменяемые параметры оставлены у источника. |
 
 Каждая содержательная страница PDF либо каждый смысловой раздел DOCX имеет disposition: каноническая заметка, объединённый раздел, source-only mention или dated/review. Формулы, таблицы и схемы дополнительно сверены по локальному рендеру.

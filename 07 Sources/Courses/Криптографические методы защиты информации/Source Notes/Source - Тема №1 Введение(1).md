@@ -19,15 +19,17 @@ processing_status: processed
 - Исходный SHA-256: `5709892e23e1586772aa0a40529093153539a88f26d022ba9fbf8055cd45f376`.
 - Публичный SHA-256: `5709892e23e1586772aa0a40529093153539a88f26d022ba9fbf8055cd45f376`.
 - Санитаризация: Публичная копия побайтно совпадает с оригиналом; санитаризация не требовалась.
+- Даты из свойств DOCX: создан `2025-04-17`, изменён `2025-04-20`. Это дата файла, а не гарантия актуальности всех упомянутых сведений.
 
 ## Матрица покрытия
 
 | Страницы или раздел | Disposition | Что учтено |
 |---|---|---|
-| Основные понятия и история | [[History of Cryptography]]; [[Cryptosystem and Security Goals]]; [[Cryptanalysis]] | Терминология, развитие криптографии, цели и методы анализа. |
-| Российское регулирование и сертификация | [[Russian Cryptographic Regulation and Certification]] — dated/review | Нормативные и организационные сведения курса фиксируются с датой 2024 и требуют актуализации перед применением. |
-| Криптографические и технические атаки | [[Brute-Force Attack]]; [[Linear Cryptanalysis]]; [[Differential Cryptanalysis]]; [[Side-Channel Attacks]] | Классы атак, утечки реализации и защитные меры. |
-| Атаки на протоколы | [[Man-in-the-Middle Attack]]; [[Cryptographic Protocols and Authenticated Key Exchange]] | Нарушение аутентификации и активный посредник. |
-| Таблица и встроенное изображение | supporting source material | Сохранены в локальном extract/manifest и учтены при визуальной проверке. |
+| абз. 1–173 | [[History of Cryptography]]; [[Cryptosystem and Security Goals]]; [[Cryptanalysis]]; related foundations | Введение, терминология, модели шифрования, протоколы, генераторы и оценка защищённости. |
+| абз. 174–396 | [[Russian Cryptographic Regulation and Certification]] — dated/review | Нормативные и организационные сведения из DOCX, созданного в апреле 2025 года; перед применением требуется актуализация. |
+| абз. 397–421 | [[Brute-Force Attack]]; [[Linear Cryptanalysis]]; [[Differential Cryptanalysis]] | Криптографические классы атак и их базовые модели. |
+| абз. 422–611 | [[Side-Channel Attacks]]; [[RSA]] | Побочные излучения, энергопотребление, время, fault-подходы и меры защиты. |
+| абз. 612–678 | [[Man-in-the-Middle Attack]]; [[Cryptographic Protocols and Authenticated Key Exchange]] | Активный посредник, replay и трёхэтапный протокол. |
+| абз. 679–731 | source-only security-channel taxonomy | Атаки по каналам аппаратуры и скрытые каналы сохранены у источника как смежная классификация. |
 
 Каждая содержательная страница PDF либо каждый смысловой раздел DOCX имеет disposition: каноническая заметка, объединённый раздел, source-only mention или dated/review. Формулы, таблицы и схемы дополнительно сверены по локальному рендеру.

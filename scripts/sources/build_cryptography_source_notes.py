@@ -66,7 +66,7 @@ COVERAGE: dict[str, list[tuple[str, str, str]]] = {
         item("1–5", "[[Asymmetric Cryptography]]; [[Cryptographic Key Management]]", "Открытые и закрытые ключи, постановка задач и управление ключевым материалом."),
         item("6–8", "[[Diffie-Hellman Key Exchange]]; [[Man-in-the-Middle Attack]]", "Согласование ключа и необходимость аутентификации обмена."),
         item("9–17", "[[RSA]]", "Генерация ключей, корректность и операции RSA."),
-        item("18–23", "[[Rabin Cryptosystem (Cryptography)|Rabin Cryptosystem]]", "Квадратичные вычеты и неоднозначность расшифрования Рабина."),
+        item("18–23", "[[Rabin Cryptosystem]]", "Квадратичные вычеты и неоднозначность расшифрования Рабина."),
         item("24–31", "[[ElGamal Cryptosystem]]", "Шифрование Эль-Гамаля и роль случайного параметра."),
         item("32–35", "[[Primality Testing and Miller-Rabin]]", "Вероятностная проверка простоты и тест Миллера–Рабина."),
     ],
@@ -81,12 +81,12 @@ COVERAGE: dict[str, list[tuple[str, str, str]]] = {
     "2024_Лекция 21.pdf": [item("1–11", "[[GOST R 34.10-2012]]; [[Digital Signatures]]", "Формирование и проверка российской подписи на эллиптических кривых.")],
     "2024_Лекция 22.pdf": [
         item("1–4", "[[Public Key Infrastructure and X.509]]; [[Man-in-the-Middle Attack]]", "Проблема подлинности открытых ключей и доверенная третья сторона."),
-        item("5–9", "[[Public Key Infrastructure and X.509]]", "Сертификаты, удостоверяющий центр, отзыв и цепочка доверия."),
+        item("5–9", "certificate lifecycle within the same [[Public Key Infrastructure and X.509]] section", "Сертификаты, удостоверяющий центр, отзыв и цепочка доверия."),
     ],
     "2024_Лекция 23.pdf": [
         item("1–12", "[[Quantum Key Distribution]]", "Физические предпосылки квантового распределения ключей."),
         item("13–20", "[[BB84]]", "Кодирование в двух базисах, просеивание и обнаружение перехвата."),
-        item("21–23", "[[Quantum Key Distribution]]", "Варианты и практические ограничения QKD."),
+        item("21–23", "practical limitations within the same [[Quantum Key Distribution]] section", "Варианты и практические ограничения QKD."),
         item("24–30", "source-only dated examples (2022–2024)", "Эксперименты и внедрения сохранены как датированный материал курса."),
     ],
     "ГОСТ Р 34.10-2012.pdf": [item("1–33", "[[GOST R 34.10-2012]]", "Полный нормативный текст о формировании и проверке электронной цифровой подписи.")],
@@ -102,59 +102,65 @@ COVERAGE: dict[str, list[tuple[str, str, str]]] = {
     "Семинар 08.pdf": [item("1–2", "[[Rings and Modular Arithmetic]] — worked example", "Решение линейного сравнения и вычисление обратного элемента.")],
     "Семинар 09.pdf": [item("1–2", "[[Chinese Remainder Theorem]] — worked example", "Решение системы сравнений по попарно взаимно простым модулям.")],
     "Семинар 10.pdf": [item("1–2", "[[Quadratic Residues and Modular Square Roots]] — worked example", "Вычисление символа Лежандра через закон квадратичной взаимности.")],
-    "Семинар 11.pdf": [item("1–3", "[[Quadratic Residues and Modular Square Roots]]; [[Rabin Cryptosystem (Cryptography)|Rabin Cryptosystem]] — worked example", "Извлечение корней по простому и составному модулям с объединением по CRT.")],
+    "Семинар 11.pdf": [item("1–3", "[[Quadratic Residues and Modular Square Roots]]; [[Rabin Cryptosystem]] — worked example", "Извлечение корней по простому и составному модулям с объединением по CRT.")],
     "Тема №1 Введение(1).docx": [
-        item("Основные понятия и история", "[[History of Cryptography]]; [[Cryptosystem and Security Goals]]; [[Cryptanalysis]]", "Терминология, развитие криптографии, цели и методы анализа."),
-        item("Российское регулирование и сертификация", "[[Russian Cryptographic Regulation and Certification]] — dated/review", "Нормативные и организационные сведения курса фиксируются с датой 2024 и требуют актуализации перед применением."),
-        item("Криптографические и технические атаки", "[[Brute-Force Attack]]; [[Linear Cryptanalysis]]; [[Differential Cryptanalysis]]; [[Side-Channel Attacks]]", "Классы атак, утечки реализации и защитные меры."),
-        item("Атаки на протоколы", "[[Man-in-the-Middle Attack]]; [[Cryptographic Protocols and Authenticated Key Exchange]]", "Нарушение аутентификации и активный посредник."),
-        item("Таблица и встроенное изображение", "supporting source material", "Сохранены в локальном extract/manifest и учтены при визуальной проверке."),
+        item("абз. 1–173", "[[History of Cryptography]]; [[Cryptosystem and Security Goals]]; [[Cryptanalysis]]; related foundations", "Введение, терминология, модели шифрования, протоколы, генераторы и оценка защищённости."),
+        item("абз. 174–396", "[[Russian Cryptographic Regulation and Certification]] — dated/review", "Нормативные и организационные сведения из DOCX, созданного в апреле 2025 года; перед применением требуется актуализация."),
+        item("абз. 397–421", "[[Brute-Force Attack]]; [[Linear Cryptanalysis]]; [[Differential Cryptanalysis]]", "Криптографические классы атак и их базовые модели."),
+        item("абз. 422–611", "[[Side-Channel Attacks]]; [[RSA]]", "Побочные излучения, энергопотребление, время, fault-подходы и меры защиты."),
+        item("абз. 612–678", "[[Man-in-the-Middle Attack]]; [[Cryptographic Protocols and Authenticated Key Exchange]]", "Активный посредник, replay и трёхэтапный протокол."),
+        item("абз. 679–731", "source-only security-channel taxonomy", "Атаки по каналам аппаратуры и скрытые каналы сохранены у источника как смежная классификация."),
     ],
     "Тема №2 Блокчейн(1).docx": [
-        item("Устройство блокчейна и консенсус", "[[Blockchain and Consensus]]", "Цепочка блоков, распределённый реестр и семейства консенсуса."),
-        item("Криптографические механизмы", "[[Blockchain Cryptography]]", "Хэширование, подписи, адреса и связывание блоков."),
-        item("Sybil, double-spending и 51%", "[[Blockchain Attacks]]", "Атаки объединены в одну каноническую модель угроз."),
-        item("Криптовалюты, smart contracts, IoT и PKI", "merged sections or source-only mentions", "Существенные механизмы включены в тематические заметки; перечисления продуктов оставлены у источника."),
-        item("События 2020–2024", "source-only dated examples", "Новостные случаи не превращены в канонические знания."),
+        item("абз. 1–53", "[[Blockchain and Consensus]]", "Сопоставление базы данных, распределённой сети и блокчейна."),
+        item("абз. 54–121", "[[Blockchain and Consensus]]; [[Blockchain Cryptography]]", "Механизмы защиты, типы реестров, консенсус и выбор фиксатора транзакций."),
+        item("абз. 122–160", "[[Blockchain Attacks]]; source-only governance details", "Sybil, double-spending, 51% и контекст обновления протокола."),
+        item("абз. 161–320", "[[Blockchain Cryptography]]; merged sections and source-only mentions", "Криптовалюты, кошельки, smart contracts, токены и MEV; устойчивые механизмы синтезированы, перечни оставлены у источника."),
+        item("абз. 321–363", "[[Public Key Infrastructure and X.509]]; source-only IoT applications", "PKI на блокчейне и применение в IoT."),
+        item("абз. 364–387", "source-only dated examples (2020–2024)", "Датированные сообщения об атаках не превращены в канонические знания."),
     ],
     "Тема №3 Алгоритмы(1).docx": [
-        item("Симметричные алгоритмы", "[[Symmetric-Key Cryptography]]; [[Block Cipher Design]]; [[Block Cipher Modes]]", "Блочные конструкции, преобразования и режимы."),
-        item("Российские и международные шифры", "[[Magma]]; [[Kuznyechik]]; [[DES and Triple DES]]; [[Advanced Encryption Standard]]", "Структура и назначение алгоритмов."),
-        item("Хэширование и имитозащита", "[[Cryptographic Hash Functions]]; [[Streebog]]; [[Message Authentication Codes]]", "Свойства хэш-функций, sponge-подход и MAC."),
-        item("Асимметричные алгоритмы и подписи", "[[Asymmetric Cryptography]]; [[RSA]]; [[ElGamal Cryptosystem]]; [[Digital Signatures]]", "Открытые ключи и основные схемы."),
-        item("Иллюстрации и headers", "supporting source material", "Схемы алгоритмов проверены визуально и используются как сверка формул."),
+        item("абз. 1–39", "[[Stream Ciphers and One-Time Pad]]; [[Block Cipher Design]]; [[Linear Cryptanalysis]]; [[Differential Cryptanalysis]]", "Поточные конструкции, LFSR, bent functions и переход к блочным шифрам."),
+        item("абз. 40–95", "[[Symmetric-Key Cryptography]]; [[Block Cipher Design]]; [[DES and Triple DES]]; [[Magma]]; [[Kuznyechik]]", "История и параметры блочных шифров, SP-сети, Feistel и итерационная структура."),
+        item("абз. 96–139", "[[Block Cipher Modes]]; [[GOST R 34.13-2015]]", "Режимы работы, IV, зацепление и режим счётчика."),
+        item("абз. 140–149", "[[Advanced Encryption Standard]]", "Раунд AES и развёртка ключа."),
+        item("абз. 150–165", "[[IPsec]]; [[SSH]]; authenticated encryption source context", "Порядок шифрования и аутентификации и режим MGM."),
+        item("абз. 166–219", "[[Cryptographic Hash Functions]]; [[Streebog]]; [[Message Authentication Codes]]", "Свойства хэш-функций, birthday bound, итеративные конструкции и HMAC."),
+        item("абз. 220–238", "source-only Ascon and sponge overview", "Краткий обзор семейства Ascon и sponge-структуры оставлен у источника до появления самостоятельной заметки."),
     ],
     "Тема №4 ГСЧ(1).docx": [
-        item("Источники случайности", "[[Random Number Generation and Entropy]]", "Физические источники, энтропия и сбор начального материала."),
-        item("Псевдослучайные генераторы", "[[Random Number Generation and Entropy]]", "Детерминированное растяжение seed и требования к криптографическому ГПСЧ."),
-        item("Тестирование и аппаратные реализации", "[[Random Number Generation and Entropy]]; source-only product examples", "Критерии качества включены в каноническую заметку, конкретные изделия оставлены у источника."),
-        item("Иллюстрации и headers", "supporting source material", "Схемы источников шума учтены при визуальной проверке."),
+        item("абз. 1–38", "[[Random Number Generation and Entropy]]", "Назначение ГСЧ, программные источники и детерминированное формирование блоков."),
+        item("абз. 39–138", "physical-noise and testing sections within [[Random Number Generation and Entropy]]", "Физические источники, постобработка, контроль работоспособности и методика оценки."),
+        item("абз. 139–153", "security section within [[Random Number Generation and Entropy]]; [[Side-Channel Attacks]]", "Атаки на ГСЧ и защита источников случайности."),
+        item("абз. 154–207", "[[Cryptographic Key Management]]", "Длина ключа, жизненный цикл, ключевая структура и устройства генерации."),
     ],
     "Тема №5 Протоколы(1).docx": [
-        item("Основные определения и модели", "[[Cryptographic Protocols and Authenticated Key Exchange]]", "Участники, сообщения, противник и цели протокола."),
-        item("Протоколы цифровой подписи", "[[Digital Signatures]]; [[Schnorr Signatures]]", "Схемы подписи, nonce и угрозы повторного использования."),
-        item("Распределение и управление ключами", "[[Diffie-Hellman Key Exchange]]; [[Cryptographic Key Management]]", "Выработка общего секрета и жизненный цикл ключей."),
-        item("PKI и сертификаты", "[[Public Key Infrastructure and X.509]]; [[Certificate Enrollment Protocols]]", "Удостоверяющие центры, сертификаты и протоколы регистрации."),
-        item("Интернет-протоколы", "[[TLS (Cryptography)|TLS]]; [[IPsec]]; [[SSH]]", "Применение криптографии в сетевом стеке."),
-        item("Анонимные сети", "[[Anonymous Communication Systems]]", "Маршрутизация и сокрытие связи между отправителем и получателем."),
-        item("Перечни алгоритмов и продуктов", "source-only mentions", "Короткие перечисления без самостоятельного объяснения не вынесены в отдельные заметки."),
+        item("абз. 1–104", "[[Cryptographic Protocols and Authenticated Key Exchange]]", "Определения, классификация и цели безопасности протоколов."),
+        item("абз. 105–258", "[[Digital Signatures]]; [[Schnorr Signatures]]; [[GOST R 34.10-2012]]", "RSA-, ElGamal-, EC- и Schnorr-подписи, nonce, атаки и мультиподпись."),
+        item("абз. 259–312", "[[Diffie-Hellman Key Exchange]]; [[Cryptographic Protocols and Authenticated Key Exchange]]", "Распределение ключей, MTI, STS и EDHOC."),
+        item("абз. 313–344", "[[Cryptographic Key Management]]; [[Public Key Infrastructure and X.509]]", "Подмена открытого ключа, доверенная сторона и структура сертификата."),
+        item("абз. 345–407", "[[IPsec]]", "Сетевой уровень, AH/ESP/IKE и базы политик/ассоциаций."),
+        item("абз. 408–431", "[[TLS]]", "Назначение, архитектура и задачи TLS в объёме курса."),
+        item("абз. 432–446", "[[SSH]]", "Защищённая оболочка и место протокола в сетевом стеке."),
+        item("абз. 447–478", "[[Public Key Infrastructure and X.509]]; [[Certificate Enrollment Protocols]]", "Компоненты PKI и управление жизненным циклом сертификатов."),
+        item("абз. 479–530", "[[Anonymous Communication Systems]]", "Модели нарушителя, системы с большими и малыми задержками."),
     ],
     "Тема №6 Классы СКЗИ(1).docx": [
-        item("Классы и архитектура СКЗИ", "[[Cryptographic Protection Systems]]; [[Cryptographic Service Providers]]", "Программные, аппаратные и программно-аппаратные средства."),
-        item("Аппаратура защиты и ключи", "[[Hardware Security Modules]]; [[Cryptographic Key Management]]", "Изоляция операций, хранение и применение ключевого материала."),
-        item("Сетевые средства", "[[IPsec]]; [[TLS (Cryptography)|TLS]]; [[SSH]]", "Канальные и сетевые средства защиты."),
-        item("Аппаратура квантового распределения ключей", "[[Quantum Key Distribution]]", "Практическая архитектура QKD-устройств."),
-        item("Изделия, сертификаты и характеристики", "source-only dated/review", "Состояние конкретных продуктов и сертификатов не переносится в устойчивую часть базы."),
-        item("Встроенные изображения и headers", "supporting source material", "Аппаратные схемы и фотографии сохранены и проверены локально."),
+        item("абз. 1–66", "[[Cryptographic Protection Systems]]; [[Cryptographic Service Providers]]; [[Hardware Security Modules]]", "Программные библиотеки, CSP, HSM и криптографические модули."),
+        item("абз. 67–118", "[[IPsec]]; [[TLS]]; [[SSH]]; source-only product examples", "Аппаратура защиты каналов и сетевого уровня."),
+        item("абз. 119–215", "[[Cryptographic Protection Systems]]; source-only access-control products", "Средства защиты от НСД, доверенная загрузка и AAA."),
+        item("абз. 216–250", "[[Quantum Key Distribution]] — dated/review", "Аппаратура, производители и сети QKD из DOCX, созданного в апреле 2025 года."),
     ],
     "Тема №7 Постквантовая криптография(1).docx": [
-        item("Квантовые вычисления и алгоритмы", "[[Quantum Computing for Cryptography]] — review", "Модель квантовых вычислений и влияние алгоритмов Шора и Гровера."),
-        item("Постквантовая миграция", "[[Post-Quantum Cryptography]] — review", "Классы стойких задач и переходные риски."),
-        item("Хэш-подписи", "[[Hash-Based Signatures]] — review", "Lamport, WOTS, Merkle и SPHINCS+ как семейство одной канонической заметки."),
-        item("Кодовые схемы", "[[Code-Based Cryptography]]", "McEliece и Niederreiter как разделы кодовой криптографии."),
-        item("Решётки", "[[Lattice-Based Cryptography]] — review", "LWE, SIS, Kyber и Dilithium как связанные конструкции."),
-        item("Многомерные схемы", "[[Multivariate Cryptography]]", "Криптосистемы на многомерных полиномиальных задачах."),
-        item("Параметры и статусы стандартизации", "source-only dated/review", "Все изменяемые сведения привязаны к срезу 2024 года."),
+        item("абз. 1–8", "[[Post-Quantum Cryptography]]", "Мотивация и границы постквантовой криптографии."),
+        item("абз. 9–32", "[[Quantum Computing for Cryptography]]", "Алгоритмы Шора и Гровера и их влияние на криптографические задачи."),
+        item("абз. 33–47", "[[Quantum Computing for Cryptography]] — dated/review", "Состояние разработки квантовых компьютеров из DOCX, созданного в апреле 2025 года."),
+        item("абз. 48–61", "[[Post-Quantum Cryptography]] — dated/review", "Семейства алгоритмов и состояние стандартизации на момент подготовки DOCX."),
+        item("абз. 62–93", "[[Hash-Based Signatures]]", "Lamport, WOTS, Merkle и SPHINCS+ внутри одной канонической заметки."),
+        item("абз. 94–120", "[[Code-Based Cryptography]]", "McEliece и Niederreiter внутри кодового семейства."),
+        item("абз. 121–151", "[[Lattice-Based Cryptography]]", "SVP/CVP, LWE, SIS, Kyber и Dilithium внутри решёточного семейства."),
+        item("абз. 152–157", "[[Multivariate Cryptography]]", "Схемы на трудности решения многомерных нелинейных систем."),
+        item("абз. 158–170", "source-only dated/review", "Постквантовые блокчейны и изменяемые параметры оставлены у источника."),
     ],
 }
 
@@ -178,6 +184,15 @@ def page_set(spec: str) -> set[int]:
         end = int(match.group(2) or start)
         result.update(range(start, end + 1))
     return result
+
+
+def paragraph_set(spec: str) -> set[int]:
+    match = re.fullmatch(r"абз\. (\d+)(?:–(\d+))?", spec)
+    if not match:
+        return set()
+    start = int(match.group(1))
+    end = int(match.group(2) or start)
+    return set(range(start, end + 1))
 
 
 def metrics(manifest: dict[str, object]) -> str:
@@ -205,6 +220,15 @@ def source_note(record: dict[str, object], manifest: dict[str, object]) -> str:
         )
     else:
         sanitation_text = "Публичная копия побайтно совпадает с оригиналом; санитаризация не требовалась."
+    provenance_line = ""
+    if manifest["format"] == "docx":
+        metadata = manifest.get("metadata", {})
+        created = str(metadata.get("created", "не указано"))[:10]
+        modified = str(metadata.get("modified", "не указано"))[:10]
+        provenance_line = (
+            f'\n- Даты из свойств DOCX: создан `{created}`, изменён `{modified}`. '
+            "Это дата файла, а не гарантия актуальности всех упомянутых сведений."
+        )
     coverage_lines = "\n".join(
         f'| {scope} | {destination} | {description} |' for scope, destination, description in rows
     )
@@ -228,7 +252,7 @@ processing_status: processed
 - Объём: {metrics(manifest)}
 - Исходный SHA-256: `{record["original_sha256"]}`.
 - Публичный SHA-256: `{record["public_sha256"]}`.
-- Санитаризация: {sanitation_text}
+- Санитаризация: {sanitation_text}{provenance_line}
 
 ## Матрица покрытия
 
@@ -263,9 +287,32 @@ def main() -> int:
             expected = set(range(1, int(manifest["pages"]) + 1))
             if covered != expected:
                 raise RuntimeError(f"Incomplete page coverage for {filename}: {sorted(expected - covered)}")
+        else:
+            covered_paragraphs: set[int] = set()
+            for scope, _, _ in COVERAGE[filename]:
+                current = paragraph_set(scope)
+                if not current:
+                    raise RuntimeError(f"Invalid paragraph coverage scope for {filename}: {scope}")
+                if covered_paragraphs & current:
+                    raise RuntimeError(f"Overlapping paragraph coverage for {filename}: {scope}")
+                covered_paragraphs |= current
+            expected_paragraphs = set(range(1, int(manifest["paragraphs"]) + 1))
+            if covered_paragraphs != expected_paragraphs:
+                missing = sorted(expected_paragraphs - covered_paragraphs)
+                raise RuntimeError(f"Incomplete paragraph coverage for {filename}: {missing}")
         note_name = f"Source - {stem}.md"
         (NOTES / note_name).write_text(source_note(record, manifest), encoding="utf-8")
-        disposition = "; ".join(row[1] for row in COVERAGE[filename])
+        disposition_items: list[str] = []
+        for _, destination, _ in COVERAGE[filename]:
+            links = re.findall(r"\[\[[^]]+\]\]", destination)
+            for link in links:
+                if link not in disposition_items:
+                    disposition_items.append(link)
+            if "source-only" in destination and "source-only material" not in disposition_items:
+                disposition_items.append("source-only material")
+            if "dated/review" in destination and "dated/review material" not in disposition_items:
+                disposition_items.append("dated/review material")
+        disposition = "; ".join(disposition_items)
         course_rows.append(
             f'| [[Source - {stem}]] | {record["kind"]} | {metrics(manifest)} | {disposition} |'
         )
@@ -295,12 +342,13 @@ processing_status: processed
 - Слайды и главы — источники, а не самостоятельные канонические знания.
 - Семинарские решения встроены в теоретические заметки как worked examples.
 - Простые упоминания, списки продуктов и конкретные события остаются в source-note.
-- Регулирование, сертификаты, стандартизация и иные изменяемые сведения отмечены `status: review` и рассматриваются как срез 2024 года.
+- Регулирование, сертификаты, стандартизация и иные изменяемые сведения отмечены `status: review`. Для лекций используется обозначенный в имени срез 2024 года; DOCX датируются по встроенным свойствам файла (апрель 2025 года).
 - Для формул приоритет имеет визуально проверенная страница, а не машинный extract.
 
 ## Навигация
 
 - [[Cryptography]] — основной маршрут изучения.
+- [[Visual QA - Курс криптографии]] — журнал визуальной сверки формул, таблиц и схем.
 - [[Sources]] — вход в библиотеку источников.
 '''
     (ROOT / f"Course - {COURSE}.md").write_text(course_note, encoding="utf-8")

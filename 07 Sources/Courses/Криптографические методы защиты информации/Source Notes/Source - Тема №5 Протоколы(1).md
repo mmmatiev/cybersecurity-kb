@@ -19,17 +19,20 @@ processing_status: processed
 - Исходный SHA-256: `72deac7f83d6f718f4032e9385d89b4b4d5e1929cf0c40c8a1fd10699f30afee`.
 - Публичный SHA-256: `72deac7f83d6f718f4032e9385d89b4b4d5e1929cf0c40c8a1fd10699f30afee`.
 - Санитаризация: Публичная копия побайтно совпадает с оригиналом; санитаризация не требовалась.
+- Даты из свойств DOCX: создан `2025-04-18`, изменён `2025-04-18`. Это дата файла, а не гарантия актуальности всех упомянутых сведений.
 
 ## Матрица покрытия
 
 | Страницы или раздел | Disposition | Что учтено |
 |---|---|---|
-| Основные определения и модели | [[Cryptographic Protocols and Authenticated Key Exchange]] | Участники, сообщения, противник и цели протокола. |
-| Протоколы цифровой подписи | [[Digital Signatures]]; [[Schnorr Signatures]] | Схемы подписи, nonce и угрозы повторного использования. |
-| Распределение и управление ключами | [[Diffie-Hellman Key Exchange]]; [[Cryptographic Key Management]] | Выработка общего секрета и жизненный цикл ключей. |
-| PKI и сертификаты | [[Public Key Infrastructure and X.509]]; [[Certificate Enrollment Protocols]] | Удостоверяющие центры, сертификаты и протоколы регистрации. |
-| Интернет-протоколы | [[TLS (Cryptography)|TLS]]; [[IPsec]]; [[SSH]] | Применение криптографии в сетевом стеке. |
-| Анонимные сети | [[Anonymous Communication Systems]] | Маршрутизация и сокрытие связи между отправителем и получателем. |
-| Перечни алгоритмов и продуктов | source-only mentions | Короткие перечисления без самостоятельного объяснения не вынесены в отдельные заметки. |
+| абз. 1–104 | [[Cryptographic Protocols and Authenticated Key Exchange]] | Определения, классификация и цели безопасности протоколов. |
+| абз. 105–258 | [[Digital Signatures]]; [[Schnorr Signatures]]; [[GOST R 34.10-2012]] | RSA-, ElGamal-, EC- и Schnorr-подписи, nonce, атаки и мультиподпись. |
+| абз. 259–312 | [[Diffie-Hellman Key Exchange]]; [[Cryptographic Protocols and Authenticated Key Exchange]] | Распределение ключей, MTI, STS и EDHOC. |
+| абз. 313–344 | [[Cryptographic Key Management]]; [[Public Key Infrastructure and X.509]] | Подмена открытого ключа, доверенная сторона и структура сертификата. |
+| абз. 345–407 | [[IPsec]] | Сетевой уровень, AH/ESP/IKE и базы политик/ассоциаций. |
+| абз. 408–431 | [[TLS]] | Назначение, архитектура и задачи TLS в объёме курса. |
+| абз. 432–446 | [[SSH]] | Защищённая оболочка и место протокола в сетевом стеке. |
+| абз. 447–478 | [[Public Key Infrastructure and X.509]]; [[Certificate Enrollment Protocols]] | Компоненты PKI и управление жизненным циклом сертификатов. |
+| абз. 479–530 | [[Anonymous Communication Systems]] | Модели нарушителя, системы с большими и малыми задержками. |
 
 Каждая содержательная страница PDF либо каждый смысловой раздел DOCX имеет disposition: каноническая заметка, объединённый раздел, source-only mention или dated/review. Формулы, таблицы и схемы дополнительно сверены по локальному рендеру.

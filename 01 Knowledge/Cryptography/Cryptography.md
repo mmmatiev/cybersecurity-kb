@@ -8,6 +8,25 @@ area:
 
 Знания о криптографических примитивах, протоколах и их безопасном применении.
 
+## Как работать с разделом
+
+1. Идти сверху вниз: основы → математика → примитивы → протоколы → стандарты → post-quantum.
+2. После чтения отвечать на блок «Самопроверка» без подглядывания и разбирать связанные семинарские примеры.
+3. Менять `status: learning` на `status: stable`, когда механизм, ограничения и пример воспроизводятся самостоятельно.
+4. Заметки со `status: review` не использовать для эксплуатационных решений без актуального источника.
+
+### В работе
+
+```query
+path:"01 Knowledge" [status:learning]
+```
+
+### Требуют актуализации
+
+```query
+path:"01 Knowledge" [status:review]
+```
+
 ## Foundations
 
 - [[History of Cryptography]]
@@ -40,7 +59,7 @@ area:
 - [[Cryptographic Hash Functions]] → [[Streebog]]
 - [[Message Authentication Codes]]
 - [[Asymmetric Cryptography]]
-  - [[RSA]] and [[Rabin Cryptosystem (Cryptography)|Rabin Cryptosystem]]
+  - [[RSA]] and [[Rabin Cryptosystem]]
   - [[ElGamal Cryptosystem]]
   - [[Diffie-Hellman Key Exchange]]
   - [[Elliptic Curve Cryptography]]
@@ -54,7 +73,7 @@ area:
 - [[Public Key Infrastructure and X.509]] → [[Certificate Enrollment Protocols]]
 - [[Hardware Security Modules]] and [[Cryptographic Service Providers]]
 - [[Cryptographic Protection Systems]]
-- [[TLS (Cryptography)|TLS]]
+- [[TLS]]
 
 ## Standards
 

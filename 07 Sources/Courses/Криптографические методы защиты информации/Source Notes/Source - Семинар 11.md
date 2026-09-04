@@ -24,6 +24,6 @@ processing_status: processed
 
 | Страницы или раздел | Disposition | Что учтено |
 |---|---|---|
-| 1–3 | [[Quadratic Residues and Modular Square Roots]]; [[Rabin Cryptosystem (Cryptography)|Rabin Cryptosystem]] — worked example | Извлечение корней по простому и составному модулям с объединением по CRT. |
+| 1–3 | [[Quadratic Residues and Modular Square Roots]]; [[Rabin Cryptosystem]] — worked example | Извлечение корней по простому и составному модулям с объединением по CRT. |
 
 Каждая содержательная страница PDF либо каждый смысловой раздел DOCX имеет disposition: каноническая заметка, объединённый раздел, source-only mention или dated/review. Формулы, таблицы и схемы дополнительно сверены по локальному рендеру.

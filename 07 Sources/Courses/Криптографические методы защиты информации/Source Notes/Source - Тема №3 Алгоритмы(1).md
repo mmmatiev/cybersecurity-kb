@@ -19,15 +19,18 @@ processing_status: processed
 - Исходный SHA-256: `c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217`.
 - Публичный SHA-256: `c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217`.
 - Санитаризация: Публичная копия побайтно совпадает с оригиналом; санитаризация не требовалась.
+- Даты из свойств DOCX: создан `2025-04-18`, изменён `2025-04-18`. Это дата файла, а не гарантия актуальности всех упомянутых сведений.
 
 ## Матрица покрытия
 
 | Страницы или раздел | Disposition | Что учтено |
 |---|---|---|
-| Симметричные алгоритмы | [[Symmetric-Key Cryptography]]; [[Block Cipher Design]]; [[Block Cipher Modes]] | Блочные конструкции, преобразования и режимы. |
-| Российские и международные шифры | [[Magma]]; [[Kuznyechik]]; [[DES and Triple DES]]; [[Advanced Encryption Standard]] | Структура и назначение алгоритмов. |
-| Хэширование и имитозащита | [[Cryptographic Hash Functions]]; [[Streebog]]; [[Message Authentication Codes]] | Свойства хэш-функций, sponge-подход и MAC. |
-| Асимметричные алгоритмы и подписи | [[Asymmetric Cryptography]]; [[RSA]]; [[ElGamal Cryptosystem]]; [[Digital Signatures]] | Открытые ключи и основные схемы. |
-| Иллюстрации и headers | supporting source material | Схемы алгоритмов проверены визуально и используются как сверка формул. |
+| абз. 1–39 | [[Stream Ciphers and One-Time Pad]]; [[Block Cipher Design]]; [[Linear Cryptanalysis]]; [[Differential Cryptanalysis]] | Поточные конструкции, LFSR, bent functions и переход к блочным шифрам. |
+| абз. 40–95 | [[Symmetric-Key Cryptography]]; [[Block Cipher Design]]; [[DES and Triple DES]]; [[Magma]]; [[Kuznyechik]] | История и параметры блочных шифров, SP-сети, Feistel и итерационная структура. |
+| абз. 96–139 | [[Block Cipher Modes]]; [[GOST R 34.13-2015]] | Режимы работы, IV, зацепление и режим счётчика. |
+| абз. 140–149 | [[Advanced Encryption Standard]] | Раунд AES и развёртка ключа. |
+| абз. 150–165 | [[IPsec]]; [[SSH]]; authenticated encryption source context | Порядок шифрования и аутентификации и режим MGM. |
+| абз. 166–219 | [[Cryptographic Hash Functions]]; [[Streebog]]; [[Message Authentication Codes]] | Свойства хэш-функций, birthday bound, итеративные конструкции и HMAC. |
+| абз. 220–238 | source-only Ascon and sponge overview | Краткий обзор семейства Ascon и sponge-структуры оставлен у источника до появления самостоятельной заметки. |
 
 Каждая содержательная страница PDF либо каждый смысловой раздел DOCX имеет disposition: каноническая заметка, объединённый раздел, source-only mention или dated/review. Формулы, таблицы и схемы дополнительно сверены по локальному рендеру.

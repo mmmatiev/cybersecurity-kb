@@ -3,5 +3,9 @@
   "openBehavior": "",
   "newFileLocation": "folder",
   "newFileFolderPath": "00 Inbox",
-  "attachmentFolderPath": "90 Attachments"
+  "attachmentFolderPath": "90 Attachments",
+  "userIgnoreFilters": [
+    "07 Sources/Courses/Криптографические методы защиты информации/Processed/",
+    "AGENTS.md"
+  ]
 }
