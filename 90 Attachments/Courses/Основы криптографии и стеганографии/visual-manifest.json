@@ -1,0 +1,661 @@
+{
+  "course": "Основы криптографии и стеганографии",
+  "count": 24,
+  "category_counts": {
+    "embedding": 9,
+    "steganalysis": 6,
+    "images": 4,
+    "classical": 5
+  },
+  "render_scale": 2.2,
+  "visuals": [
+    {
+      "filename": "OCS - Polybius Square - L03 p03.png",
+      "category": "classical",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 03.pdf",
+      "source_pdf_sha256": "43e2364f316af862d4cafdc6f0691a3a88c4e36afdd9c311d0e35c9b8815b166",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 03",
+      "page": 3,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Polybius Square"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 144394,
+      "sha256": "f2e7f2077320a466c9819d75b24437ca25328557b7a6991e56ef29bec59a01a1"
+    },
+    {
+      "filename": "OCS - Affine Cipher - L03 p06.png",
+      "category": "classical",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 03.pdf",
+      "source_pdf_sha256": "43e2364f316af862d4cafdc6f0691a3a88c4e36afdd9c311d0e35c9b8815b166",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 03",
+      "page": 6,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Affine Cipher"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 78015,
+      "sha256": "d4bf5e08205613462061056c9ead58145d58adf069494112d39dd9c5aab0599c"
+    },
+    {
+      "filename": "OCS - Cardan Grille - L04 p03.png",
+      "category": "classical",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 04.pdf",
+      "source_pdf_sha256": "df68ec26479a787316a08538244618bf92f131859b3d82864b648c1d5491f4ba",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 04",
+      "page": 3,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Cardan Grille Cipher"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 113667,
+      "sha256": "e198b4bdc2ac7ac5a0b6e2b7f2995863fab0d6359f9789e43fe7c430e994f405"
+    },
+    {
+      "filename": "OCS - Playfair Cipher - L05 p02.png",
+      "category": "classical",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 05.pdf",
+      "source_pdf_sha256": "c7dd54b7cc0311b576190772421bcb1bd47ad281357ff4ef6ebb914254d633dd",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 05",
+      "page": 2,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Playfair Cipher"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 172446,
+      "sha256": "50d583f8d568ac04cd0ad533ecb745e7ea91bb52b3523f750bd53b1820186834"
+    },
+    {
+      "filename": "OCS - Hill Cipher - L05 p05.png",
+      "category": "classical",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 05.pdf",
+      "source_pdf_sha256": "c7dd54b7cc0311b576190772421bcb1bd47ad281357ff4ef6ebb914254d633dd",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 05",
+      "page": 5,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Hill Cipher"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 81926,
+      "sha256": "b8aa38750bd4df91c50b552a4fc69931a015e1af4c4d0cbef27288337805b29c"
+    },
+    {
+      "filename": "OCS - RGB Model - L09 p12.png",
+      "category": "images",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 09.pdf",
+      "source_pdf_sha256": "5047f2a95fdf5f493bf53b0a25b328a4aeec68903e3d81f2d8e17d435b925218",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 09",
+      "page": 12,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Image Color Models"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 513175,
+      "sha256": "57a5408073ac8f7b7b1104a6344dd774a9f8c5c1c4759b950a539a64590b3814"
+    },
+    {
+      "filename": "OCS - YCbCr Model - L09 p15.png",
+      "category": "images",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 09.pdf",
+      "source_pdf_sha256": "5047f2a95fdf5f493bf53b0a25b328a4aeec68903e3d81f2d8e17d435b925218",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 09",
+      "page": 15,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Image Color Models"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 105792,
+      "sha256": "42d4fc5b80c6eb1843f67e585f9dc881f73f7482e13268c048a3699cbb720ecd"
+    },
+    {
+      "filename": "OCS - DCT Basis - L11 p28.png",
+      "category": "images",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 11.pdf",
+      "source_pdf_sha256": "9df8c8c3a133b6c75c84a5c5cc780139d50f3b1ff1752cab39e927f633aed923",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 11",
+      "page": 28,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Discrete Fourier and Cosine Transforms for Images"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 71946,
+      "sha256": "879632b9849d9f0aafa7cfa7c43883676ffc9b3e4c5364f64f91a5a02564a1e3"
+    },
+    {
+      "filename": "OCS - JPEG Pipeline - L12 p09.png",
+      "category": "images",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 12.pdf",
+      "source_pdf_sha256": "0c5e06d0856a2b572d6713d5a8c9786de701e0b035e9aae4ffb5d69b1f83b7c2",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 12",
+      "page": 9,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "JPEG Compression"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 130126,
+      "sha256": "632513b559c3741d65245dc2998f2243b6c41fa8d35a8b5a613e5417dd97e5f6"
+    },
+    {
+      "filename": "OCS - LSB Embedding - L10 p03.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 10.pdf",
+      "source_pdf_sha256": "afc97677a6e9ecbea7c37ac1345518136e612d779de3d27ff7933b5241ef334f",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 10",
+      "page": 3,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "LSB Steganography"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 106118,
+      "sha256": "ac7c68956a00524d4e0fe1845429e24a37831d37ba818d5463d0e7a651b51ba4"
+    },
+    {
+      "filename": "OCS - PM1 Embedding - L10 p05.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 10.pdf",
+      "source_pdf_sha256": "afc97677a6e9ecbea7c37ac1345518136e612d779de3d27ff7933b5241ef334f",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 10",
+      "page": 5,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Plus-Minus One Steganography"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 114533,
+      "sha256": "51686dd217b05e86a3864a4359476be3ac7c2612766fb61fb633d3f168839c0e"
+    },
+    {
+      "filename": "OCS - QIM Embedding - L10 p07.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 10.pdf",
+      "source_pdf_sha256": "afc97677a6e9ecbea7c37ac1345518136e612d779de3d27ff7933b5241ef334f",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 10",
+      "page": 7,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Quantization Index Modulation"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 120325,
+      "sha256": "490535a96b0cf786200c844d9960e1e632a5620981859282f8140f4b9f7d98bb"
+    },
+    {
+      "filename": "OCS - PVD Embedding - L10 p10.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 10.pdf",
+      "source_pdf_sha256": "afc97677a6e9ecbea7c37ac1345518136e612d779de3d27ff7933b5241ef334f",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 10",
+      "page": 10,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Pixel Value Differencing"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 115882,
+      "sha256": "d3dc57704b907f65c61551210d0014f2d060c6867aa2d66bd8c4789feeb23bcf"
+    },
+    {
+      "filename": "OCS - NMI Embedding - L10 p13.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 10.pdf",
+      "source_pdf_sha256": "afc97677a6e9ecbea7c37ac1345518136e612d779de3d27ff7933b5241ef334f",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 10",
+      "page": 13,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Neighbor Mean Interpolation"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 148217,
+      "sha256": "57c0d49a38a1fd6b0da27740045943abafd70c3761e6bf02d50eb90fb147c736"
+    },
+    {
+      "filename": "OCS - Koch Zhao - L13 p06.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 13.pdf",
+      "source_pdf_sha256": "aa52b9c7f53155ac0cf48a2de5c2465c06d7447491181f733caa2b429b1ada8a",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 13",
+      "page": 6,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Koch-Zhao Method"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 120504,
+      "sha256": "36219724e6ef401f0b4c7658d011450a2b6bd7c303087d619bbaadee0dc735fe"
+    },
+    {
+      "filename": "OCS - JSteg - L13 p11.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 13.pdf",
+      "source_pdf_sha256": "aa52b9c7f53155ac0cf48a2de5c2465c06d7447491181f733caa2b429b1ada8a",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 13",
+      "page": 11,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "JSteg"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 102834,
+      "sha256": "2dd8c7685af35933f4025583f4625b6e6c40721cd00764f0ecae77f36f2bdad5"
+    },
+    {
+      "filename": "OCS - F3 F4 - L13 p14.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 13.pdf",
+      "source_pdf_sha256": "aa52b9c7f53155ac0cf48a2de5c2465c06d7447491181f733caa2b429b1ada8a",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 13",
+      "page": 14,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "F3 and F4 JPEG Steganography"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 94566,
+      "sha256": "79259dd7f49669dfcf03bca2ee44dc349484e96ba39ac4cdfdfd57b51575f5de"
+    },
+    {
+      "filename": "OCS - F5 - L13 p15.png",
+      "category": "embedding",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 13.pdf",
+      "source_pdf_sha256": "aa52b9c7f53155ac0cf48a2de5c2465c06d7447491181f733caa2b429b1ada8a",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 13",
+      "page": 15,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "F5 JPEG Steganography"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 145763,
+      "sha256": "d737af5b6121d7475dbfbe311267874c29e8a4405b17da8338f4bcb4b4846a59"
+    },
+    {
+      "filename": "OCS - Bit Planes - L14 p05.png",
+      "category": "steganalysis",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 14.pdf",
+      "source_pdf_sha256": "035551e649e29ec9c4b463f7550a57d70afcb6428bb11431892f24df2d141008",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 14",
+      "page": 5,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Visual Steganalysis and Bit-Plane Analysis"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 921687,
+      "sha256": "5ac3caa4cec5881cef933ebf50326f57fc1cc53c046abddeedf55551ac0147f8"
+    },
+    {
+      "filename": "OCS - DCT Histogram - L14 p08.png",
+      "category": "steganalysis",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 14.pdf",
+      "source_pdf_sha256": "035551e649e29ec9c4b463f7550a57d70afcb6428bb11431892f24df2d141008",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 14",
+      "page": 8,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Visual Steganalysis and Bit-Plane Analysis"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 138958,
+      "sha256": "38feac93de84b99d32d0829c2938db4e96927f1a43ff28c6021db72b44fca0be"
+    },
+    {
+      "filename": "OCS - Pairs of Values - L14 p12.png",
+      "category": "steganalysis",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 14.pdf",
+      "source_pdf_sha256": "035551e649e29ec9c4b463f7550a57d70afcb6428bb11431892f24df2d141008",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 14",
+      "page": 12,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Statistical Steganalysis"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 198624,
+      "sha256": "ecb36a6128c2dfa4aa011eb44fbbd8cffb6b76505912f128f7db87ae0c876617"
+    },
+    {
+      "filename": "OCS - Classification Pipeline - L14 p14.png",
+      "category": "steganalysis",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 14.pdf",
+      "source_pdf_sha256": "035551e649e29ec9c4b463f7550a57d70afcb6428bb11431892f24df2d141008",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 14",
+      "page": 14,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Machine Learning for Steganalysis"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 164283,
+      "sha256": "674233e0ee9949e559e6a54c52d2853506fea537d47572aa9229781bcfe03d88"
+    },
+    {
+      "filename": "OCS - GNCNN - L14 p26.png",
+      "category": "steganalysis",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 14.pdf",
+      "source_pdf_sha256": "035551e649e29ec9c4b463f7550a57d70afcb6428bb11431892f24df2d141008",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 14",
+      "page": 26,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Neural Network Steganalysis"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 195999,
+      "sha256": "e7e7324e329749afa2f6ea8d21a16ea78a539fa27089e015d20bd0cd8061b526"
+    },
+    {
+      "filename": "OCS - PNet - L14 p28.png",
+      "category": "steganalysis",
+      "source_pdf": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 14.pdf",
+      "source_pdf_sha256": "035551e649e29ec9c4b463f7550a57d70afcb6428bb11431892f24df2d141008",
+      "source_note": "Source - Основы криптографии и стеганографии - Лекция 14",
+      "page": 28,
+      "crop_normalized": [
+        0.035,
+        0.14,
+        0.965,
+        0.94
+      ],
+      "crop_points": [
+        33.6,
+        75.6,
+        926.4,
+        507.6
+      ],
+      "target_notes": [
+        "Neural Network Steganalysis"
+      ],
+      "width": 1966,
+      "height": 951,
+      "bytes": 280268,
+      "sha256": "170a15b5806765115beacf4d18623759fe2c0a37872f4541edcb98f864fb8aa7"
+    }
+  ]
+}

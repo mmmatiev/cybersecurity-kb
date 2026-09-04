@@ -28,4 +28,15 @@ area:
 - [[Blockchain and Consensus]] → [[Blockchain Cryptography]] → [[Blockchain Attacks]]
 - [[Quantum Computing for Cryptography]] → [[Post-Quantum Cryptography]]
 
+## Digital images
+
+- [[Digital Image Fundamentals]] → [[Image Color Models]] → [[Digital Image File Formats]]
+- [[Lossless Image Compression]] and [[JPEG Compression]]
+- [[Image Frequency-Domain Transforms]]
+  - [[Discrete Fourier and Cosine Transforms for Images]]
+  - [[Walsh-Hadamard Transform]]
+  - [[Discrete Wavelet Transform]]
+
+Эти foundations используются в самостоятельном security-workstream [[Steganography]].
+
 Вернуться на [[Home]].

@@ -82,6 +82,7 @@ Allowed security values:
 - Malware
 - OSINT
 - Security Engineering
+- Steganography
 
 The `security` property is required for every note under `01 Knowledge/Cybersecurity`. It is optional elsewhere. When present, it is a YAML list with one value by default and no more than two.
 

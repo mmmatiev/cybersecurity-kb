@@ -27,6 +27,7 @@ security:
 ## Cryptography
 
 - [[Brute-Force Attack]]
+- [[Frequency Analysis]]
 - [[Linear Cryptanalysis]] and [[Differential Cryptanalysis]]
 - [[Blockchain Attacks]]
 - [[Russian Cryptographic Regulation and Certification]]

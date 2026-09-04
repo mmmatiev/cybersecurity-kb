@@ -30,7 +30,7 @@ ALLOWED_AREAS = {
 }
 ALLOWED_SECURITY = {
     "AppSec", "Network Security", "Infrastructure Security", "Cloud Security", "AI Security",
-    "Threat Intelligence", "DFIR", "Malware", "OSINT", "Security Engineering",
+    "Threat Intelligence", "DFIR", "Malware", "OSINT", "Security Engineering", "Steganography",
 }
 REQUIRED_SECTIONS = {
     "Суть", "Как устроено", "Практический разбор", "Ограничения и безопасность",
@@ -272,8 +272,8 @@ def check_notes() -> dict[str, int]:
     expected = load_expected_titles()
     canonical, _, metadata = note_index()
     paths = [path for path in KNOWLEDGE.rglob("*.md") if path.stem in expected]
-    if {path.stem for path in paths} != expected or len(paths) != 68:
-        fail("knowledge corpus is not exactly 68 canonical notes")
+    if {path.stem for path in paths} != expected or len(paths) != len(expected):
+        fail("required cryptography-course note set is incomplete or duplicated")
     moc_texts = [
         path.read_text(encoding="utf-8")
         for path, data in metadata.items()
@@ -327,7 +327,7 @@ def check_notes() -> dict[str, int]:
     if seminar_refs != {f"Семинар {number:02d}" for number in range(1, 12)}:
         fail(f"seminar coverage mismatch: {sorted(seminar_refs)}")
     return {
-        "canonical_notes": len(paths),
+        "required_cryptography_notes": len(paths),
         "notes_with_math": math_count,
         "notes_with_diagrams": diagram_count,
         "seminars_linked": len(seminar_refs),

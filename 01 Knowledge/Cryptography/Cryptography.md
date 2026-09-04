@@ -33,6 +33,15 @@ path:"01 Knowledge" [status:review]
 - [[Cryptosystem and Security Goals]]
 - [[Cryptanalysis]]
 
+## Classical cryptography
+
+- [[Classical Cryptography]]
+  - [[Substitution Ciphers]] → [[Polybius Square]], [[Affine Cipher]] and [[Playfair Cipher]]
+  - [[Transposition Ciphers]] → [[Cardan Grille Cipher]]
+  - [[Hill Cipher]] and [[Vigenere Cipher]]
+- [[Frequency Analysis]]
+- [[Perfect Secrecy and Cryptographic Strength]]
+
 ## Mathematics
 
 - [[Algebraic Structures]] → [[Permutation Groups]]
@@ -97,9 +106,12 @@ path:"01 Knowledge" [status:review]
 - [[Man-in-the-Middle Attack]] and [[Side-Channel Attacks]]
 - [[Russian Cryptographic Regulation and Certification]]
 
+Стеганография не является веткой криптографии: для сокрытия самого факта передачи используется отдельный маршрут [[Steganography]], который опирается на основы цифровых изображений.
+
 ## Course source
 
 - [[Course - Криптографические методы защиты информации]]
+- [[Course - Основы криптографии и стеганографии]]
 
 Cryptography является самостоятельной предметной областью и одновременно фундаментом для [[Cybersecurity]], [[AppSec]] и [[Network Security]].
 

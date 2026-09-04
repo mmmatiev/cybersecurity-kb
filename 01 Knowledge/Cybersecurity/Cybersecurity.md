@@ -32,6 +32,7 @@ area:
 - [[Malware]]
 - [[OSINT]]
 - [[Security Engineering]]
+- [[Steganography]]
 
 ## Cryptography attack paths
 
@@ -39,6 +40,10 @@ area:
 - [[Man-in-the-Middle Attack]]
 - [[Side-Channel Attacks]]
 - [[Blockchain Attacks]]
+
+## Information hiding
+
+- [[Steganography]] — сокрытие данных, цифровые водяные знаки и стегоанализ.
 
 ## Applied work
 
