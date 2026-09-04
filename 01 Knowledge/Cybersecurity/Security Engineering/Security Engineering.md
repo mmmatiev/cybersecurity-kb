@@ -14,6 +14,7 @@ security:
 - [[Computer Science]]
 - [[Cloud]]
 - [[Operating Systems]]
+- [[Cryptography]]
 
 ## Areas
 
@@ -22,6 +23,13 @@ security:
 - Security Testing and DevSecOps
 - CI/CD and Secrets Management
 - Detection Engineering, Automation and Monitoring
+
+## Cryptography
+
+- [[Brute-Force Attack]]
+- [[Linear Cryptanalysis]] and [[Differential Cryptanalysis]]
+- [[Blockchain Attacks]]
+- [[Russian Cryptographic Regulation and Certification]]
 
 ## Applied work
 

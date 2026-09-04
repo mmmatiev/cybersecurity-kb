@@ -33,6 +33,13 @@ area:
 - [[OSINT]]
 - [[Security Engineering]]
 
+## Cryptography attack paths
+
+- [[Brute-Force Attack]], [[Linear Cryptanalysis]] and [[Differential Cryptanalysis]]
+- [[Man-in-the-Middle Attack]]
+- [[Side-Channel Attacks]]
+- [[Blockchain Attacks]]
+
 ## Applied work
 
 - [[Tools]]

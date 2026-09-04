@@ -23,4 +23,9 @@ area:
 
 Эти основы используются в [[Cybersecurity]] и [[Security Engineering]].
 
+## Cryptography-related systems
+
+- [[Blockchain and Consensus]] → [[Blockchain Cryptography]] → [[Blockchain Attacks]]
+- [[Quantum Computing for Cryptography]] → [[Post-Quantum Cryptography]]
+
 Вернуться на [[Home]].

@@ -13,6 +13,7 @@ security:
 - [[Operating Systems]]
 - [[Networks]]
 - [[Cloud]]
+- [[Cryptography]]
 
 ## Areas
 
@@ -21,6 +22,10 @@ security:
 - Privilege Escalation
 - Virtualization and Containers
 - Hardening and Secrets Management
+
+## Cryptographic implementations
+
+- [[Side-Channel Attacks]]
 
 ## Applied work
 

@@ -20,4 +20,11 @@ area:
 
 Security-знания, построенные поверх сетевых основ: [[Network Security]].
 
+## Protected communication
+
+- [[IPsec]]
+- [[SSH]]
+- [[Anonymous Communication Systems]]
+- [[TLS (Cryptography)|TLS]] находится в Cryptography и опирается на сетевой транспорт.
+
 Вернуться на [[Home]].
