@@ -1,0 +1,39 @@
+{
+  "source": "ГОСТ Р 34.12-2015.pdf",
+  "format": "pdf",
+  "pages": 25,
+  "backend": "Poppler pdfinfo/pdftotext",
+  "metadata": {
+    "Creator": "Microsoft® Word 2010",
+    "Producer": "Microsoft® Word 2010",
+    "CreationDate": "Fri Jun 26 14:07:25 2015 MSK",
+    "ModDate": "Fri Jun 26 14:07:25 2015 MSK",
+    "Custom Metadata": "no",
+    "Metadata Stream": "no",
+    "Tagged": "yes",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "25",
+    "Encrypted": "no",
+    "Page size": "595.32 x 842.04 pts (A4)",
+    "Page rot": "0",
+    "File size": "755595 bytes",
+    "Optimized": "no",
+    "PDF version": "1.5"
+  },
+  "sha256": "8be7c613c801f6184b4fc588190304862438d49df9f1800d193ee9bc2010aadc",
+  "generated_at": "2026-09-04T08:43:16.189515+00:00",
+  "course": "Криптографические методы защиты информации",
+  "kind": "standard",
+  "original_filename": "ГОСТ Р 34.12-2015.pdf",
+  "public_filename": "ГОСТ Р 34.12-2015.pdf",
+  "original_sha256": "8be7c613c801f6184b4fc588190304862438d49df9f1800d193ee9bc2010aadc",
+  "public_sha256": "8be7c613c801f6184b4fc588190304862438d49df9f1800d193ee9bc2010aadc",
+  "original_bytes": 755595,
+  "public_bytes": 755595,
+  "sanitization": {
+    "action": "none; byte-for-byte public copy"
+  }
+}

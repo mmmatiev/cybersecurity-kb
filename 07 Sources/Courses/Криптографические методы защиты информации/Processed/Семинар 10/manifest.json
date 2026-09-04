@@ -1,0 +1,40 @@
+{
+  "source": "Семинар 10.pdf",
+  "format": "pdf",
+  "pages": 2,
+  "backend": "Poppler pdfinfo/pdftotext",
+  "metadata": {
+    "Author": "Oleg Evsutin",
+    "Creator": "Microsoft® Word для Microsoft 365",
+    "Producer": "Microsoft® Word для Microsoft 365",
+    "CreationDate": "Fri Nov 29 22:02:27 2024 MSK",
+    "ModDate": "Fri Nov 29 22:02:27 2024 MSK",
+    "Custom Metadata": "no",
+    "Metadata Stream": "yes",
+    "Tagged": "yes",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "2",
+    "Encrypted": "no",
+    "Page size": "595.32 x 841.92 pts (A4)",
+    "Page rot": "0",
+    "File size": "165081 bytes",
+    "Optimized": "no",
+    "PDF version": "1.7"
+  },
+  "sha256": "f1644236dbf5b3a5e2b963bb86d64506f7b1936b0e75634fdb9a1712bcfd17fa",
+  "generated_at": "2026-09-04T08:43:16.855040+00:00",
+  "course": "Криптографические методы защиты информации",
+  "kind": "seminar",
+  "original_filename": "Семинар 10.pdf",
+  "public_filename": "Семинар 10.pdf",
+  "original_sha256": "f1644236dbf5b3a5e2b963bb86d64506f7b1936b0e75634fdb9a1712bcfd17fa",
+  "public_sha256": "f1644236dbf5b3a5e2b963bb86d64506f7b1936b0e75634fdb9a1712bcfd17fa",
+  "original_bytes": 165081,
+  "public_bytes": 165081,
+  "sanitization": {
+    "action": "none; byte-for-byte public copy"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "source": "Тема №7 Постквантовая криптография(1).docx",
+  "format": "docx",
+  "backend": "python-docx and OOXML",
+  "paragraphs": 170,
+  "tables": 0,
+  "equations": 0,
+  "embedded_media": 1,
+  "related_parts": {
+    "Headers": 1
+  },
+  "metadata": {
+    "author": "Игорь Шапошников",
+    "created": "2025-04-19T17:44:00+00:00",
+    "modified": "2025-04-19T17:46:00+00:00",
+    "last_modified_by": "Игорь Шапошников",
+    "revision": 1
+  },
+  "sha256": "b544886df0c611db9634dff1d17983589c82ad480123deefbfca99d8b6c76a98",
+  "generated_at": "2026-09-04T08:43:17.605335+00:00",
+  "course": "Криптографические методы защиты информации",
+  "kind": "docx",
+  "original_filename": "Тема №7 Постквантовая криптография(1).docx",
+  "public_filename": "Тема №7 Постквантовая криптография(1).docx",
+  "original_sha256": "b544886df0c611db9634dff1d17983589c82ad480123deefbfca99d8b6c76a98",
+  "public_sha256": "b544886df0c611db9634dff1d17983589c82ad480123deefbfca99d8b6c76a98",
+  "original_bytes": 89706,
+  "public_bytes": 89706,
+  "sanitization": {
+    "action": "none; byte-for-byte public copy"
+  }
+}

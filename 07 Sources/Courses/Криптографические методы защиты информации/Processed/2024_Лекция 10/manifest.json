@@ -1,0 +1,42 @@
+{
+  "source": "2024_Лекция 10.pdf",
+  "format": "pdf",
+  "pages": 6,
+  "backend": "Poppler pdfinfo/pdftotext",
+  "metadata": {
+    "Title": "PowerPoint Presentation",
+    "Author": "Кутьков Юрий Юрьевич",
+    "Creator": "Microsoft® PowerPoint® для Microsoft 365",
+    "Producer": "Microsoft® PowerPoint® для Microsoft 365",
+    "Custom Metadata": "no",
+    "Metadata Stream": "no",
+    "Tagged": "no",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "6",
+    "Encrypted": "no",
+    "Page size": "960 x 540 pts",
+    "Page rot": "0",
+    "File size": "412633 bytes",
+    "Optimized": "no",
+    "PDF version": "1.7"
+  },
+  "sha256": "0c0f0f091b067e3d5f0fdb7b472a79f5828b6b325578726fc41d5ac7c57835a1",
+  "generated_at": "2026-09-04T08:43:15.165975+00:00",
+  "course": "Криптографические методы защиты информации",
+  "kind": "lecture",
+  "original_filename": "2024_Лекция 10.pdf",
+  "public_filename": "2024_Лекция 10.pdf",
+  "original_sha256": "98d27f353b4b2a175c0df6db65e46d406835a0373b77566514e9d3820c060581",
+  "public_sha256": "0c0f0f091b067e3d5f0fdb7b472a79f5828b6b325578726fc41d5ac7c57835a1",
+  "original_bytes": 444760,
+  "public_bytes": 412633,
+  "sanitization": {
+    "action": "removed final contact page",
+    "removed_page": 7,
+    "original_pages": 7,
+    "public_pages": 6
+  }
+}

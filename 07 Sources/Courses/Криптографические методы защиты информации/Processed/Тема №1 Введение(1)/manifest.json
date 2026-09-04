@@ -1,0 +1,30 @@
+{
+  "source": "Тема №1 Введение(1).docx",
+  "format": "docx",
+  "backend": "python-docx and OOXML",
+  "paragraphs": 731,
+  "tables": 1,
+  "equations": 0,
+  "embedded_media": 1,
+  "related_parts": {},
+  "metadata": {
+    "author": "Игорь Шапошников",
+    "created": "2025-04-17T14:43:00+00:00",
+    "modified": "2025-04-20T11:34:00+00:00",
+    "last_modified_by": "Евсютин Олег Олегович",
+    "revision": 13
+  },
+  "sha256": "5709892e23e1586772aa0a40529093153539a88f26d022ba9fbf8055cd45f376",
+  "generated_at": "2026-09-04T08:43:17.081421+00:00",
+  "course": "Криптографические методы защиты информации",
+  "kind": "docx",
+  "original_filename": "Тема №1 Введение(1).docx",
+  "public_filename": "Тема №1 Введение(1).docx",
+  "original_sha256": "5709892e23e1586772aa0a40529093153539a88f26d022ba9fbf8055cd45f376",
+  "public_sha256": "5709892e23e1586772aa0a40529093153539a88f26d022ba9fbf8055cd45f376",
+  "original_bytes": 448284,
+  "public_bytes": 448284,
+  "sanitization": {
+    "action": "none; byte-for-byte public copy"
+  }
+}

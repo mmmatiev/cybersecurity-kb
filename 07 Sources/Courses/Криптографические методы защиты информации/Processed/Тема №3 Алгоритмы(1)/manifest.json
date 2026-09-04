@@ -1,0 +1,32 @@
+{
+  "source": "Тема №3 Алгоритмы(1).docx",
+  "format": "docx",
+  "backend": "python-docx and OOXML",
+  "paragraphs": 238,
+  "tables": 0,
+  "equations": 0,
+  "embedded_media": 12,
+  "related_parts": {
+    "Headers": 1
+  },
+  "metadata": {
+    "author": "Игорь Шапошников",
+    "created": "2025-04-18T19:03:00+00:00",
+    "modified": "2025-04-18T19:03:00+00:00",
+    "last_modified_by": "Игорь Шапошников",
+    "revision": 3
+  },
+  "sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+  "generated_at": "2026-09-04T08:43:17.251824+00:00",
+  "course": "Криптографические методы защиты информации",
+  "kind": "docx",
+  "original_filename": "Тема №3 Алгоритмы(1).docx",
+  "public_filename": "Тема №3 Алгоритмы(1).docx",
+  "original_sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+  "public_sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+  "original_bytes": 710610,
+  "public_bytes": 710610,
+  "sanitization": {
+    "action": "none; byte-for-byte public copy"
+  }
+}

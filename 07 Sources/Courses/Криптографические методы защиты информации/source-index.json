@@ -1,0 +1,537 @@
+{
+  "course": "Криптографические методы защиты информации",
+  "source_root": "/Users/mmmatiev/Desktop/крипта",
+  "counts": {
+    "lecture": 21,
+    "seminar": 11,
+    "standard": 3,
+    "docx": 7
+  },
+  "files": [
+    {
+      "source": "2024_Лекция 01.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 01.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 01",
+      "original_sha256": "ba32462fc288fdec21d46b567e996c96fa0fdb6e959c3617148530717eebce2a",
+      "public_sha256": "b7482989b18d8927104a099e0abde115f7c0b002847f2d59448188291cdc433d",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 16,
+        "original_pages": 16,
+        "public_pages": 15
+      }
+    },
+    {
+      "source": "2024_Лекция 02.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 02.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 02",
+      "original_sha256": "e1f3788842484010f1fae6e3f14efd2facf91f623f5706dde10522b16b0f7cd1",
+      "public_sha256": "13618e65b62814ff4b9ace5d71ed6199690b9f9f96b785e2d6572682bd1ead25",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 10,
+        "original_pages": 10,
+        "public_pages": 9
+      }
+    },
+    {
+      "source": "2024_Лекция 03.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 03.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 03",
+      "original_sha256": "5d56844b897f696a62fd812a2596d896ba08e293b8a7c465c105820276f0cf85",
+      "public_sha256": "e40768bd4f6142498d8f3a529f9a43d736f555839dc30ba73a6246a2daf6cfe0",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 7,
+        "original_pages": 7,
+        "public_pages": 6
+      }
+    },
+    {
+      "source": "2024_Лекция 04.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 04.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 04",
+      "original_sha256": "72463983adb17656e4bf34740d6be34f424c711b854ffe3246b7b1a4b47a1f04",
+      "public_sha256": "76fa78fef1ef205448c2be32cd6a97bbbac97a04255056deb3bb4e01114f8485",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 9,
+        "original_pages": 9,
+        "public_pages": 8
+      }
+    },
+    {
+      "source": "2024_Лекция 05-06.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 05-06.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 05-06",
+      "original_sha256": "8309ec9d66809d17e847c136b775f53f660c97a2272cc1e946353a9af91987c9",
+      "public_sha256": "bf6c0fc87d15e498e51649ea10c828c05fff7c0e60ef7ea51222d5cc75615790",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 17,
+        "original_pages": 17,
+        "public_pages": 16
+      }
+    },
+    {
+      "source": "2024_Лекция 07.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 07.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 07",
+      "original_sha256": "79c5e30c45c5b76fd77c7f2c4c5089062a690706820ab6bdbf1f00f841f99171",
+      "public_sha256": "ec12b165574d036ec2c7e3c0e65d098c69016136b1ba286bf6840d2c4f7a3128",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 10,
+        "original_pages": 10,
+        "public_pages": 9
+      }
+    },
+    {
+      "source": "2024_Лекция 08.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 08.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 08",
+      "original_sha256": "101ee64dfac713b4bbcdfcfb6302a38e0b869ad4ee2b3422c710afdf95cf066e",
+      "public_sha256": "f1a21d448224a1450cf563052bcffff412ba5bed500e6ef085c5046b8db60f61",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 12,
+        "original_pages": 12,
+        "public_pages": 11
+      }
+    },
+    {
+      "source": "2024_Лекция 09.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 09.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 09",
+      "original_sha256": "ac38257aea9db75ba721a0b7c7d7a95f9753270742430c3e4ce85f7ad7bbe633",
+      "public_sha256": "ba5b6676daaa0d01bd913313be18947713bab604140924c343f7e3f91b3f6aa0",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 14,
+        "original_pages": 14,
+        "public_pages": 13
+      }
+    },
+    {
+      "source": "2024_Лекция 10.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 10.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 10",
+      "original_sha256": "98d27f353b4b2a175c0df6db65e46d406835a0373b77566514e9d3820c060581",
+      "public_sha256": "0c0f0f091b067e3d5f0fdb7b472a79f5828b6b325578726fc41d5ac7c57835a1",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 7,
+        "original_pages": 7,
+        "public_pages": 6
+      }
+    },
+    {
+      "source": "2024_Лекция 11.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 11.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 11",
+      "original_sha256": "eb855f14353d314ea56aee7d5f1a60ad3ff92b2e50daca7c62ae2ffd4fed6d93",
+      "public_sha256": "469206c193c26136a51f309f5dc502473968896fb8b774175be5221067c2ef7b",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 14,
+        "original_pages": 14,
+        "public_pages": 13
+      }
+    },
+    {
+      "source": "2024_Лекция 12.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 12.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 12",
+      "original_sha256": "f97c1994a91865e1f88400ebb76650b9ab2388789d920eae070ddaef4778d279",
+      "public_sha256": "40bc6b8593a3e32bf165f4d5f75bc27098adc407de161b458d03ab21aa1053bd",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 11,
+        "original_pages": 11,
+        "public_pages": 10
+      }
+    },
+    {
+      "source": "2024_Лекция 13.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 13.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 13",
+      "original_sha256": "28e6d320330f235c1e0fceac47d336310ccb200a036aa06d0b784f72836a9052",
+      "public_sha256": "e022376455ee98accd637252534ff0fe9833c61cac4ed4a00840a7099d37bb1e",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 14,
+        "original_pages": 14,
+        "public_pages": 13
+      }
+    },
+    {
+      "source": "2024_Лекция 14.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 14.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 14",
+      "original_sha256": "7781c375f59f81c8fc318627444e7058fc5552f912775d8430202f1f4cc9b5e1",
+      "public_sha256": "310cb2691fb6a72b8d2942747e1c861a5166e2560a7f8f804d7496e7d45d9ee8",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 12,
+        "original_pages": 12,
+        "public_pages": 11
+      }
+    },
+    {
+      "source": "2024_Лекция 15.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 15.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 15",
+      "original_sha256": "efb6b3fe403fcb53bb2698f21ebff1f6660fab3ce87830712ceb5d21dab1291f",
+      "public_sha256": "099a0708bbb0360c2fa8105bb9054b027d3671f465ea4da6c957a77c8bd50af4",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 13,
+        "original_pages": 13,
+        "public_pages": 12
+      }
+    },
+    {
+      "source": "2024_Лекция 16.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 16.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 16",
+      "original_sha256": "f88df0188f7f57ce79f578f6d6b5b3510db58e78226235b7f6e9176afa1aa0bb",
+      "public_sha256": "bffba2603d66e33726f6087dad349146dad3671ad361281fdb6781ea7c62b6b6",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 13,
+        "original_pages": 13,
+        "public_pages": 12
+      }
+    },
+    {
+      "source": "2024_Лекция 17-18.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 17-18.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 17-18",
+      "original_sha256": "3f38979edd246558e431bc88db1e44098c6ea2372d8ae8bada4f0d253517861f",
+      "public_sha256": "ee2258235956f955715cf269fcabe6f5c7027e9c8149aad8591709fcb19a04a2",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 36,
+        "original_pages": 36,
+        "public_pages": 35
+      }
+    },
+    {
+      "source": "2024_Лекция 19.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 19.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 19",
+      "original_sha256": "9a84017d251706c292e31eaabd97ce3714fa965fe28f90b7081b1056605605a7",
+      "public_sha256": "dd76e5cc44fc9034793c24a756bc64fc9b56c7f1d316c660afa9a7a6b8c1a968",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 17,
+        "original_pages": 17,
+        "public_pages": 16
+      }
+    },
+    {
+      "source": "2024_Лекция 20.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 20.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 20",
+      "original_sha256": "a943a2c52fd030e139b5a801beff833f98c315a8c5155b2a93ef4e2124d285d2",
+      "public_sha256": "cace7eba9dcb625e623ab28e055d7691c05598b585b59fd369ed5c16cd7a5c80",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 17,
+        "original_pages": 17,
+        "public_pages": 16
+      }
+    },
+    {
+      "source": "2024_Лекция 21.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 21.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 21",
+      "original_sha256": "a6766ad4ae680fcebe9c545584e8c7365f949f26cbf4ede1855db3752897f503",
+      "public_sha256": "db551450776583c5f2b6ae23366d3b451c0bc6681cff2c61e0b1059df84fb83f",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 12,
+        "original_pages": 12,
+        "public_pages": 11
+      }
+    },
+    {
+      "source": "2024_Лекция 22.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 22.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 22",
+      "original_sha256": "0a26451aed48a4d543e56d376459188e2fc43b1b17d26d43b9246bfb41f20aea",
+      "public_sha256": "6140c31814d66dd123ec059785c8e86367b2ebd2ba5ab73f4249527f489739e6",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 10,
+        "original_pages": 10,
+        "public_pages": 9
+      }
+    },
+    {
+      "source": "2024_Лекция 23.pdf",
+      "kind": "lecture",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 23.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/2024_Лекция 23",
+      "original_sha256": "f997e9a62f9425e54feb4e73a3adfbffca4dc2d4fc68e0107f646aa55f9d807b",
+      "public_sha256": "6bd132fc235870648c2fe6668c651d0ebba7c682ebaa8dea6f60387bf7227806",
+      "sanitization": {
+        "action": "removed final contact page",
+        "removed_page": 31,
+        "original_pages": 31,
+        "public_pages": 30
+      }
+    },
+    {
+      "source": "ГОСТ Р 34.10-2012.pdf",
+      "kind": "standard",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/ГОСТ Р 34.10-2012.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/ГОСТ Р 34.10-2012",
+      "original_sha256": "ef8c0315f6b387bbff80c0c7055572b6ece6b290ee64dcd57ff8840a442ffb6a",
+      "public_sha256": "ef8c0315f6b387bbff80c0c7055572b6ece6b290ee64dcd57ff8840a442ffb6a",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "ГОСТ Р 34.12-2015.pdf",
+      "kind": "standard",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/ГОСТ Р 34.12-2015.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/ГОСТ Р 34.12-2015",
+      "original_sha256": "8be7c613c801f6184b4fc588190304862438d49df9f1800d193ee9bc2010aadc",
+      "public_sha256": "8be7c613c801f6184b4fc588190304862438d49df9f1800d193ee9bc2010aadc",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "ГОСТ Р 34.13-2015.pdf",
+      "kind": "standard",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/ГОСТ Р 34.13-2015.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/ГОСТ Р 34.13-2015",
+      "original_sha256": "f674b9e51a86bb1c912862affb1b2f0332e3a0c6cb8cedb181a3c20ffd64e34b",
+      "public_sha256": "f674b9e51a86bb1c912862affb1b2f0332e3a0c6cb8cedb181a3c20ffd64e34b",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 01.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 01.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 01",
+      "original_sha256": "13f1301f64a2cea9e90e46b0f9e77d5d173626959c165c61ee6a72d78983f0f5",
+      "public_sha256": "13f1301f64a2cea9e90e46b0f9e77d5d173626959c165c61ee6a72d78983f0f5",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 02.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 02.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 02",
+      "original_sha256": "648cf95a33ff651bb9fcd0f1e1626846f21aaf372473f96c4aff9c73e734f3cd",
+      "public_sha256": "648cf95a33ff651bb9fcd0f1e1626846f21aaf372473f96c4aff9c73e734f3cd",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 03.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 03.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 03",
+      "original_sha256": "ed3fde2df901279854006737c3b09f33f41649b2a20090b369cf93cf05675b26",
+      "public_sha256": "ed3fde2df901279854006737c3b09f33f41649b2a20090b369cf93cf05675b26",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 04.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 04.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 04",
+      "original_sha256": "edd09c9d28c928651d6cf756ead92dfd4c07e9d97fd035ec3a72e12b4ba58826",
+      "public_sha256": "edd09c9d28c928651d6cf756ead92dfd4c07e9d97fd035ec3a72e12b4ba58826",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 05.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 05.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 05",
+      "original_sha256": "f4f7a9eb9cf3ee65944fa1f42e8feba7f9b84b7b4775d3d1b5f3d1c006bfba6b",
+      "public_sha256": "f4f7a9eb9cf3ee65944fa1f42e8feba7f9b84b7b4775d3d1b5f3d1c006bfba6b",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 06.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 06.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 06",
+      "original_sha256": "542deef76340d7016f9f6a0d20592f9ad45fb64c4d051bb9504dbb83354d0e53",
+      "public_sha256": "542deef76340d7016f9f6a0d20592f9ad45fb64c4d051bb9504dbb83354d0e53",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 07.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 07.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 07",
+      "original_sha256": "a17c8b0286fd08cb2b8e0eee71f1ce7c1dc6d555787540de9b3bafbd624ad82b",
+      "public_sha256": "a17c8b0286fd08cb2b8e0eee71f1ce7c1dc6d555787540de9b3bafbd624ad82b",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 08.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 08.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 08",
+      "original_sha256": "e295e998c3fd5b48b6db10a37febfaa77bb078520b29dc4dd63322b57425902c",
+      "public_sha256": "e295e998c3fd5b48b6db10a37febfaa77bb078520b29dc4dd63322b57425902c",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 09.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 09.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 09",
+      "original_sha256": "70d37463b4fe0f1c815b0c8a8d34b7a0a826a7520e00b7249dc74346650d4d9d",
+      "public_sha256": "70d37463b4fe0f1c815b0c8a8d34b7a0a826a7520e00b7249dc74346650d4d9d",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 10.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 10.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 10",
+      "original_sha256": "f1644236dbf5b3a5e2b963bb86d64506f7b1936b0e75634fdb9a1712bcfd17fa",
+      "public_sha256": "f1644236dbf5b3a5e2b963bb86d64506f7b1936b0e75634fdb9a1712bcfd17fa",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Семинар 11.pdf",
+      "kind": "seminar",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/Семинар 11.pdf",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Семинар 11",
+      "original_sha256": "b46229f90a20bb0040e94d0ca609ae0224df61254f3d5acdf335e0007cac3fd1",
+      "public_sha256": "b46229f90a20bb0040e94d0ca609ae0224df61254f3d5acdf335e0007cac3fd1",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Тема №1 Введение(1).docx",
+      "kind": "docx",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №1 Введение(1).docx",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Тема №1 Введение(1)",
+      "original_sha256": "5709892e23e1586772aa0a40529093153539a88f26d022ba9fbf8055cd45f376",
+      "public_sha256": "5709892e23e1586772aa0a40529093153539a88f26d022ba9fbf8055cd45f376",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Тема №2 Блокчейн(1).docx",
+      "kind": "docx",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №2 Блокчейн(1).docx",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Тема №2 Блокчейн(1)",
+      "original_sha256": "370027c587b7c0fa5add01b025258e34a0407e4f6d481c2e190beb03896b68e7",
+      "public_sha256": "370027c587b7c0fa5add01b025258e34a0407e4f6d481c2e190beb03896b68e7",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Тема №3 Алгоритмы(1).docx",
+      "kind": "docx",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №3 Алгоритмы(1).docx",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Тема №3 Алгоритмы(1)",
+      "original_sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+      "public_sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Тема №4 ГСЧ(1).docx",
+      "kind": "docx",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №4 ГСЧ(1).docx",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Тема №4 ГСЧ(1)",
+      "original_sha256": "92dbe54b71242022f6471721788d957bdb165cbd05867d7d4742ae28f62e9a3e",
+      "public_sha256": "92dbe54b71242022f6471721788d957bdb165cbd05867d7d4742ae28f62e9a3e",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Тема №5 Протоколы(1).docx",
+      "kind": "docx",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №5 Протоколы(1).docx",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Тема №5 Протоколы(1)",
+      "original_sha256": "72deac7f83d6f718f4032e9385d89b4b4d5e1929cf0c40c8a1fd10699f30afee",
+      "public_sha256": "72deac7f83d6f718f4032e9385d89b4b4d5e1929cf0c40c8a1fd10699f30afee",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Тема №6 Классы СКЗИ(1).docx",
+      "kind": "docx",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №6 Классы СКЗИ(1).docx",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Тема №6 Классы СКЗИ(1)",
+      "original_sha256": "4ebbf549cd25c25d224ada24653f463ac1b5c3f401049fa407d044fc6ed69086",
+      "public_sha256": "4ebbf549cd25c25d224ada24653f463ac1b5c3f401049fa407d044fc6ed69086",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    },
+    {
+      "source": "Тема №7 Постквантовая криптография(1).docx",
+      "kind": "docx",
+      "public_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №7 Постквантовая криптография(1).docx",
+      "processed_path": "07 Sources/Courses/Криптографические методы защиты информации/Processed/Тема №7 Постквантовая криптография(1)",
+      "original_sha256": "b544886df0c611db9634dff1d17983589c82ad480123deefbfca99d8b6c76a98",
+      "public_sha256": "b544886df0c611db9634dff1d17983589c82ad480123deefbfca99d8b6c76a98",
+      "sanitization": {
+        "action": "none; byte-for-byte public copy"
+      }
+    }
+  ]
+}

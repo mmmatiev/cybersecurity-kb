@@ -1,0 +1,39 @@
+{
+  "source": "ГОСТ Р 34.13-2015.pdf",
+  "format": "pdf",
+  "pages": 42,
+  "backend": "Poppler pdfinfo/pdftotext",
+  "metadata": {
+    "Creator": "Microsoft® Word 2010",
+    "Producer": "Microsoft® Word 2010",
+    "CreationDate": "Fri Dec 11 10:15:59 2015 MSK",
+    "ModDate": "Fri Dec 11 10:15:59 2015 MSK",
+    "Custom Metadata": "no",
+    "Metadata Stream": "no",
+    "Tagged": "yes",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "42",
+    "Encrypted": "no",
+    "Page size": "595.32 x 842.04 pts (A4)",
+    "Page rot": "0",
+    "File size": "1029701 bytes",
+    "Optimized": "no",
+    "PDF version": "1.5"
+  },
+  "sha256": "f674b9e51a86bb1c912862affb1b2f0332e3a0c6cb8cedb181a3c20ffd64e34b",
+  "generated_at": "2026-09-04T08:43:16.309365+00:00",
+  "course": "Криптографические методы защиты информации",
+  "kind": "standard",
+  "original_filename": "ГОСТ Р 34.13-2015.pdf",
+  "public_filename": "ГОСТ Р 34.13-2015.pdf",
+  "original_sha256": "f674b9e51a86bb1c912862affb1b2f0332e3a0c6cb8cedb181a3c20ffd64e34b",
+  "public_sha256": "f674b9e51a86bb1c912862affb1b2f0332e3a0c6cb8cedb181a3c20ffd64e34b",
+  "original_bytes": 1029701,
+  "public_bytes": 1029701,
+  "sanitization": {
+    "action": "none; byte-for-byte public copy"
+  }
+}

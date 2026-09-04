@@ -1,0 +1,43 @@
+{
+  "source": "ГОСТ Р 34.10-2012.pdf",
+  "format": "pdf",
+  "pages": 33,
+  "backend": "Poppler pdfinfo/pdftotext",
+  "metadata": {
+    "Title": "НАЦИОНАЛЬНЫЙ СТАНДАРТ РОССИЙСКОЙ ФЕДЕРАЦИИ",
+    "Subject": "Процессы формирования и проверки электронной цифровой подписи",
+    "Keywords": "ГОСТ Р 34.10; ЭЦП; электронная цифровая подпись",
+    "Author": "Igor A. Serikov",
+    "Creator": "Microsoft® Word 2010",
+    "Producer": "Microsoft® Word 2010",
+    "CreationDate": "Tue Aug 21 11:07:56 2012 MSK",
+    "ModDate": "Tue Aug 21 11:07:56 2012 MSK",
+    "Custom Metadata": "no",
+    "Metadata Stream": "no",
+    "Tagged": "yes",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "33",
+    "Encrypted": "no",
+    "Page size": "595.32 x 842.04 pts (A4)",
+    "Page rot": "0",
+    "File size": "969433 bytes",
+    "Optimized": "no",
+    "PDF version": "1.5"
+  },
+  "sha256": "ef8c0315f6b387bbff80c0c7055572b6ece6b290ee64dcd57ff8840a442ffb6a",
+  "generated_at": "2026-09-04T08:43:16.096652+00:00",
+  "course": "Криптографические методы защиты информации",
+  "kind": "standard",
+  "original_filename": "ГОСТ Р 34.10-2012.pdf",
+  "public_filename": "ГОСТ Р 34.10-2012.pdf",
+  "original_sha256": "ef8c0315f6b387bbff80c0c7055572b6ece6b290ee64dcd57ff8840a442ffb6a",
+  "public_sha256": "ef8c0315f6b387bbff80c0c7055572b6ece6b290ee64dcd57ff8840a442ffb6a",
+  "original_bytes": 969433,
+  "public_bytes": 969433,
+  "sanitization": {
+    "action": "none; byte-for-byte public copy"
+  }
+}
