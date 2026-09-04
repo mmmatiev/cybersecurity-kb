@@ -15,39 +15,39 @@ processing_status: processed
 
 ## Учебные маршруты
 
-1. Классические шифры и их анализ: [[Classical Cryptography]] → [[Substitution Ciphers]] и [[Transposition Ciphers]] → [[Frequency Analysis]] → [[Perfect Secrecy and Cryptographic Strength]].
-2. Представление изображения: [[Digital Image Fundamentals]] → [[Image Color Models]] → [[JPEG Compression]] → [[Image Frequency-Domain Transforms]].
-3. Сокрытие: [[Steganography]] → пространственные и частотные методы → [[Steganalysis]].
+1. Классические шифры и их анализ: [[Классическая криптография]] → [[Шифры подстановки]] и [[Шифры перестановки]] → [[Частотный анализ]] → [[Совершенная секретность и криптографическая стойкость]].
+2. Представление изображения: [[Основы цифровых изображений]] → [[Цветовые модели изображений]] → [[Сжатие изображений в JPEG]] → [[Частотные преобразования изображений]].
+3. Сокрытие: [[Стеганография]] → пространственные и частотные методы → [[Стегоанализ]].
 
 ## Полная матрица покрытия
 
-| Source-note | Публичных страниц | Каноническое назначение |
+| Источник | Публичных страниц | Каноническое назначение |
 |---|---:|---|
-| [[Source - Основы криптографии и стеганографии - Лекция 01]] | 19 | source-only material; [[Cryptosystem and Security Goals]]; [[Classical Cryptography]]; [[Symmetric-Key Cryptography]]; [[Cryptographic Hash Functions]]; [[Message Authentication Codes]]; [[Digital Signatures]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 02]] | 12 | source-only material; [[History of Cryptography]]; [[Classical Cryptography]]; [[Rings and Modular Arithmetic]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 03]] | 10 | source-only material; [[Substitution Ciphers]]; [[Polybius Square]]; [[Affine Cipher]]; [[Frequency Analysis]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 04]] | 6 | source-only material; [[Transposition Ciphers]]; [[Cardan Grille Cipher]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 05]] | 8 | source-only material; [[Playfair Cipher]]; [[Classical Cryptography]]; [[Hill Cipher]]; [[Frequency Analysis]]; [[Cryptanalysis]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 06]] | 11 | source-only material; [[Classical Cryptography]]; [[Vigenere Cipher]]; [[Stream Ciphers and One-Time Pad]]; [[Cryptanalysis]]; [[Frequency Analysis]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 07]] | 7 | source-only material; [[Perfect Secrecy and Cryptographic Strength]]; [[Brute-Force Attack]]; [[Cryptanalysis]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 08]] | 18 | source-only material; [[Information Hiding]]; [[Digital Steganography]]; [[Digital Watermarking]]; [[Spatial-Domain Image Steganography]]; [[Frequency-Domain Image Steganography]]; [[Steganography Quality Metrics]]; [[Steganalysis]]; [[Digital Watermark Attacks]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 09]] | 21 | source-only material; [[Digital Image Fundamentals]]; [[Image Color Models]]; [[Digital Image File Formats]]; [[Lossless Image Compression]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 10]] | 15 | source-only material; [[Spatial-Domain Image Steganography]]; [[LSB Steganography]]; [[Plus-Minus One Steganography]]; [[Quantization Index Modulation]]; [[Pixel Value Differencing]]; [[Neighbor Mean Interpolation]]; [[Digital Steganography]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 11]] | 54 | source-only material; [[Image Frequency-Domain Transforms]]; [[Discrete Fourier and Cosine Transforms for Images]]; [[Walsh-Hadamard Transform]]; [[Discrete Wavelet Transform]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 12]] | 18 | source-only material; [[Lossless Image Compression]]; [[JPEG Compression]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 13]] | 15 | source-only material; [[Frequency-Domain Image Steganography]]; [[Koch-Zhao Method]]; [[Quantization Index Modulation]]; [[JPEG Steganography]]; [[JSteg]]; [[Plus-Minus One Steganography]]; [[F3 and F4 JPEG Steganography]]; [[F5 JPEG Steganography]] |
-| [[Source - Основы криптографии и стеганографии - Лекция 14]] | 28 | source-only material; [[Steganalysis]]; [[Visual Steganalysis and Bit-Plane Analysis]]; [[JPEG Steganography]]; [[Statistical Steganalysis]]; [[Machine Learning for Steganalysis]]; [[Neural Network Steganalysis]]; dated/review material |
+| [[Source - Основы криптографии и стеганографии - Лекция 01]] | 19 | материал только в источнике; [[Cryptosystem and Security Goals]]; [[Классическая криптография]]; [[Symmetric-Key Cryptography]]; [[Cryptographic Hash Functions]]; [[Message Authentication Codes]]; [[Digital Signatures]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 02]] | 12 | материал только в источнике; [[History of Cryptography]]; [[Классическая криптография]]; [[Rings and Modular Arithmetic]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 03]] | 10 | материал только в источнике; [[Шифры подстановки]]; [[Квадрат Полибия]]; [[Аффинный шифр]]; [[Частотный анализ]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 04]] | 6 | материал только в источнике; [[Шифры перестановки]]; [[Решётка Кардано]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 05]] | 8 | материал только в источнике; [[Шифр Плейфера]]; [[Классическая криптография]]; [[Шифр Хилла]]; [[Частотный анализ]]; [[Cryptanalysis]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 06]] | 11 | материал только в источнике; [[Классическая криптография]]; [[Шифр Виженера]]; [[Stream Ciphers and One-Time Pad]]; [[Cryptanalysis]]; [[Частотный анализ]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 07]] | 7 | материал только в источнике; [[Совершенная секретность и криптографическая стойкость]]; [[Brute-Force Attack]]; [[Cryptanalysis]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 08]] | 18 | материал только в источнике; [[Сокрытие информации]]; [[Цифровая стеганография]]; [[Цифровые водяные знаки]]; [[Стеганография в пространственной области]]; [[Стеганография в частотной области]]; [[Метрики качества стеганографии]]; [[Стегоанализ]]; [[Атаки на цифровые водяные знаки]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 09]] | 21 | материал только в источнике; [[Основы цифровых изображений]]; [[Цветовые модели изображений]]; [[Форматы цифровых изображений]]; [[Сжатие изображений без потерь]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 10]] | 15 | материал только в источнике; [[Стеганография в пространственной области]]; [[LSB-стеганография]]; [[Метод ±1 в стеганографии]]; [[Модуляция индекса квантования (QIM)]]; [[Метод разности значений пикселей (PVD)]]; [[Интерполяция по среднему значению соседних пикселей (NMI)]]; [[Цифровая стеганография]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 11]] | 54 | материал только в источнике; [[Частотные преобразования изображений]]; [[ДПФ и ДКП для изображений]]; [[Преобразование Уолша—Адамара]]; [[Дискретное вейвлет-преобразование]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 12]] | 18 | материал только в источнике; [[Сжатие изображений без потерь]]; [[Сжатие изображений в JPEG]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 13]] | 15 | материал только в источнике; [[Стеганография в частотной области]]; [[Метод Коха—Жао]]; [[Модуляция индекса квантования (QIM)]]; [[Стеганография в JPEG]]; [[JSteg]]; [[Метод ±1 в стеганографии]]; [[Методы F3 и F4 в JPEG]]; [[Метод F5 в JPEG]] |
+| [[Source - Основы криптографии и стеганографии - Лекция 14]] | 28 | материал только в источнике; [[Стегоанализ]]; [[Визуальный стегоанализ и анализ битовых плоскостей]]; [[Стеганография в JPEG]]; [[Статистический стегоанализ]]; [[Машинное обучение в стегоанализе]]; [[Нейросетевой стегоанализ]]; датированный материал, требующий проверки |
 
 ## Правила интерпретации
 
 - Каждая публичная страница отражена в source-note; удалённые контактные страницы отмечены отдельно.
-- Сцитала, линейка Энея и Jefferson Disk остаются разделами более общих карточек.
-- Формулы Hill, QIM, PVD, NMI, Fourier/DCT, JPEG, wavelets, F3–F5 и методы стегоанализа сверяются по локальному рендеру.
-- Результаты GNCNN, TLU-CNN, PNet и перечень HUGO/WOW/S-UNIWARD/J-UNIWARD/UED считаются датированным срезом курса 2024 года и требуют review перед практическим применением.
+- Сцитала, линейка Энея и дисковый шифратор Джефферсона остаются разделами более общих карточек.
+- Формулы шифра Хилла, QIM, PVD, NMI, ДПФ, ДКП, JPEG, вейвлет-преобразований и методов F3–F5 сверяются по локальному рендеру.
+- Результаты GNCNN, TLU-CNN, PNet и перечень HUGO/WOW/S-UNIWARD/J-UNIWARD/UED считаются датированным срезом курса 2024 года и требуют проверки перед практическим применением.
 
 ## Навигация
 
 - [[Cryptography]] — криптографический маршрут.
 - [[Computer Science]] — основы цифровых изображений.
-- [[Steganography]] — самостоятельный маршрут по сокрытию и обнаружению данных.
+- [[Стеганография]] — самостоятельный маршрут по сокрытию и обнаружению данных.
 - [[Sources]] — библиотека источников.

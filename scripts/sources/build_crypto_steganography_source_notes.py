@@ -5,12 +5,39 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 
 
 COURSE = "Основы криптографии и стеганографии"
 ROOT = Path("07 Sources/Courses") / COURSE
 NOTES = ROOT / "Source Notes"
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "knowledge"))
+from build_crypto_steganography_knowledge import TITLE_MAP  # noqa: E402
+
+
+REFERENCE_REPLACEMENTS: tuple[tuple[str, str], ...] = (
+    ("source-only course context", "контекст курса — только в источнике"),
+    ("source-only title", "титульная страница — только в источнике"),
+    ("Aeneas ruler section within", "раздел о линейке Энея внутри"),
+    ("Scytale section within", "раздел о сцитале внутри"),
+    ("Jefferson Disk section within", "раздел о дисковом шифраторе Джефферсона внутри"),
+    ("tabular gamma section within", "раздел о табличном гаммировании внутри"),
+    ("neural embedding section within", "раздел о нейросетевом встраивании внутри"),
+    ("source-only architecture example", "архитектурный пример только в источнике"),
+    ("linear-algebra section within", "раздел о линейной алгебре внутри"),
+    ("error-correction section within", "раздел об исправлении ошибок внутри"),
+    ("dated/review examples (2024 course snapshot)", "датированные примеры, требующие проверки (срез курса 2024 года)"),
+)
+
+
+def localize_references(value: str) -> str:
+    text = value
+    for old in sorted(TITLE_MAP, key=len, reverse=True):
+        text = text.replace(f"[[{old}]]", f"[[{TITLE_MAP[old]}]]")
+    for old, new in REFERENCE_REPLACEMENTS:
+        text = text.replace(old, new)
+    return text
 
 
 def item(pages: str, destination: str, description: str) -> tuple[str, str, str]:
@@ -70,7 +97,7 @@ COVERAGE: dict[int, list[tuple[str, str, str]]] = {
         item("1", "source-only title", "Титульная страница лекции."),
         item("2–5", "[[Information Hiding]]; [[Digital Steganography]]; [[Digital Watermarking]]", "Контейнеры, цели стеганографии и цифровых водяных знаков."),
         item("6–9", "[[Spatial-Domain Image Steganography]]; [[Frequency-Domain Image Steganography]]", "Классификация по области и примеры двух подходов."),
-        item("10–13", "[[Steganography Quality Metrics]]; [[Steganalysis]]", "Компромисс незаметности, робастности и обнаружимости."),
+        item("10–13", "[[Steganography Quality Metrics]]; [[Steganalysis]]", "Компромисс незаметности, устойчивости и обнаружимости."),
         item("14", "[[Digital Watermark Attacks]]", "Классы атак на цифровые водяные знаки."),
         item("15–18", "[[Steganography Quality Metrics]]; [[Digital Watermark Attacks]]", "Ёмкость, MSE/PSNR, BER/NCC и пример искажения."),
     ],
@@ -102,7 +129,7 @@ COVERAGE: dict[int, list[tuple[str, str, str]]] = {
     12: [
         item("1", "source-only title", "Титульная страница лекции."),
         item("2–7", "[[Lossless Image Compression]]", "Избыточность данных и общая роль сжатия изображений."),
-        item("8–18", "[[JPEG Compression]]", "YCbCr, субдискретизация, DCT, квантование, zig-zag и кодирование."),
+        item("8–18", "[[JPEG Compression]]", "YCbCr, субдискретизация, ДКП, квантование, зигзагообразный обход и кодирование."),
     ],
     13: [
         item("1", "source-only title", "Титульная страница лекции."),
@@ -113,7 +140,7 @@ COVERAGE: dict[int, list[tuple[str, str, str]]] = {
         item("10", "[[JPEG Steganography]]", "Переход к квантованным DCT-коэффициентам JPEG."),
         item("11", "[[JSteg]]", "LSB-модификация ненулевых коэффициентов."),
         item("12", "[[Plus-Minus One Steganography]]", "Адаптация PM1 к JPEG-коэффициентам."),
-        item("13–14", "[[F3 and F4 JPEG Steganography]]", "Устранение shrinkage и знаковое отображение битов."),
+        item("13–14", "[[F3 and F4 JPEG Steganography]]", "Обработка обнуления коэффициентов и знаковое отображение битов."),
         item("15", "[[F5 JPEG Steganography]]", "Матричное кодирование и перестановка коэффициентов."),
     ],
     14: [
@@ -149,7 +176,7 @@ def source_note(record: dict[str, object], manifest: dict[str, object]) -> str:
     stem = Path(public_name).stem
     sanitation = record["sanitization"]
     rows = "\n".join(
-        f"| {scope} | {destination} | {description} |"
+        f"| {scope} | {localize_references(destination)} | {description} |"
         for scope, destination, description in COVERAGE[number]
     )
     redaction = ""
@@ -166,26 +193,26 @@ processing_status: processed
 
 ## Описание
 
-Лекционные слайды курса [[Course - {COURSE}]], локально обработанные без внешнего OCR, API, embeddings или загрузки содержимого в сторонние сервисы. Нумерация сохранённых страниц совпадает с оригиналом.
+Лекционные слайды курса [[Course - {COURSE}]], локально обработанные без внешнего OCR, API, векторизации или загрузки содержимого в сторонние сервисы. Нумерация сохранённых страниц совпадает с оригиналом.
 
 ## Файлы и целостность
 
 - Публичный PDF: [открыть](<../PDF/{public_name}>).
-- Технический extract: [текст](<../Processed/{stem}/extracted-text.md>) и [manifest](<../Processed/{stem}/manifest.json>).
+- Технические данные: [извлечённый текст](<../Processed/{stem}/extracted-text.md>) и [манифест](<../Processed/{stem}/manifest.json>).
 - Объём: {manifest["pages"]} публичных страниц из {sanitation["original_pages"]} исходных.
 - Исходный SHA-256: `{record["original_sha256"]}`.
 - Публичный SHA-256: `{record["public_sha256"]}`.
 - Санитаризация: удалена финальная контактная страница оригинала {sanitation["removed_pages"][0]}.{redaction}
-- Page mapping: публичные страницы 1–{manifest["pages"]} соответствуют исходным страницам 1–{manifest["pages"]}; исходная страница {sanitation["removed_pages"][0]} не публикуется.
+- Соответствие страниц: публичные страницы 1–{manifest["pages"]} соответствуют исходным страницам 1–{manifest["pages"]}; исходная страница {sanitation["removed_pages"][0]} не публикуется.
 
 ## Матрица покрытия
 
-| Страницы | Disposition | Что учтено |
+| Страницы | Назначение | Что учтено |
 |---|---|---|
 {rows}
-| Исходная {sanitation["removed_pages"][0]} | removed public-safety material | Финальная контактная страница удалена из публичной копии. |
+| Исходная {sanitation["removed_pages"][0]} | удалено перед публикацией | Финальная контактная страница удалена из публичной копии. |
 
-Все содержательные публичные страницы получили disposition. Формулы и схемы интерпретируются по отрендерованным страницам; машинный extract используется только как поисковый слой.
+Для каждой содержательной публичной страницы указано назначение. Формулы и схемы интерпретируются по отрендерованным страницам; автоматически извлечённый текст используется только для поиска.
 '''
 
 
@@ -219,12 +246,13 @@ def main() -> int:
         destinations: list[str] = []
         for _, destination, _ in COVERAGE[number]:
             for link in re.findall(r"\[\[[^]]+\]\]", destination):
-                if link not in destinations:
-                    destinations.append(link)
-            if "source-only" in destination and "source-only material" not in destinations:
-                destinations.append("source-only material")
-            if "dated/review" in destination and "dated/review material" not in destinations:
-                destinations.append("dated/review material")
+                localized_link = localize_references(link)
+                if localized_link not in destinations:
+                    destinations.append(localized_link)
+            if "source-only" in destination and "материал только в источнике" not in destinations:
+                destinations.append("материал только в источнике")
+            if "dated/review" in destination and "датированный материал, требующий проверки" not in destinations:
+                destinations.append("датированный материал, требующий проверки")
         course_rows.append(
             f"| [[Source - {stem}]] | {manifest['pages']} | {'; '.join(destinations)} |"
         )
@@ -246,28 +274,28 @@ processing_status: processed
 
 ## Учебные маршруты
 
-1. Классические шифры и их анализ: [[Classical Cryptography]] → [[Substitution Ciphers]] и [[Transposition Ciphers]] → [[Frequency Analysis]] → [[Perfect Secrecy and Cryptographic Strength]].
-2. Представление изображения: [[Digital Image Fundamentals]] → [[Image Color Models]] → [[JPEG Compression]] → [[Image Frequency-Domain Transforms]].
-3. Сокрытие: [[Steganography]] → пространственные и частотные методы → [[Steganalysis]].
+1. Классические шифры и их анализ: [[Классическая криптография]] → [[Шифры подстановки]] и [[Шифры перестановки]] → [[Частотный анализ]] → [[Совершенная секретность и криптографическая стойкость]].
+2. Представление изображения: [[Основы цифровых изображений]] → [[Цветовые модели изображений]] → [[Сжатие изображений в JPEG]] → [[Частотные преобразования изображений]].
+3. Сокрытие: [[Стеганография]] → пространственные и частотные методы → [[Стегоанализ]].
 
 ## Полная матрица покрытия
 
-| Source-note | Публичных страниц | Каноническое назначение |
+| Источник | Публичных страниц | Каноническое назначение |
 |---|---:|---|
 {chr(10).join(course_rows)}
 
 ## Правила интерпретации
 
 - Каждая публичная страница отражена в source-note; удалённые контактные страницы отмечены отдельно.
-- Сцитала, линейка Энея и Jefferson Disk остаются разделами более общих карточек.
-- Формулы Hill, QIM, PVD, NMI, Fourier/DCT, JPEG, wavelets, F3–F5 и методы стегоанализа сверяются по локальному рендеру.
-- Результаты GNCNN, TLU-CNN, PNet и перечень HUGO/WOW/S-UNIWARD/J-UNIWARD/UED считаются датированным срезом курса 2024 года и требуют review перед практическим применением.
+- Сцитала, линейка Энея и дисковый шифратор Джефферсона остаются разделами более общих карточек.
+- Формулы шифра Хилла, QIM, PVD, NMI, ДПФ, ДКП, JPEG, вейвлет-преобразований и методов F3–F5 сверяются по локальному рендеру.
+- Результаты GNCNN, TLU-CNN, PNet и перечень HUGO/WOW/S-UNIWARD/J-UNIWARD/UED считаются датированным срезом курса 2024 года и требуют проверки перед практическим применением.
 
 ## Навигация
 
 - [[Cryptography]] — криптографический маршрут.
 - [[Computer Science]] — основы цифровых изображений.
-- [[Steganography]] — самостоятельный маршрут по сокрытию и обнаружению данных.
+- [[Стеганография]] — самостоятельный маршрут по сокрытию и обнаружению данных.
 - [[Sources]] — библиотека источников.
 '''
     (ROOT / f"Course - {COURSE}.md").write_text(course_note, encoding="utf-8")

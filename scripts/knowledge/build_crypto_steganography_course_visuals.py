@@ -11,6 +11,8 @@ from pathlib import Path
 
 import pymupdf
 
+from build_crypto_steganography_knowledge import TITLE_MAP
+
 
 COURSE = "Основы криптографии и стеганографии"
 PDF_ROOT = Path("07 Sources/Courses") / COURSE / "PDF"
@@ -80,7 +82,7 @@ def main() -> int:
         raise RuntimeError("The curated visual set must contain 24 unique files")
     category_counts = {
         category: sum(visual.category == category for visual in VISUALS)
-        for category in {visual.category for visual in VISUALS}
+        for category in ("classical", "images", "embedding", "steganalysis")
     }
     if category_counts != {"classical": 5, "images": 4, "embedding": 9, "steganalysis": 6}:
         raise RuntimeError(f"Unexpected visual category counts: {category_counts}")
@@ -119,7 +121,7 @@ def main() -> int:
                     "page": visual.page,
                     "crop_normalized": list(visual.crop),
                     "crop_points": [round(value, 3) for value in (rect.x0, rect.y0, rect.x1, rect.y1)],
-                    "target_notes": list(visual.targets),
+                    "target_notes": [TITLE_MAP.get(target, target) for target in visual.targets],
                     "width": pixmap.width,
                     "height": pixmap.height,
                     "bytes": output.stat().st_size,

@@ -13,6 +13,8 @@ from pathlib import Path
 
 import pymupdf
 
+from build_crypto_steganography_knowledge import SELF_CHECKS, TITLE_MAP
+
 
 VAULT = Path(__file__).resolve().parents[2]
 COURSE_NAME = "Основы криптографии и стеганографии"
@@ -24,18 +26,18 @@ GENERATED_MARKER = "<!-- generated: crypto-stego-course -->"
 UPDATE_START = "<!-- crypto-stego-course:start -->"
 SOURCE_PREFIX = "Source - Основы криптографии и стеганографии - Лекция"
 
-CLASSICAL = {
+CLASSICAL_KEYS = {
     "Classical Cryptography", "Substitution Ciphers", "Polybius Square", "Affine Cipher",
     "Transposition Ciphers", "Cardan Grille Cipher", "Playfair Cipher", "Hill Cipher",
     "Vigenere Cipher", "Frequency Analysis", "Perfect Secrecy and Cryptographic Strength",
 }
-IMAGE_FOUNDATIONS = {
+IMAGE_FOUNDATION_KEYS = {
     "Digital Image Fundamentals", "Image Color Models", "Digital Image File Formats",
     "Lossless Image Compression", "JPEG Compression", "Image Frequency-Domain Transforms",
     "Discrete Fourier and Cosine Transforms for Images", "Walsh-Hadamard Transform",
     "Discrete Wavelet Transform",
 }
-STEGANOGRAPHY = {
+STEGANOGRAPHY_KEYS = {
     "Steganography", "Information Hiding", "Digital Steganography", "Digital Watermarking",
     "Steganography Quality Metrics", "Digital Watermark Attacks",
     "Spatial-Domain Image Steganography", "LSB Steganography",
@@ -46,10 +48,15 @@ STEGANOGRAPHY = {
     "Visual Steganalysis and Bit-Plane Analysis", "Statistical Steganalysis",
     "Machine Learning for Steganalysis", "Neural Network Steganalysis",
 }
+CLASSICAL = {TITLE_MAP[title] for title in CLASSICAL_KEYS}
+IMAGE_FOUNDATIONS = {TITLE_MAP[title] for title in IMAGE_FOUNDATION_KEYS}
+STEGANOGRAPHY = {TITLE_MAP[title] for title in STEGANOGRAPHY_KEYS}
 EXPECTED_NOTES = CLASSICAL | IMAGE_FOUNDATIONS | STEGANOGRAPHY
-REQUIRED_HEADINGS = {
-    "Суть", "Как устроено", "Формулы и критерии", "Пример из курса",
-    "Ограничения и безопасность", "Связи", "Самопроверка", "Источники курса",
+COMMON_HEADINGS = {"Связи", "Самопроверка", "Источники курса"}
+TYPE_HEADINGS = {
+    "concept": {"Кратко", "Основные идеи", "Формальная модель", "Пример из курса", "Ограничения"},
+    "technique": {"Кратко", "Как работает", "Алгоритм и критерии", "Разбор примера", "Ограничения"},
+    "attack": {"Цель атаки", "Как проходит атака", "Последствия и признаки", "Противодействие"},
 }
 ALLOWED_TYPES = {"concept", "attack", "technique", "moc"}
 ALLOWED_AREAS = {"Computer Science", "Cryptography", "Cybersecurity", "AI & ML"}
@@ -58,6 +65,11 @@ EMAIL_RE = re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-zА-Яа-я]{2,}")
 PHONE_RE = re.compile(
     r"(?<!\d)(?:\+?7|8)[\s()\-]{0,3}\d{3}[\s()\-]{0,3}"
     r"\d{3}[\s\-]{0,2}\d{2}[\s\-]{0,2}\d{2}(?!\d)"
+)
+BANNED_PROSE_RE = re.compile(
+    r"\b(?:embedding|payload|pipeline|padding|shrinkage|foundations?|workstream)\b"
+    r"|feature engineering|false positive|cover/stego|pairs-of-values|робаст\w*|ресэмпл\w*",
+    re.I,
 )
 
 
@@ -198,6 +210,9 @@ def check_sources() -> dict[str, object]:
 
 def check_knowledge() -> dict[str, int]:
     canonical, _ = index_notes()
+    questions = [question for group in SELF_CHECKS.values() for question in group]
+    if len(questions) != 126 or len(set(questions)) != 126:
+        fail("self-check questions must contain 126 unique prompts")
     actual = {
         path.stem
         for path in KNOWLEDGE.rglob("*.md")
@@ -205,9 +220,9 @@ def check_knowledge() -> dict[str, int]:
     }
     if actual != EXPECTED_NOTES:
         fail(f"new note set mismatch: missing={sorted(EXPECTED_NOTES-actual)}, extra={sorted(actual-EXPECTED_NOTES)}")
-    moc = canonical.get("Steganography")
+    moc = canonical.get("Стеганография")
     if moc is None:
-        fail("missing Steganography MOC")
+        fail("missing Стеганография MOC")
     moc_text = moc.read_text(encoding="utf-8")
 
     visual_embeds = 0
@@ -217,6 +232,9 @@ def check_knowledge() -> dict[str, int]:
             fail(f"missing required note: {title}")
         text = path.read_text(encoding="utf-8")
         data, body = frontmatter(text)
+        h1 = re.search(r"(?m)^# (.+)$", body)
+        if h1 is None or h1.group(1) != title or path.stem != title:
+            fail(f"filename and H1 mismatch: {title}")
         if data.get("type") not in ALLOWED_TYPES:
             fail(f"invalid type: {title}")
         areas = data.get("area")
@@ -230,13 +248,27 @@ def check_knowledge() -> dict[str, int]:
             not isinstance(security, list) or not set(security) <= ALLOWED_SECURITY
         ):
             fail(f"invalid security metadata: {title}")
-        if title == "Steganography":
+        old_title = next(old for old, localized in TITLE_MAP.items() if localized == title)
+        aliases = data.get("aliases", [])
+        if title != "JSteg" and (
+            not isinstance(aliases, list) or old_title not in aliases
+        ):
+            fail(f"missing English alias: {title}")
+        if title == "Стеганография":
             if data.get("type") != "moc":
-                fail("Steganography must be a MOC")
+                fail("Стеганография must be a MOC")
             continue
         headings = set(re.findall(r"(?m)^## (.+)$", body))
-        if not REQUIRED_HEADINGS <= headings:
-            fail(f"missing study section in {title}: {sorted(REQUIRED_HEADINGS-headings)}")
+        required_headings = COMMON_HEADINGS | TYPE_HEADINGS[str(data["type"])]
+        if not required_headings <= headings:
+            fail(f"missing study section in {title}: {sorted(required_headings-headings)}")
+        opening = "Цель атаки" if data["type"] == "attack" else "Кратко"
+        intro_match = re.search(rf"(?m)^## {re.escape(opening)}\n\n([^\n]+)", body)
+        if intro_match is None:
+            fail(f"missing introductory paragraph in {title}")
+        has_short_identifier = re.search(r"(?:[A-ZА-ЯЁ]{2,}|[A-Z]\d)", title)
+        if old_title != title and not has_short_identifier and old_title not in intro_match.group(1):
+            fail(f"English term is not introduced in {title}")
         if "$$" not in body:
             fail(f"missing MathJax in {title}")
         if not re.search(
@@ -245,6 +277,17 @@ def check_knowledge() -> dict[str, int]:
             fail(f"missing exact course provenance in {title}")
         if f"[[{title}]]" not in moc_text and title not in CLASSICAL and title not in IMAGE_FOUNDATIONS:
             fail(f"Steganography note is not linked from its MOC: {title}")
+        expected_questions = SELF_CHECKS[old_title]
+        if any(f"{index}. {question}" not in body for index, question in enumerate(expected_questions, start=1)):
+            fail(f"missing subject-specific self-check in {title}")
+        if "Сформулируйте назначение" in body:
+            fail(f"generic self-check remains in {title}")
+        prose = re.sub(r"\$\$.*?\$\$", "", body, flags=re.S)
+        prose = re.sub(r"!?\[\[[^]]+\]\]", "", prose)
+        prose = re.sub(r"`[^`]*`", "", prose)
+        match = BANNED_PROSE_RE.search(prose)
+        if match:
+            fail(f"unnecessary English calque remains in {title}: {match.group(0)}")
         visual_embeds += len(re.findall(rf"!\[\[{re.escape('90 Attachments/Courses/'+COURSE_NAME)}/[^]]+\.png\]\]", body))
 
     updated = [

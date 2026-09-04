@@ -7,6 +7,7 @@ import hashlib
 import importlib.util
 import json
 import re
+import runpy
 import struct
 import sys
 from collections import Counter, defaultdict
@@ -334,12 +335,33 @@ def check_notes() -> dict[str, int]:
     }
 
 
+def check_localized_course_names() -> dict[str, int]:
+    builder = VAULT / "scripts" / "knowledge" / "build_crypto_steganography_knowledge.py"
+    title_map = runpy.run_path(builder)["TITLE_MAP"]
+    canonical, by_name, metadata = note_index()
+    for english, russian in title_map.items():
+        path = canonical.get(russian)
+        if path is None or path.stem != russian:
+            fail(f"missing localized course note: {russian}")
+        if english != russian:
+            aliases = metadata[path].get("aliases", [])
+            if not isinstance(aliases, list) or english not in aliases:
+                fail(f"missing English alias in localized course note: {russian}")
+            if english in by_name:
+                fail(f"obsolete English basename remains: {english}")
+    return {"localized_course_notes": len(title_map)}
+
+
 def main() -> int:
     source_stats = check_sources()
     visual_stats = check_course_visuals()
     vault_stats = check_vault_integrity()
     note_stats = check_notes()
-    summary = {**source_stats, **visual_stats, **vault_stats, **note_stats, "result": "ok"}
+    localized_stats = check_localized_course_names()
+    summary = {
+        **source_stats, **visual_stats, **vault_stats, **note_stats,
+        **localized_stats, "result": "ok",
+    }
     print(json.dumps(summary, ensure_ascii=False, sort_keys=True))
     return 0
 

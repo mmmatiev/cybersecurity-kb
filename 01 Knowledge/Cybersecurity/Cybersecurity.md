@@ -8,7 +8,7 @@ area:
 
 Поперечный слой знаний о том, как технологии атакуются, тестируются, защищаются и проявляются в реальных случаях.
 
-## Foundations
+## Технологические основы
 
 - [[Computer Science]]
 - [[Networks]]
@@ -20,7 +20,7 @@ area:
 - [[AI & ML]]
 - [[Cryptography]]
 
-## Security areas
+## Направления безопасности
 
 - [[AppSec]]
 - [[Network Security]]
@@ -32,20 +32,20 @@ area:
 - [[Malware]]
 - [[OSINT]]
 - [[Security Engineering]]
-- [[Steganography]]
+- [[Стеганография]]
 
-## Cryptography attack paths
+## Атаки на криптографические системы
 
-- [[Brute-Force Attack]], [[Linear Cryptanalysis]] and [[Differential Cryptanalysis]]
+- [[Brute-Force Attack]], [[Linear Cryptanalysis]] и [[Differential Cryptanalysis]]
 - [[Man-in-the-Middle Attack]]
 - [[Side-Channel Attacks]]
 - [[Blockchain Attacks]]
 
-## Information hiding
+## Сокрытие информации
 
-- [[Steganography]] — сокрытие данных, цифровые водяные знаки и стегоанализ.
+- [[Стеганография]] — сокрытие данных, цифровые водяные знаки и стегоанализ.
 
-## Applied work
+## Практическая работа
 
 - [[Tools]]
 - [[Practice]]

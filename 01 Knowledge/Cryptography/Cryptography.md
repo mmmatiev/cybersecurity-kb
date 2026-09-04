@@ -10,7 +10,7 @@ area:
 
 ## Как работать с разделом
 
-1. Идти сверху вниз: основы → математика → примитивы → протоколы → стандарты → post-quantum.
+1. Идти сверху вниз: основы → математика → примитивы → протоколы → стандарты → постквантовая криптография.
 2. После чтения отвечать на блок «Самопроверка» без подглядывания и разбирать связанные семинарские примеры.
 3. Менять `status: learning` на `status: stable`, когда механизм, ограничения и пример воспроизводятся самостоятельно.
 4. Заметки со `status: review` не использовать для эксплуатационных решений без актуального источника.
@@ -27,22 +27,22 @@ path:"01 Knowledge" [status:learning]
 path:"01 Knowledge" [status:review]
 ```
 
-## Foundations
+## Основы
 
 - [[History of Cryptography]]
 - [[Cryptosystem and Security Goals]]
 - [[Cryptanalysis]]
 
-## Classical cryptography
+## Классическая криптография
 
-- [[Classical Cryptography]]
-  - [[Substitution Ciphers]] → [[Polybius Square]], [[Affine Cipher]] and [[Playfair Cipher]]
-  - [[Transposition Ciphers]] → [[Cardan Grille Cipher]]
-  - [[Hill Cipher]] and [[Vigenere Cipher]]
-- [[Frequency Analysis]]
-- [[Perfect Secrecy and Cryptographic Strength]]
+- [[Классическая криптография]]
+  - [[Шифры подстановки]] → [[Квадрат Полибия]], [[Аффинный шифр]] и [[Шифр Плейфера]]
+  - [[Шифры перестановки]] → [[Решётка Кардано]]
+  - [[Шифр Хилла]] и [[Шифр Виженера]]
+- [[Частотный анализ]]
+- [[Совершенная секретность и криптографическая стойкость]]
 
-## Mathematics
+## Математика
 
 - [[Algebraic Structures]] → [[Permutation Groups]]
 - [[Rings and Modular Arithmetic]] → [[Polynomial Rings]] → [[Finite Fields]]
@@ -56,41 +56,41 @@ path:"01 Knowledge" [status:review]
 - [[Discrete Logarithm and Baby-Step Giant-Step]]
 - [[Primality Testing and Miller-Rabin]]
 
-## Primitives
+## Криптографические примитивы
 
 - [[Symmetric-Key Cryptography]]
   - [[Block Cipher Design]]
   - [[Stream Ciphers and One-Time Pad]]
   - [[DES and Triple DES]]
   - [[Advanced Encryption Standard|AES]]
-  - [[Kuznyechik]] and [[Magma]]
+  - [[Kuznyechik]] и [[Magma]]
   - [[Block Cipher Modes]]
 - [[Cryptographic Hash Functions]] → [[Streebog]]
 - [[Message Authentication Codes]]
 - [[Asymmetric Cryptography]]
-  - [[RSA]] and [[Rabin Cryptosystem]]
+  - [[RSA]] и [[Rabin Cryptosystem]]
   - [[ElGamal Cryptosystem]]
   - [[Diffie-Hellman Key Exchange]]
   - [[Elliptic Curve Cryptography]]
   - [[Digital Signatures]] → [[Schnorr Signatures]]
 
-## Protocols and infrastructure
+## Протоколы и инфраструктура
 
 - [[Random Number Generation and Entropy]]
 - [[Cryptographic Key Management]]
 - [[Cryptographic Protocols and Authenticated Key Exchange]]
 - [[Public Key Infrastructure and X.509]] → [[Certificate Enrollment Protocols]]
-- [[Hardware Security Modules]] and [[Cryptographic Service Providers]]
+- [[Hardware Security Modules]] и [[Cryptographic Service Providers]]
 - [[Cryptographic Protection Systems]]
 - [[TLS]]
 
-## Standards
+## Стандарты
 
-- [[GOST R 34.10-2012]] — digital signatures
-- [[GOST R 34.12-2015]] — Kuznyechik and Magma
-- [[GOST R 34.13-2015]] — block cipher modes
+- [[GOST R 34.10-2012]] — цифровые подписи
+- [[GOST R 34.12-2015]] — шифры Kuznyechik и Magma
+- [[GOST R 34.13-2015]] — режимы работы блочных шифров
 
-## Quantum and post-quantum cryptography
+## Квантовая и постквантовая криптография
 
 - [[Quantum Computing for Cryptography]]
 - [[Quantum Key Distribution]] → [[BB84]]
@@ -100,15 +100,15 @@ path:"01 Knowledge" [status:review]
   - [[Lattice-Based Cryptography]]
   - [[Multivariate Cryptography]]
 
-## Security connections
+## Связи с безопасностью
 
-- [[Brute-Force Attack]], [[Linear Cryptanalysis]] and [[Differential Cryptanalysis]]
-- [[Man-in-the-Middle Attack]] and [[Side-Channel Attacks]]
+- [[Brute-Force Attack]], [[Linear Cryptanalysis]] и [[Differential Cryptanalysis]]
+- [[Man-in-the-Middle Attack]] и [[Side-Channel Attacks]]
 - [[Russian Cryptographic Regulation and Certification]]
 
-Стеганография не является веткой криптографии: для сокрытия самого факта передачи используется отдельный маршрут [[Steganography]], который опирается на основы цифровых изображений.
+Стеганография не является веткой криптографии: для сокрытия самого факта передачи используется отдельный маршрут [[Стеганография]], который опирается на основы цифровых изображений.
 
-## Course source
+## Материалы курсов
 
 - [[Course - Криптографические методы защиты информации]]
 - [[Course - Основы криптографии и стеганографии]]

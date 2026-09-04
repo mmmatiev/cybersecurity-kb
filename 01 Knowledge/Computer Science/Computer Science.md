@@ -8,35 +8,35 @@ area:
 
 Фундаментальные знания, которые лежат ниже конкретных технологий и помогают понимать их устройство.
 
-## Directions
+## Направления
 
-- Computer architecture
-- Data structures and algorithms
-- Processes, memory and concurrency
-- Encoding and compilers
-- Programming concepts
-- Distributed systems fundamentals
+- Архитектура компьютеров
+- Структуры данных и алгоритмы
+- Процессы, память и параллельные вычисления
+- Кодирование и компиляторы
+- Основы программирования
+- Распределённые системы
 
 Раздел расширяется только знаниями, которые реально полезны для понимания технологий и безопасности.
 
-## Security
+## Связь с безопасностью
 
 Эти основы используются в [[Cybersecurity]] и [[Security Engineering]].
 
-## Cryptography-related systems
+## Системы, связанные с криптографией
 
 - [[Blockchain and Consensus]] → [[Blockchain Cryptography]] → [[Blockchain Attacks]]
 - [[Quantum Computing for Cryptography]] → [[Post-Quantum Cryptography]]
 
-## Digital images
+## Цифровые изображения
 
-- [[Digital Image Fundamentals]] → [[Image Color Models]] → [[Digital Image File Formats]]
-- [[Lossless Image Compression]] and [[JPEG Compression]]
-- [[Image Frequency-Domain Transforms]]
-  - [[Discrete Fourier and Cosine Transforms for Images]]
-  - [[Walsh-Hadamard Transform]]
-  - [[Discrete Wavelet Transform]]
+- [[Основы цифровых изображений]] → [[Цветовые модели изображений]] → [[Форматы цифровых изображений]]
+- [[Сжатие изображений без потерь]] и [[Сжатие изображений в JPEG]]
+- [[Частотные преобразования изображений]]
+  - [[ДПФ и ДКП для изображений]]
+  - [[Преобразование Уолша—Адамара]]
+  - [[Дискретное вейвлет-преобразование]]
 
-Эти foundations используются в самостоятельном security-workstream [[Steganography]].
+Эти основы используются в самостоятельном разделе [[Стеганография]].
 
 Вернуться на [[Home]].

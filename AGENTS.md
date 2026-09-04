@@ -204,6 +204,9 @@ Add status, aliases, or tags only when they improve retrieval or workflow. A tem
 
 - Prefer canonical cybersecurity and technology terminology with human-readable filenames.
 - Keep common English names for technologies, protocols, attacks, standards, products, and tools.
+- When an established Russian term sounds natural, use it for the filename and H1; keep the canonical English term in `aliases` and introduce it once in the text when useful for search or recognition.
+- Keep acronyms, product names, standard designations, and established identifiers such as AES, RSA, TLS, JPEG, JSteg, and BB84 unchanged.
+- In Russian explanatory text, prefer established Russian terminology over unnecessary English insertions and literal calques.
 - Explanatory text may be written in Russian.
 - Use Obsidian wikilinks such as <code>[[Target Note]]</code> for meaningful relationships.
 - Search canonical names and aliases before creating a note.

@@ -2,10 +2,10 @@
   "course": "Основы криптографии и стеганографии",
   "count": 24,
   "category_counts": {
-    "embedding": 9,
-    "steganalysis": 6,
+    "classical": 5,
     "images": 4,
-    "classical": 5
+    "embedding": 9,
+    "steganalysis": 6
   },
   "render_scale": 2.2,
   "visuals": [
@@ -29,7 +29,7 @@
         507.6
       ],
       "target_notes": [
-        "Polybius Square"
+        "Квадрат Полибия"
       ],
       "width": 1966,
       "height": 951,
@@ -56,7 +56,7 @@
         507.6
       ],
       "target_notes": [
-        "Affine Cipher"
+        "Аффинный шифр"
       ],
       "width": 1966,
       "height": 951,
@@ -83,7 +83,7 @@
         507.6
       ],
       "target_notes": [
-        "Cardan Grille Cipher"
+        "Решётка Кардано"
       ],
       "width": 1966,
       "height": 951,
@@ -110,7 +110,7 @@
         507.6
       ],
       "target_notes": [
-        "Playfair Cipher"
+        "Шифр Плейфера"
       ],
       "width": 1966,
       "height": 951,
@@ -137,7 +137,7 @@
         507.6
       ],
       "target_notes": [
-        "Hill Cipher"
+        "Шифр Хилла"
       ],
       "width": 1966,
       "height": 951,
@@ -164,7 +164,7 @@
         507.6
       ],
       "target_notes": [
-        "Image Color Models"
+        "Цветовые модели изображений"
       ],
       "width": 1966,
       "height": 951,
@@ -191,7 +191,7 @@
         507.6
       ],
       "target_notes": [
-        "Image Color Models"
+        "Цветовые модели изображений"
       ],
       "width": 1966,
       "height": 951,
@@ -218,7 +218,7 @@
         507.6
       ],
       "target_notes": [
-        "Discrete Fourier and Cosine Transforms for Images"
+        "ДПФ и ДКП для изображений"
       ],
       "width": 1966,
       "height": 951,
@@ -245,7 +245,7 @@
         507.6
       ],
       "target_notes": [
-        "JPEG Compression"
+        "Сжатие изображений в JPEG"
       ],
       "width": 1966,
       "height": 951,
@@ -272,7 +272,7 @@
         507.6
       ],
       "target_notes": [
-        "LSB Steganography"
+        "LSB-стеганография"
       ],
       "width": 1966,
       "height": 951,
@@ -299,7 +299,7 @@
         507.6
       ],
       "target_notes": [
-        "Plus-Minus One Steganography"
+        "Метод ±1 в стеганографии"
       ],
       "width": 1966,
       "height": 951,
@@ -326,7 +326,7 @@
         507.6
       ],
       "target_notes": [
-        "Quantization Index Modulation"
+        "Модуляция индекса квантования (QIM)"
       ],
       "width": 1966,
       "height": 951,
@@ -353,7 +353,7 @@
         507.6
       ],
       "target_notes": [
-        "Pixel Value Differencing"
+        "Метод разности значений пикселей (PVD)"
       ],
       "width": 1966,
       "height": 951,
@@ -380,7 +380,7 @@
         507.6
       ],
       "target_notes": [
-        "Neighbor Mean Interpolation"
+        "Интерполяция по среднему значению соседних пикселей (NMI)"
       ],
       "width": 1966,
       "height": 951,
@@ -407,7 +407,7 @@
         507.6
       ],
       "target_notes": [
-        "Koch-Zhao Method"
+        "Метод Коха—Жао"
       ],
       "width": 1966,
       "height": 951,
@@ -461,7 +461,7 @@
         507.6
       ],
       "target_notes": [
-        "F3 and F4 JPEG Steganography"
+        "Методы F3 и F4 в JPEG"
       ],
       "width": 1966,
       "height": 951,
@@ -488,7 +488,7 @@
         507.6
       ],
       "target_notes": [
-        "F5 JPEG Steganography"
+        "Метод F5 в JPEG"
       ],
       "width": 1966,
       "height": 951,
@@ -515,7 +515,7 @@
         507.6
       ],
       "target_notes": [
-        "Visual Steganalysis and Bit-Plane Analysis"
+        "Визуальный стегоанализ и анализ битовых плоскостей"
       ],
       "width": 1966,
       "height": 951,
@@ -542,7 +542,7 @@
         507.6
       ],
       "target_notes": [
-        "Visual Steganalysis and Bit-Plane Analysis"
+        "Визуальный стегоанализ и анализ битовых плоскостей"
       ],
       "width": 1966,
       "height": 951,
@@ -569,7 +569,7 @@
         507.6
       ],
       "target_notes": [
-        "Statistical Steganalysis"
+        "Статистический стегоанализ"
       ],
       "width": 1966,
       "height": 951,
@@ -596,7 +596,7 @@
         507.6
       ],
       "target_notes": [
-        "Machine Learning for Steganalysis"
+        "Машинное обучение в стегоанализе"
       ],
       "width": 1966,
       "height": 951,
@@ -623,7 +623,7 @@
         507.6
       ],
       "target_notes": [
-        "Neural Network Steganalysis"
+        "Нейросетевой стегоанализ"
       ],
       "width": 1966,
       "height": 951,
@@ -650,7 +650,7 @@
         507.6
       ],
       "target_notes": [
-        "Neural Network Steganalysis"
+        "Нейросетевой стегоанализ"
       ],
       "width": 1966,
       "height": 951,

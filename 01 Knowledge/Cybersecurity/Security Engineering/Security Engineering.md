@@ -8,7 +8,7 @@ security:
 
 # Security Engineering
 
-## Foundations
+## Основы
 
 - [[Software Engineering]]
 - [[Computer Science]]
@@ -16,23 +16,23 @@ security:
 - [[Operating Systems]]
 - [[Cryptography]]
 
-## Areas
+## Направления
 
-- Security Architecture and Threat Modeling
-- Secure Design and Security Requirements
-- Security Testing and DevSecOps
-- CI/CD and Secrets Management
-- Detection Engineering, Automation and Monitoring
+- Архитектура безопасности и моделирование угроз
+- Безопасное проектирование и требования безопасности
+- Тестирование безопасности и DevSecOps
+- CI/CD и управление секретами
+- Инженерия обнаружения, автоматизация и мониторинг
 
-## Cryptography
+## Криптография
 
 - [[Brute-Force Attack]]
-- [[Frequency Analysis]]
-- [[Linear Cryptanalysis]] and [[Differential Cryptanalysis]]
+- [[Частотный анализ]]
+- [[Linear Cryptanalysis]] и [[Differential Cryptanalysis]]
 - [[Blockchain Attacks]]
 - [[Russian Cryptographic Regulation and Certification]]
 
-## Applied work
+## Практическая работа
 
 - [[Tools]]
 - [[Practice]]
