@@ -1,0 +1,306 @@
+{
+  "visuals": [
+    {
+      "output": "ECC - Point Addition - Lecture 08 p05.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 08.pdf",
+      "source_sha256": "f1a21d448224a1450cf563052bcffff412ba5bed500e6ef085c5046b8db60f61",
+      "target_note": "01 Knowledge/Cryptography/Elliptic Curves.md",
+      "source_note": "Source - 2024_Лекция 08",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "2442dea6751c8e6f54732652c417bafab5eb6ecc4760879e1046283900220e99",
+      "page": 5,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "AES - Round Transformations - Lecture 16 p06.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 16.pdf",
+      "source_sha256": "bffba2603d66e33726f6087dad349146dad3671ad361281fdb6781ea7c62b6b6",
+      "target_note": "01 Knowledge/Cryptography/Advanced Encryption Standard.md",
+      "source_note": "Source - 2024_Лекция 16",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "afa2b31998cb5061acb6c0e7890404eb846c121fb2153db06a630a5d5d3462d0",
+      "page": 6,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "DES - Feistel Round - Lecture 16 p03.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 16.pdf",
+      "source_sha256": "bffba2603d66e33726f6087dad349146dad3671ad361281fdb6781ea7c62b6b6",
+      "target_note": "01 Knowledge/Cryptography/DES and Triple DES.md",
+      "source_note": "Source - 2024_Лекция 16",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "ae01ae0a395361a573d66c3b1996ac46fb851d49d1a2afa93598880f5aed4a07",
+      "page": 3,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "Diffie-Hellman - Key Agreement - Lecture 17-18 p07.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 17-18.pdf",
+      "source_sha256": "ee2258235956f955715cf269fcabe6f5c7027e9c8149aad8591709fcb19a04a2",
+      "target_note": "01 Knowledge/Cryptography/Diffie-Hellman Key Exchange.md",
+      "source_note": "Source - 2024_Лекция 17-18",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "5d6b365aca05872c8b008091c59284bd66a4a54f43a15181ee5ce04c38acfe29",
+      "page": 7,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "MITM - Diffie-Hellman - Lecture 17-18 p08.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 17-18.pdf",
+      "source_sha256": "ee2258235956f955715cf269fcabe6f5c7027e9c8149aad8591709fcb19a04a2",
+      "target_note": "01 Knowledge/Cybersecurity/Network Security/Man-in-the-Middle Attack.md",
+      "source_note": "Source - 2024_Лекция 17-18",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "14a6acecffc931db65480af84fbefa93603d651151fc6a2a257a3f4e1fd6fcb8",
+      "page": 8,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "MAC - Integrity and Authenticity - Lecture 20 p04.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 20.pdf",
+      "source_sha256": "cace7eba9dcb625e623ab28e055d7691c05598b585b59fd369ed5c16cd7a5c80",
+      "target_note": "01 Knowledge/Cryptography/Message Authentication Codes.md",
+      "source_note": "Source - 2024_Лекция 20",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "2f769014ee933ccc85349d125d986c9a64a1e1b0b5e82bf66c88718dce5f02af",
+      "page": 4,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "Digital Signatures - RSA Flow - Lecture 20 p13.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 20.pdf",
+      "source_sha256": "cace7eba9dcb625e623ab28e055d7691c05598b585b59fd369ed5c16cd7a5c80",
+      "target_note": "01 Knowledge/Cryptography/Digital Signatures.md",
+      "source_note": "Source - 2024_Лекция 20",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "78100ef5517136c5a733574c07d3f3dc0588faf9d5c7049537fb6ae427aa0ab9",
+      "page": 13,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "PKI - Certification Authority - Lecture 22 p06.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 22.pdf",
+      "source_sha256": "6140c31814d66dd123ec059785c8e86367b2ebd2ba5ab73f4249527f489739e6",
+      "target_note": "01 Knowledge/Cryptography/Public Key Infrastructure and X.509.md",
+      "source_note": "Source - 2024_Лекция 22",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "c3a67d0979060b4279f1dcb3432fa732bcfdd7a0351ead8718432949909d8f1d",
+      "page": 6,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "PKI - Certificate Chain - Lecture 22 p08.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 22.pdf",
+      "source_sha256": "6140c31814d66dd123ec059785c8e86367b2ebd2ba5ab73f4249527f489739e6",
+      "target_note": "01 Knowledge/Cryptography/Public Key Infrastructure and X.509.md",
+      "source_note": "Source - 2024_Лекция 22",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "debb50b17e3f37dcb3eae0fef4472e85b9bd8f7c66a38a43eeb42e51b778858c",
+      "page": 8,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "QKD - General Flow - Lecture 23 p12.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 23.pdf",
+      "source_sha256": "6bd132fc235870648c2fe6668c651d0ebba7c682ebaa8dea6f60387bf7227806",
+      "target_note": "01 Knowledge/Cryptography/Quantum Key Distribution.md",
+      "source_note": "Source - 2024_Лекция 23",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "72c17bd4455997b9f02fcadf0058da8bbe11e04d97e983e0ebda09efe6ccfaac",
+      "page": 12,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "BB84 - Protocol Flow - Lecture 23 p18.png",
+      "kind": "pdf-page",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/PDF/2024_Лекция 23.pdf",
+      "source_sha256": "6bd132fc235870648c2fe6668c651d0ebba7c682ebaa8dea6f60387bf7227806",
+      "target_note": "01 Knowledge/Cryptography/BB84.md",
+      "source_note": "Source - 2024_Лекция 23",
+      "width": 2480,
+      "height": 1185,
+      "output_sha256": "467353bb1896c9868fd064b0400a92120722576e46e3307b1eec1a2184219b4b",
+      "page": 18,
+      "crop_fraction": [
+        0.035,
+        0.155,
+        0.965,
+        0.945
+      ]
+    },
+    {
+      "output": "Blockchain - Merkle Proof - Topic 2 p068-069.png",
+      "kind": "docx-media",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №2 Блокчейн(1).docx",
+      "source_sha256": "370027c587b7c0fa5add01b025258e34a0407e4f6d481c2e190beb03896b68e7",
+      "target_note": "01 Knowledge/Computer Science/Blockchain Cryptography.md",
+      "source_note": "Source - Тема №2 Блокчейн(1)",
+      "width": 450,
+      "height": 286,
+      "output_sha256": "9417dd52a15f13df69aae6af4f17838e7e6032cc013adbdada2a5816e1311f77",
+      "media": "image2.png",
+      "paragraphs": "68–69"
+    },
+    {
+      "output": "Blockchain Attacks - Competing Chains - Topic 2 p131-132.png",
+      "kind": "docx-media",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №2 Блокчейн(1).docx",
+      "source_sha256": "370027c587b7c0fa5add01b025258e34a0407e4f6d481c2e190beb03896b68e7",
+      "target_note": "01 Knowledge/Cybersecurity/Security Engineering/Blockchain Attacks.md",
+      "source_note": "Source - Тема №2 Блокчейн(1)",
+      "width": 2112,
+      "height": 438,
+      "output_sha256": "5d3794938e4bc5042e8ac3de62e00621de6f3da35ea7ab0e003ee18fbd5211c7",
+      "media": "image3.png",
+      "paragraphs": "131–132"
+    },
+    {
+      "output": "Block Cipher Design - Feistel Network - Topic 3 p097-098.png",
+      "kind": "docx-media",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №3 Алгоритмы(1).docx",
+      "source_sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+      "target_note": "01 Knowledge/Cryptography/Block Cipher Design.md",
+      "source_note": "Source - Тема №3 Алгоритмы(1)",
+      "width": 412,
+      "height": 424,
+      "output_sha256": "05ca7c7df22402848c2aa2f4448ad6d9d19dbb444184445205c1006fffe17e73",
+      "media": "image4.png",
+      "paragraphs": "97–98"
+    },
+    {
+      "output": "Block Cipher Design - SP Network - Topic 3 p097-099.png",
+      "kind": "docx-media",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №3 Алгоритмы(1).docx",
+      "source_sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+      "target_note": "01 Knowledge/Cryptography/Block Cipher Design.md",
+      "source_note": "Source - Тема №3 Алгоритмы(1)",
+      "width": 516,
+      "height": 483,
+      "output_sha256": "df2cea6e81697ffdb823d821110fd49ac4aac95fb31f4f0daa9657e2eccc61b6",
+      "media": "image5.png",
+      "paragraphs": "97–99"
+    },
+    {
+      "output": "GCM - Authenticated Encryption Layout - Topic 3 p158-159.png",
+      "kind": "docx-media",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №3 Алгоритмы(1).docx",
+      "source_sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+      "target_note": "01 Knowledge/Cryptography/Block Cipher Modes.md",
+      "source_note": "Source - Тема №3 Алгоритмы(1)",
+      "width": 592,
+      "height": 320,
+      "output_sha256": "15aa448b6b3a7c3725ab2aa915d257138929c674fc9263a3ac01929bfbc15df2",
+      "media": "image6.png",
+      "paragraphs": "158–159"
+    },
+    {
+      "output": "Hash Functions - Merkle-Damgard Construction - Topic 3 p193-194.png",
+      "kind": "docx-media",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №3 Алгоритмы(1).docx",
+      "source_sha256": "c3cf32542a6ecdf91c6ad24788f25e99ceb6c4e9be63edbb7e15faa418f02217",
+      "target_note": "01 Knowledge/Cryptography/Cryptographic Hash Functions.md",
+      "source_note": "Source - Тема №3 Алгоритмы(1)",
+      "width": 1920,
+      "height": 896,
+      "output_sha256": "759dad3c9cd8bbb0b1733599c42197a2174ff3cd8d3c39d167a54e0a7cd2447d",
+      "media": "image10.png",
+      "paragraphs": "193–194"
+    },
+    {
+      "output": "RNG - Quantum Entropy Pipeline - Topic 4 p122-124.png",
+      "kind": "docx-media",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №4 ГСЧ(1).docx",
+      "source_sha256": "92dbe54b71242022f6471721788d957bdb165cbd05867d7d4742ae28f62e9a3e",
+      "target_note": "01 Knowledge/Cryptography/Random Number Generation and Entropy.md",
+      "source_note": "Source - Тема №4 ГСЧ(1)",
+      "width": 938,
+      "height": 378,
+      "output_sha256": "65debbadd846ba314ebeaf4e4d540c5acec70a929b0c1cb433303d5c7ba5b3fd",
+      "media": "image8.png",
+      "paragraphs": "122–124"
+    },
+    {
+      "output": "Lattice Cryptography - Alternative Bases - Topic 7 p126-127.png",
+      "kind": "docx-media",
+      "source_path": "07 Sources/Courses/Криптографические методы защиты информации/Original/Тема №7 Постквантовая криптография(1).docx",
+      "source_sha256": "b544886df0c611db9634dff1d17983589c82ad480123deefbfca99d8b6c76a98",
+      "target_note": "01 Knowledge/Cryptography/Lattice-Based Cryptography.md",
+      "source_note": "Source - Тема №7 Постквантовая криптография(1)",
+      "width": 814,
+      "height": 610,
+      "output_sha256": "52d7deada0e94fce0dd34fa25e5db5749125b31d2f2ce2ca80ca25cfb2f97d0c",
+      "media": "image1.png",
+      "paragraphs": "126–127"
+    }
+  ]
+}

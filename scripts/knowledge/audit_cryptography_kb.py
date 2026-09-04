@@ -7,6 +7,7 @@ import hashlib
 import importlib.util
 import json
 import re
+import struct
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -17,6 +18,7 @@ COURSE_NAME = "Криптографические методы защиты ин
 COURSE = VAULT / "07 Sources" / "Courses" / COURSE_NAME
 DESKTOP = Path("/Users/mmmatiev/Desktop/крипта")
 KNOWLEDGE = VAULT / "01 Knowledge"
+VISUALS = VAULT / "90 Attachments" / "Cryptography" / "Course Visuals"
 
 ALLOWED_TYPES = {
     "concept", "attack", "vulnerability", "technique", "tool", "lab", "case",
@@ -95,6 +97,57 @@ def load_expected_titles() -> set[str]:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return set(module.ALIASES)
+
+
+def png_dimensions(path: Path) -> tuple[int, int]:
+    with path.open("rb") as stream:
+        header = stream.read(24)
+    if len(header) != 24 or header[:8] != b"\x89PNG\r\n\x1a\n":
+        fail(f"not a valid PNG: {path.relative_to(VAULT)}")
+    return struct.unpack(">II", header[16:24])
+
+
+def check_course_visuals() -> dict[str, int]:
+    manifest_path = VISUALS / "course-visuals-manifest.json"
+    if not manifest_path.is_file():
+        fail("missing course visuals manifest")
+    records = json.loads(manifest_path.read_text(encoding="utf-8")).get("visuals", [])
+    if len(records) != 19:
+        fail(f"expected 19 course visuals, got {len(records)}")
+    names = [record["output"] for record in records]
+    if len(set(names)) != len(names):
+        fail("duplicate course visual output name")
+    actual = sorted(path.name for path in VISUALS.glob("*.png"))
+    if sorted(names) != actual:
+        fail("course visual file set does not match manifest")
+
+    target_notes: set[str] = set()
+    kinds = Counter()
+    for record in records:
+        output = VISUALS / record["output"]
+        source = VAULT / record["source_path"]
+        target = VAULT / record["target_note"]
+        if not source.is_file() or sha256(source) != record["source_sha256"]:
+            fail(f"course visual source mismatch: {record['output']}")
+        if not output.is_file() or sha256(output) != record["output_sha256"]:
+            fail(f"course visual output mismatch: {record['output']}")
+        width, height = png_dimensions(output)
+        if [width, height] != [record["width"], record["height"]]:
+            fail(f"course visual dimensions mismatch: {record['output']}")
+        if width < 400 or height < 280:
+            fail(f"course visual is too small: {record['output']} ({width}x{height})")
+        if not target.is_file():
+            fail(f"missing course visual target note: {record['target_note']}")
+        target_text = target.read_text(encoding="utf-8")
+        embed = f"![[90 Attachments/Cryptography/Course Visuals/{record['output']}]]"
+        source_link = f"[[{record['source_note']}]]"
+        if embed not in target_text or source_link not in target_text:
+            fail(f"course visual is not fully attributed in {record['target_note']}")
+        target_notes.add(record["target_note"])
+        kinds[record["kind"]] += 1
+    if kinds != {"pdf-page": 11, "docx-media": 8}:
+        fail(f"unexpected course visual kinds: {dict(kinds)}")
+    return {"course_visuals": len(records), "notes_with_course_visuals": len(target_notes)}
 
 
 def check_sources() -> dict[str, int]:
@@ -261,8 +314,11 @@ def check_notes() -> dict[str, int]:
         for raw_target in re.findall(r"\[\[([^]]+)\]\]", body):
             target = raw_target.split("|", 1)[0].split("#", 1)[0]
             if "/" in target:
-                candidate = VAULT / (target if target.endswith(".md") else target + ".md")
-                if not candidate.exists():
+                candidate = VAULT / target
+                candidates = [candidate]
+                if not candidate.suffix:
+                    candidates.append(candidate.with_suffix(".md"))
+                if not any(item.exists() for item in candidates):
                     fail(f"unresolved path link in {path}: {raw_target}")
             elif target not in canonical:
                 fail(f"unresolved wikilink in {path}: {raw_target}")
@@ -280,9 +336,10 @@ def check_notes() -> dict[str, int]:
 
 def main() -> int:
     source_stats = check_sources()
+    visual_stats = check_course_visuals()
     vault_stats = check_vault_integrity()
     note_stats = check_notes()
-    summary = {**source_stats, **vault_stats, **note_stats, "result": "ok"}
+    summary = {**source_stats, **visual_stats, **vault_stats, **note_stats, "result": "ok"}
     print(json.dumps(summary, ensure_ascii=False, sort_keys=True))
     return 0
 

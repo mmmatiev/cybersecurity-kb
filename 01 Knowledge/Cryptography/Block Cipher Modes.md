@@ -34,6 +34,12 @@ flowchart LR
     M --> C[Шифртекст]
 ```
 
+## Иллюстрация из курса
+
+![[90 Attachments/Cryptography/Course Visuals/GCM - Authenticated Encryption Layout - Topic 3 p158-159.png]]
+
+*Что смотреть:* GCM одновременно выдаёт ciphertext и authentication tag; header и sequence number показаны как дополнительные аутентифицируемые данные. *Источник:* [[Source - Тема №3 Алгоритмы(1)]], абз. 158–159, embedded media `image6.png`.
+
 ## Практический разбор
 
 Выбор режима начинают с нужных свойств. Для конфиденциальности и целостности предпочтителен единый authenticated-encryption contract; при использовании раздельных схем необходимо точно задать порядок шифрования и MAC.

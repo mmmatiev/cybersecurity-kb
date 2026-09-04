@@ -196,6 +196,68 @@ flowchart TD
 ```""",
 }
 
+COURSE_VISUALS = {
+    "Advanced Encryption Standard": """![[90 Attachments/Cryptography/Course Visuals/AES - Round Transformations - Lecture 16 p06.png]]
+
+*Что смотреть:* состояние AES представлено матрицей байтов, а раунд последовательно применяет SubBytes, ShiftRows, MixColumns и AddRoundKey. *Источник:* [[Source - 2024_Лекция 16]], стр. 6.""",
+    "BB84": """![[90 Attachments/Cryptography/Course Visuals/BB84 - Protocol Flow - Lecture 23 p18.png]]
+
+*Что смотреть:* после передачи квантовых состояний в ключ попадают только позиции, где базисы Алисы и Боба совпали. *Источник:* [[Source - 2024_Лекция 23]], стр. 18.""",
+    "Block Cipher Design": """![[90 Attachments/Cryptography/Course Visuals/Block Cipher Design - Feistel Network - Topic 3 p097-098.png]]
+
+*Сеть Фейстеля:* за раунд функция преобразует одну половину, затем половины меняются ролями. *Источник:* [[Source - Тема №3 Алгоритмы(1)]], абз. 97–98, embedded media `image4.png`.
+
+![[90 Attachments/Cryptography/Course Visuals/Block Cipher Design - SP Network - Topic 3 p097-099.png]]
+
+*SP-network:* слой подстановок создаёт нелинейность, перестановочный слой распространяет изменения, а ключ смешивается с состоянием. *Источник:* [[Source - Тема №3 Алгоритмы(1)]], абз. 97–99, embedded media `image5.png`.""",
+    "Block Cipher Modes": """![[90 Attachments/Cryptography/Course Visuals/GCM - Authenticated Encryption Layout - Topic 3 p158-159.png]]
+
+*Что смотреть:* GCM одновременно выдаёт ciphertext и authentication tag; header и sequence number показаны как дополнительные аутентифицируемые данные. *Источник:* [[Source - Тема №3 Алгоритмы(1)]], абз. 158–159, embedded media `image6.png`.""",
+    "Blockchain Attacks": """![[90 Attachments/Cryptography/Course Visuals/Blockchain Attacks - Competing Chains - Topic 2 p131-132.png]]
+
+*Что смотреть:* атакующий скрытно развивает конкурирующую ветвь и пытается сделать её длиннее публичной цепочки. *Источник:* [[Source - Тема №2 Блокчейн(1)]], абз. 131–132, embedded media `image3.png`.""",
+    "Blockchain Cryptography": """![[90 Attachments/Cryptography/Course Visuals/Blockchain - Merkle Proof - Topic 2 p068-069.png]]
+
+*Что смотреть:* для проверки листа L3 достаточно самого листа и соседних хэшей вдоль пути к Top Hash, а не всего дерева. *Источник:* [[Source - Тема №2 Блокчейн(1)]], абз. 68–69, embedded media `image2.png`.""",
+    "Cryptographic Hash Functions": """![[90 Attachments/Cryptography/Course Visuals/Hash Functions - Merkle-Damgard Construction - Topic 3 p193-194.png]]
+
+*Что смотреть:* сообщение дополняется и разбивается на блоки, после чего функция сжатия последовательно обновляет chaining value от IV до итогового hash. *Источник:* [[Source - Тема №3 Алгоритмы(1)]], абз. 193–194, embedded media `image10.png`.""",
+    "DES and Triple DES": """![[90 Attachments/Cryptography/Course Visuals/DES - Feistel Round - Lecture 16 p03.png]]
+
+*Что смотреть:* правая половина и раундовый ключ поступают в функцию $F$, её результат складывается с левой половиной, затем ветви меняются местами. *Источник:* [[Source - 2024_Лекция 16]], стр. 3.""",
+    "Diffie-Hellman Key Exchange": """![[90 Attachments/Cryptography/Course Visuals/Diffie-Hellman - Key Agreement - Lecture 17-18 p07.png]]
+
+*Что смотреть:* стороны обмениваются $g^x$ и $g^y$, но независимо приходят к одному значению $g^{xy}$. *Источник:* [[Source - 2024_Лекция 17-18]], стр. 7.""",
+    "Digital Signatures": """![[90 Attachments/Cryptography/Course Visuals/Digital Signatures - RSA Flow - Lecture 20 p13.png]]
+
+*Что смотреть:* схема курса показывает преобразование сообщения закрытой экспонентой и проверку открытой экспонентой; в реальной конструкции подписывается подготовленное представление сообщения. *Источник:* [[Source - 2024_Лекция 20]], стр. 13.""",
+    "Elliptic Curves": """![[90 Attachments/Cryptography/Course Visuals/ECC - Point Addition - Lecture 08 p05.png]]
+
+*Что смотреть:* прямая через $P$ и $Q$ пересекает кривую в третьей точке; отражение этой точки относительно оси $x$ даёт $P+Q$. *Источник:* [[Source - 2024_Лекция 08]], стр. 5.""",
+    "Lattice-Based Cryptography": """![[90 Attachments/Cryptography/Course Visuals/Lattice Cryptography - Alternative Bases - Topic 7 p126-127.png]]
+
+*Что смотреть:* пары $u_1,u_2$ и $v_1,v_2$ выглядят по-разному, но порождают одну и ту же двумерную решётку. *Источник:* [[Source - Тема №7 Постквантовая криптография(1)]], абз. 126–127, embedded media `image1.png`.""",
+    "Man-in-the-Middle Attack": """![[90 Attachments/Cryptography/Course Visuals/MITM - Diffie-Hellman - Lecture 17-18 p08.png]]
+
+*Что смотреть:* посредник заменяет публичные вклады и устанавливает отдельный секрет с каждой стороной; равенство ключей внутри каждой пары не доказывает личность партнёра. *Источник:* [[Source - 2024_Лекция 17-18]], стр. 8.""",
+    "Message Authentication Codes": """![[90 Attachments/Cryptography/Course Visuals/MAC - Integrity and Authenticity - Lecture 20 p04.png]]
+
+*Что смотреть:* без знания общего ключа посредник может изменить сообщение, но не способен сформировать корректный $h_K(M)$ для подмены. *Источник:* [[Source - 2024_Лекция 20]], стр. 4.""",
+    "Public Key Infrastructure and X.509": """![[90 Attachments/Cryptography/Course Visuals/PKI - Certification Authority - Lecture 22 p06.png]]
+
+*Центр сертификации:* подпись CA связывает идентификатор субъекта и его открытый ключ в цифровом сертификате. *Источник:* [[Source - 2024_Лекция 22]], стр. 6.
+
+![[90 Attachments/Cryptography/Course Visuals/PKI - Certificate Chain - Lecture 22 p08.png]]
+
+*Цепочка доверия:* проверка сертификата проходит через промежуточные центры к доверенному корню. *Источник:* [[Source - 2024_Лекция 22]], стр. 8.""",
+    "Quantum Key Distribution": """![[90 Attachments/Cryptography/Course Visuals/QKD - General Flow - Lecture 23 p12.png]]
+
+*Что смотреть:* quantum channel используется для подготовки и измерения состояний, а sifting, error correction и privacy amplification выполняются с обменом по classical channel. *Источник:* [[Source - 2024_Лекция 23]], стр. 12.""",
+    "Random Number Generation and Entropy": """![[90 Attachments/Cryptography/Course Visuals/RNG - Quantum Entropy Pipeline - Topic 4 p122-124.png]]
+
+*Что смотреть:* физический источник даёт raw entropy, health tests контролируют его состояние, а DRBG формирует выходной поток для потребителя. *Источник:* [[Source - Тема №4 ГСЧ(1)]], абз. 122–124, embedded media `image8.png`.""",
+}
+
 
 def add_frontmatter(text: str, title: str) -> str:
     match = re.match(r"\A---\n(.*?)\n---\n", text, re.S)
@@ -245,6 +307,10 @@ def enrich(path: Path) -> None:
         text = text.replace(marker, block + marker, 1)
     if title in DIAGRAMS and "## Схема" not in text:
         block = f"## Схема\n\n{DIAGRAMS[title]}\n\n"
+        marker = "## Практический разбор\n"
+        text = text.replace(marker, block + marker, 1)
+    if title in COURSE_VISUALS and "## Иллюстрация из курса" not in text:
+        block = f"## Иллюстрация из курса\n\n{COURSE_VISUALS[title]}\n\n"
         marker = "## Практический разбор\n"
         text = text.replace(marker, block + marker, 1)
     if "## Самопроверка" not in text:
