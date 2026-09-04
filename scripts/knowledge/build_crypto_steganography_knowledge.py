@@ -8,6 +8,12 @@ from dataclasses import dataclass
 from pathlib import Path
 import re
 
+from crypto_steganography_enrichment import (
+    DETAILS,
+    EXTERNAL_SOURCES,
+    Enrichment,
+)
+
 
 COURSE = "Основы криптографии и стеганографии"
 SOURCE_PREFIX = "Source - Основы криптографии и стеганографии - Лекция"
@@ -336,6 +342,7 @@ class Note:
     status: str = "learning"
     visuals: tuple[tuple[str, str, int, int], ...] = ()
     extra: str = ""
+    enrichment: Enrichment | None = None
 
     @property
     def path(self) -> Path:
@@ -346,7 +353,11 @@ NOTES: list[Note] = []
 
 
 def add(**kwargs: object) -> None:
-    NOTES.append(Note(**kwargs))
+    title = str(kwargs["title"])
+    detail = DETAILS.get(title)
+    if detail is None:
+        raise RuntimeError(f"Missing enrichment for {title}")
+    NOTES.append(Note(**kwargs, enrichment=detail))
 
 
 def source(number: int) -> str:
@@ -354,6 +365,14 @@ def source(number: int) -> str:
 
 
 def render(note: Note) -> str:
+    if note.enrichment is None:
+        raise RuntimeError(f"Missing enrichment for {note.title}")
+    detail = note.enrichment
+    if len(detail.formula_notes) != len(note.formulas):
+        raise RuntimeError(
+            f"Formula explanation mismatch for {note.title}: "
+            f"{len(detail.formula_notes)} != {len(note.formulas)}"
+        )
     title = canonical_title(note.title)
     yaml = ["---", f"type: {note.note_type}", "area:"]
     yaml.extend(f"  - {value}" for value in note.area)
@@ -375,18 +394,88 @@ def render(note: Note) -> str:
     yaml.append("---")
 
     summary = localize_prose(note.summary, introduce=note.title)
-    mechanism = "\n".join(f"- {localize_prose(line)}" for line in note.mechanism)
-    formulas = "\n\n".join(f"$$\n{formula}\n$$" for formula in note.formulas)
+    mechanism = "\n".join(
+        f"{index}. {localize_prose(line)}"
+        for index, line in enumerate(note.mechanism, start=1)
+    )
+    formulas = "\n\n".join(
+        f"$$\n{formula}\n$$\n\n**Обозначения и смысл.** {localize_prose(explanation)}"
+        for formula, explanation in zip(note.formulas, detail.formula_notes)
+    )
     example = localize_prose(note.example)
-    limitations = "\n".join(f"- {localize_prose(line)}" for line in note.limitations)
+    limitations = "\n".join(
+        f"- {localize_prose(line)}" for line in (*note.limitations, *detail.mistakes)
+    )
     links = "\n".join(f"- [[{canonical_title(link)}]]" for link in note.links)
+    prerequisites = "\n".join(
+        f"- [[{canonical_title(link)}]]" for link in detail.prerequisites
+    ) or "- Специальные предварительные знания не требуются."
+    terms = "\n".join(
+        f"| {term} | {definition} |" for term, definition in detail.terms
+    )
+    example_steps = "\n".join(
+        f"{index}. {localize_prose(step)}"
+        for index, step in enumerate(detail.example_steps, start=1)
+    )
+    verification = "\n".join(
+        f"- {localize_prose(item)}" for item in detail.verification
+    )
+    takeaways = "\n".join(
+        f"- {localize_prose(item)}" for item in detail.takeaways
+    )
     questions = "\n".join(
         f"{index}. {question}"
         for index, question in enumerate(SELF_CHECKS[note.title], start=1)
     )
-    sources = "\n".join(
+    answers = "\n>\n".join(
+        f"> {index}. {localize_prose(answer)}"
+        for index, answer in enumerate(detail.answers, start=1)
+    )
+    course_sources = "\n".join(
         f"- {source(number)}, стр. {pages}." for number, pages in note.sources
     )
+    external_inline = ", ".join(
+        f"[{EXTERNAL_SOURCES[key].title}]({EXTERNAL_SOURCES[key].url})"
+        for key in detail.source_keys
+    )
+    external_sources = "\n".join(
+        f"- [{EXTERNAL_SOURCES[key].title}]({EXTERNAL_SOURCES[key].url}) — "
+        f"{EXTERNAL_SOURCES[key].authors}, {EXTERNAL_SOURCES[key].year}; "
+        f"{EXTERNAL_SOURCES[key].kind}."
+        for key in detail.source_keys
+    )
+    deep_dive = ""
+    if detail.deep_dive:
+        deep_dive = f"\n\n## Дополнительное понимание\n\n{localize_prose(detail.deep_dive)}"
+    study_notes = f"\n\n## Пояснение и границы применения\n\n{localize_prose(detail.study_notes)}"
+    depth_extension = ""
+    if detail.depth == "standard":
+        depth_extension = f'''\n\n## Рабочий разбор
+
+Разберите тему как небольшую проверяемую модель. Сначала дайте собственное определение понятия «{detail.terms[0][0]}» и отделите его от «{detail.terms[1][0]}». Затем выпишите, какие данные известны до начала работы, что считается результатом и какое условие делает преобразование корректным. Такой конспект помогает заметить скрытые допущения раньше вычислений.
+
+После ручного примера измените ровно один параметр или входное значение. Предскажите результат до пересчёта, повторите процедуру и объясните расхождение, если оно появилось. Контрольный критерий: {localize_prose(detail.verification[-1])} Отдельно проверьте ошибочный вариант «{localize_prose(detail.mistakes[-1])}». В итоге должно быть понятно не только как получить ответ, но и где заканчивается применимость метода.'''
+    elif detail.depth == "deep" and note.title != "Neural Network Steganalysis":
+        depth_extension = f'''\n\n## Рабочий разбор
+
+Для практической проверки разделите систему на источник данных, преобразование, канал и решающее правило. Зафиксируйте единицы измерения, диапазоны и точность промежуточных величин. Термин «{detail.terms[0][0]}» должен иметь одно операционное определение, а «{detail.terms[-1][0]}» — измеримый критерий. Это не формальность: изменение округления, порядка обхода или представления данных способно дать другой результат при той же формуле.
+
+Проведите три опыта. Первый подтверждает разобранный пример на малых данных, где все шаги можно проверить вручную. Второй меняет один параметр и показывает ожидаемый компромисс качества, устойчивости или сложности. Третий имитирует ошибку «{localize_prose(detail.mistakes[-1])}» и должен завершиться контролируемым отказом либо заметным ухудшением метрики. Для каждого опыта сохраните вход, параметры, промежуточные значения и итог.
+
+Вывод формулируйте только в границах испытания. Проверка «{localize_prose(detail.verification[-1])}» показывает, переносится ли наблюдение за пределы одного примера. Если результат меняется при новом источнике данных или другой цепочке обработки, это ограничение метода нужно записать явно, а не скрывать усреднённой оценкой.'''
+    elif detail.depth == "deep":
+        depth_extension = f'''\n\n## Рабочий разбор
+
+Перед сравнением архитектур зафиксируйте источник данных, алгоритм встраивания, объём вложения и разбиение по исходным изображениям. Затем воспроизведите один результат и выполните независимую проверку: {localize_prose(detail.verification[-1])} Так становится видно, обнаруживает ли модель стегосигнал или побочную особенность набора.'''
+    mini_practice = f'''\n\n## Мини-практика
+
+1. Воспроизведите разобранный пример без подсказок и запишите все промежуточные значения.
+2. Намеренно смоделируйте типичную ошибку: {localize_prose(detail.mistakes[0])}
+3. Проверьте исправленный результат по критерию: {localize_prose(detail.verification[0])}
+4. Объясните своими словами главный вывод: {localize_prose(detail.takeaways[0])}'''
+    diagram = ""
+    if detail.diagram:
+        diagram = f"\n\n## Схема\n\n```mermaid\n{detail.diagram}\n```"
     visuals = ""
     if note.visuals:
         blocks = []
@@ -399,8 +488,25 @@ def render(note: Note) -> str:
         visuals = "\n\n## Иллюстрации из курса\n\n" + "\n\n".join(blocks)
 
     extra = f"\n\n{localize_prose(note.extra.strip())}" if note.extra.strip() else ""
+    foundations = f'''## Что нужно знать заранее
+
+{prerequisites}
+
+## Основные понятия
+
+| Термин | Простое объяснение |
+|---|---|
+{terms}'''
     if note.note_type == "concept":
-        middle = f'''## Основные идеи
+        middle = f'''## Зачем это нужно
+
+{localize_prose(detail.purpose)} Подтверждающие материалы: {external_inline}.
+
+{foundations}
+
+## Как это устроено
+
+{localize_prose(detail.intuition)}
 
 {mechanism}
 
@@ -408,31 +514,63 @@ def render(note: Note) -> str:
 
 {formulas}
 
-## Пример из курса
+## Разобранный пример
 
-{example}{visuals}{extra}
+{example}
 
-## Ограничения
+{example_steps}{visuals}{diagram}{deep_dive}{study_notes}{depth_extension}{mini_practice}{extra}
+
+## Ограничения и типичные ошибки
 
 {limitations}'''
     elif note.note_type == "technique":
-        middle = f'''## Как работает
+        middle = f'''## Где применяется
+
+{localize_prose(detail.purpose)} Подтверждающие материалы: {external_inline}.
+
+## Что нужно знать заранее
+
+{prerequisites}
+
+## Входные данные и результат
+
+{localize_prose(detail.intuition)}
+
+### Основные понятия
+
+| Термин | Простое объяснение |
+|---|---|
+{terms}
+
+## Пошаговый алгоритм
 
 {mechanism}
 
-## Алгоритм и критерии
+## Формулы и обозначения
 
 {formulas}
 
 ## Разбор примера
 
-{example}{visuals}{extra}
+{example}
 
-## Ограничения
+{example_steps}{visuals}{diagram}{deep_dive}{study_notes}{depth_extension}{mini_practice}{extra}
+
+## Как проверить результат
+
+{verification}
+
+## Ограничения и ошибки
 
 {limitations}'''
     elif note.note_type == "attack":
-        middle = f'''## Как проходит атака
+        middle = f'''## Предпосылки
+
+{localize_prose(detail.purpose)} Подтверждающие материалы: {external_inline}.
+
+{foundations}
+
+## Как проходит атака
 
 {mechanism}
 
@@ -440,9 +578,17 @@ def render(note: Note) -> str:
 
 {formulas}
 
-{example}{visuals}{extra}
+## Разбор сценария
+
+{example}
+
+{example_steps}{visuals}{diagram}{deep_dive}{study_notes}{depth_extension}{mini_practice}{extra}
 
 ## Противодействие
+
+{verification}
+
+## Ограничения анализа и ошибки
 
 {limitations}'''
     else:
@@ -457,6 +603,10 @@ def render(note: Note) -> str:
 
 {middle}
 
+## Что запомнить
+
+{takeaways}
+
 ## Связи
 
 {links}
@@ -465,9 +615,18 @@ def render(note: Note) -> str:
 
 {questions}
 
-## Источники курса
+> [!answer]- Ответы
+{answers}
 
-{sources}
+## Источники
+
+### Материалы курса
+
+{course_sources}
+
+### Дополнительные источники
+
+{external_sources}
 '''
 
 
@@ -966,7 +1125,7 @@ add(
     visuals=(("OCS - GNCNN - L14 p26.png", "архитектуру GNCNN и условия приведённого эксперимента, а не только процент ошибки.", 14, 26), ("OCS - PNet - L14 p28.png", "зависимость результата PNet от совпадения метода встраивания при обучении и проверке.", 14, 28)),
     extra="""## Датированный материал курса
 
-Перечень адаптивных методов встраивания и результаты трёх CNN сохранены для понимания эволюции подходов. Перед выбором актуальной архитектуры или сравнением качества требуется новая проверка по современным источникам; внешняя проверка в рамках этой интеграции намеренно не выполнялась.""",
+Перечень адаптивных методов встраивания и результаты трёх CNN сохранены для понимания эволюции подходов. Внешние первичные публикации уточняют общую методику проверки, но не превращают несопоставимые результаты курса в рейтинг современных архитектур.""",
 )
 
 
@@ -986,46 +1145,46 @@ aliases:
 
 ## Как изучать
 
-1. [[Сокрытие информации]] → [[Цифровая стеганография]] и [[Цифровые водяные знаки]].
-2. [[Основы цифровых изображений]] → [[Цветовые модели изображений]] → [[Форматы цифровых изображений]].
-3. [[Стеганография в пространственной области]] → [[LSB-стеганография]] → адаптивные методы.
-4. [[Частотные преобразования изображений]] → [[Стеганография в частотной области]] → [[Стеганография в JPEG]].
-5. [[Стегоанализ]] → визуальные, статистические и обучаемые детекторы.
+1. [[Сокрытие информации]] задаёт общую модель, после чего [[Цифровая стеганография]] и [[Цифровые водяные знаки]] разделяют цели тайной связи и маркирования.
+2. [[Основы цифровых изображений]] → [[Цветовые модели изображений]] → [[Форматы цифровых изображений]] объясняют, какие данные фактически изменяет алгоритм.
+3. [[Стеганография в пространственной области]] → [[LSB-стеганография]] → адаптивные методы показывают путь от простого изменения бита к выбору позиции по свойствам изображения.
+4. [[Частотные преобразования изображений]] → [[Стеганография в частотной области]] → [[Стеганография в JPEG]] переносят встраивание к коэффициентам и реальной цепочке кодека.
+5. [[Стегоанализ]] связывает визуальные, статистические и обучаемые детекторы и объясняет, как честно проверять обнаружимость.
 
 ## Основы и метрики
 
-- [[Сокрытие информации]]
-- [[Цифровая стеганография]]
-- [[Цифровые водяные знаки]] → [[Атаки на цифровые водяные знаки]]
-- [[Метрики качества стеганографии]]
-- [[Основы цифровых изображений]], [[Цветовые модели изображений]], [[Сжатие изображений в JPEG]]
+- [[Сокрытие информации]] — цели, участники и общий компромисс системы.
+- [[Цифровая стеганография]] — скрытый канал, ключ и модель наблюдателя.
+- [[Цифровые водяные знаки]] → [[Атаки на цифровые водяные знаки]] — маркирование и проверка устойчивости.
+- [[Метрики качества стеганографии]] — MSE, PSNR, BER, NCC и ошибки детектора.
+- [[Основы цифровых изображений]], [[Цветовые модели изображений]], [[Сжатие изображений в JPEG]] — необходимая техническая основа.
 
 ## Встраивание в пространственной области
 
 - [[Стеганография в пространственной области]]
-  - [[LSB-стеганография]]
-  - [[Метод ±1 в стеганографии]]
-  - [[Модуляция индекса квантования (QIM)]]
-  - [[Метод разности значений пикселей (PVD)]]
-  - [[Интерполяция по среднему значению соседних пикселей (NMI)]]
+  - [[LSB-стеганография]] — прямая замена младшего бита.
+  - [[Метод ±1 в стеганографии]] — согласование бита случайным изменением значения.
+  - [[Модуляция индекса квантования (QIM)]] — выбор одной из решёток квантования.
+  - [[Метод разности значений пикселей (PVD)]] — ёмкость по локальному контрасту.
+  - [[Интерполяция по среднему значению соседних пикселей (NMI)]] — вложение в интерполированные значения.
 
 ## Встраивание в частотной области и JPEG
 
 - [[Стеганография в частотной области]]
-  - [[Метод Коха—Жао]]
-  - [[Модуляция индекса квантования (QIM)]]
+  - [[Метод Коха—Жао]] — кодирование сравнением пары коэффициентов.
+  - [[Модуляция индекса квантования (QIM)]] — перенос решёток в пространство коэффициентов.
 - [[Стеганография в JPEG]]
-  - [[JSteg]]
-  - [[Методы F3 и F4 в JPEG]]
-  - [[Метод F5 в JPEG]]
+  - [[JSteg]] — последовательная LSB-подобная модификация.
+  - [[Методы F3 и F4 в JPEG]] — движение коэффициентов к нулю и проблема обнуления.
+  - [[Метод F5 в JPEG]] — перестановка и матричное кодирование.
 
 ## Стегоанализ
 
 - [[Стегоанализ]]
-  - [[Визуальный стегоанализ и анализ битовых плоскостей]]
-  - [[Статистический стегоанализ]]
-  - [[Машинное обучение в стегоанализе]]
-  - [[Нейросетевой стегоанализ]] (`status: review` для результатов курса 2024 года)
+  - [[Визуальный стегоанализ и анализ битовых плоскостей]] — быстрый поиск явных структур.
+  - [[Статистический стегоанализ]] — проверка распределений и зависимостей.
+  - [[Машинное обучение в стегоанализе]] — ручные признаки и классификатор.
+  - [[Нейросетевой стегоанализ]] — обучение признаков вместе с моделью; результаты курса 2024 года имеют `status: review`.
 
 ## Формальная модель
 

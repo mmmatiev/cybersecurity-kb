@@ -13,7 +13,8 @@ from pathlib import Path
 
 import pymupdf
 
-from build_crypto_steganography_knowledge import SELF_CHECKS, TITLE_MAP
+from build_crypto_steganography_knowledge import SELF_CHECKS, TITLE_MAP, localize_prose
+from crypto_steganography_enrichment import DETAILS, EXTERNAL_SOURCES
 
 
 VAULT = Path(__file__).resolve().parents[2]
@@ -25,6 +26,7 @@ KNOWLEDGE = VAULT / "01 Knowledge"
 GENERATED_MARKER = "<!-- generated: crypto-stego-course -->"
 UPDATE_START = "<!-- crypto-stego-course:start -->"
 SOURCE_PREFIX = "Source - Основы криптографии и стеганографии - Лекция"
+EXTERNAL_NOTE = "Source - Дополнительные материалы по криптографии и стеганографии"
 
 CLASSICAL_KEYS = {
     "Classical Cryptography", "Substitution Ciphers", "Polybius Square", "Affine Cipher",
@@ -52,12 +54,27 @@ CLASSICAL = {TITLE_MAP[title] for title in CLASSICAL_KEYS}
 IMAGE_FOUNDATIONS = {TITLE_MAP[title] for title in IMAGE_FOUNDATION_KEYS}
 STEGANOGRAPHY = {TITLE_MAP[title] for title in STEGANOGRAPHY_KEYS}
 EXPECTED_NOTES = CLASSICAL | IMAGE_FOUNDATIONS | STEGANOGRAPHY
-COMMON_HEADINGS = {"Связи", "Самопроверка", "Источники курса"}
-TYPE_HEADINGS = {
-    "concept": {"Кратко", "Основные идеи", "Формальная модель", "Пример из курса", "Ограничения"},
-    "technique": {"Кратко", "Как работает", "Алгоритм и критерии", "Разбор примера", "Ограничения"},
-    "attack": {"Цель атаки", "Как проходит атака", "Последствия и признаки", "Противодействие"},
+COMMON_HEADINGS = {
+    "Что нужно знать заранее", "Пояснение и границы применения", "Мини-практика",
+    "Что запомнить", "Связи", "Самопроверка", "Источники",
 }
+TYPE_HEADINGS = {
+    "concept": {
+        "Кратко", "Зачем это нужно", "Основные понятия", "Как это устроено",
+        "Формальная модель", "Разобранный пример", "Ограничения и типичные ошибки",
+    },
+    "technique": {
+        "Кратко", "Где применяется", "Входные данные и результат",
+        "Пошаговый алгоритм", "Формулы и обозначения", "Разбор примера",
+        "Как проверить результат", "Ограничения и ошибки",
+    },
+    "attack": {
+        "Цель атаки", "Предпосылки", "Основные понятия", "Как проходит атака",
+        "Последствия и признаки", "Разбор сценария", "Противодействие",
+        "Ограничения анализа и ошибки",
+    },
+}
+WORD_BOUNDS = {"compact": (400, 600), "standard": (600, 850), "deep": (850, 1100)}
 ALLOWED_TYPES = {"concept", "attack", "technique", "moc"}
 ALLOWED_AREAS = {"Computer Science", "Cryptography", "Cybersecurity", "AI & ML"}
 ALLOWED_SECURITY = {"Steganography", "DFIR", "Security Engineering"}
@@ -67,8 +84,9 @@ PHONE_RE = re.compile(
     r"\d{3}[\s\-]{0,2}\d{2}[\s\-]{0,2}\d{2}(?!\d)"
 )
 BANNED_PROSE_RE = re.compile(
-    r"\b(?:embedding|payload|pipeline|padding|shrinkage|foundations?|workstream)\b"
-    r"|feature engineering|false positive|cover/stego|pairs-of-values|робаст\w*|ресэмпл\w*",
+    r"\b(?:embedding|payload|pipeline|padding|shrinkage|foundations?|workstream|targeted|baseline|accuracy|preprocessing|saliency)\b"
+    r"|feature engineering|false positive|confusion matrix|cover/stego|pairs-of-values|робаст\w*|ресэмпл\w*"
+    r"|разруш\(req\)|помRect",
     re.I,
 )
 
@@ -111,6 +129,28 @@ def frontmatter(text: str) -> tuple[dict[str, object], str]:
             index += 1
         data[key] = values
     return data, text[match.end():]
+
+
+def study_word_count(body: str) -> int:
+    """Count explanatory prose before navigation, excluding embeds and link syntax."""
+    body = body.split("\n## Связи\n", 1)[0]
+    body = re.sub(r"```.*?```", " ", body, flags=re.S)
+    body = re.sub(r"!\[\[[^\n]+", " ", body)
+    body = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", body)
+    body = re.sub(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]", r"\1", body)
+    body = re.sub(r"(?m)^#+\s+.*$", " ", body)
+    return len(re.findall(r"[A-Za-zА-Яа-яЁё0-9]+(?:[-—][A-Za-zА-Яа-яЁё0-9]+)*", body))
+
+
+def long_paragraphs(body: str) -> list[str]:
+    paragraphs: list[str] = []
+    for paragraph in re.split(r"\n\s*\n", body):
+        cleaned = re.sub(r"!?(?:\[\[[^]]+\]\]|\[[^]]+\]\([^)]*\))", " ", paragraph)
+        cleaned = re.sub(r"[`*_>#|$]", " ", cleaned)
+        cleaned = re.sub(r"\s+", " ", cleaned).strip().casefold()
+        if len(cleaned) >= 220 and not cleaned.startswith("обозначения и смысл"):
+            paragraphs.append(cleaned)
+    return paragraphs
 
 
 def png_dimensions(path: Path) -> tuple[int, int]:
@@ -196,14 +236,26 @@ def check_sources() -> dict[str, object]:
     manifests = list((COURSE / "Processed").glob("*/manifest.json"))
     extracts = list((COURSE / "Processed").glob("*/extracted-text.md"))
     source_notes = list((COURSE / "Source Notes").glob("Source - *.md"))
+    lecture_notes = list((COURSE / "Source Notes").glob(f"{SOURCE_PREFIX} *.md"))
+    bibliography = COURSE / "Source Notes" / f"{EXTERNAL_NOTE}.md"
     course_note = COURSE / f"Course - {COURSE_NAME}.md"
-    if tuple(map(len, (pdfs, manifests, extracts, source_notes))) != (14, 14, 14, 14):
+    if tuple(map(len, (pdfs, manifests, extracts, lecture_notes, source_notes))) != (14, 14, 14, 14, 15):
         fail("course file count mismatch")
-    if not course_note.is_file():
-        fail("missing course source note")
+    if not course_note.is_file() or not bibliography.is_file():
+        fail("missing course note or external bibliography")
+    bibliography_text = bibliography.read_text(encoding="utf-8")
+    for source in EXTERNAL_SOURCES.values():
+        if source.url not in bibliography_text:
+            fail(f"external source missing from bibliography: {source.key}")
+    for old_title in DETAILS:
+        if f"[[{TITLE_MAP[old_title]}]]" not in bibliography_text:
+            fail(f"card missing from external bibliography: {old_title}")
+    if f"[[{EXTERNAL_NOTE}]]" not in course_note.read_text(encoding="utf-8"):
+        fail("course note does not link external bibliography")
     return {
         "course_pdfs": len(pdfs), "course_manifests": len(manifests),
-        "course_source_notes": len(source_notes), "public_pages": index["public_pages"],
+        "course_source_notes": len(lecture_notes), "external_bibliographies": 1,
+        "public_pages": index["public_pages"],
         "original_hashes_unchanged": True, "contact_scan": "clean",
     }
 
@@ -226,6 +278,9 @@ def check_knowledge() -> dict[str, int]:
     moc_text = moc.read_text(encoding="utf-8")
 
     visual_embeds = 0
+    mermaid_diagrams = 0
+    word_counts: list[int] = []
+    paragraph_owners: dict[str, list[str]] = defaultdict(list)
     for title in sorted(EXPECTED_NOTES):
         path = canonical.get(title)
         if path is None:
@@ -249,6 +304,7 @@ def check_knowledge() -> dict[str, int]:
         ):
             fail(f"invalid security metadata: {title}")
         old_title = next(old for old, localized in TITLE_MAP.items() if localized == title)
+        detail = DETAILS.get(old_title)
         aliases = data.get("aliases", [])
         if title != "JSteg" and (
             not isinstance(aliases, list) or old_title not in aliases
@@ -258,6 +314,8 @@ def check_knowledge() -> dict[str, int]:
             if data.get("type") != "moc":
                 fail("Стеганография must be a MOC")
             continue
+        if detail is None:
+            fail(f"missing enrichment data: {title}")
         headings = set(re.findall(r"(?m)^## (.+)$", body))
         required_headings = COMMON_HEADINGS | TYPE_HEADINGS[str(data["type"])]
         if not required_headings <= headings:
@@ -269,8 +327,11 @@ def check_knowledge() -> dict[str, int]:
         has_short_identifier = re.search(r"(?:[A-ZА-ЯЁ]{2,}|[A-Z]\d)", title)
         if old_title != title and not has_short_identifier and old_title not in intro_match.group(1):
             fail(f"English term is not introduced in {title}")
-        if "$$" not in body:
+        formula_blocks = body.count("$$") // 2
+        if not formula_blocks or body.count("$$") % 2:
             fail(f"missing MathJax in {title}")
+        if body.count("**Обозначения и смысл.**") != formula_blocks:
+            fail(f"formula notation is not explained in {title}")
         if not re.search(
             rf"\[\[{re.escape(SOURCE_PREFIX)} \d{{2}}\]\], стр\. [\d,– ]+\.", body
         ):
@@ -280,15 +341,47 @@ def check_knowledge() -> dict[str, int]:
         expected_questions = SELF_CHECKS[old_title]
         if any(f"{index}. {question}" not in body for index, question in enumerate(expected_questions, start=1)):
             fail(f"missing subject-specific self-check in {title}")
+        if body.count("> [!answer]- Ответы") != 1 or any(
+            f"> {index}. {localize_prose(answer)}" not in body
+            for index, answer in enumerate(detail.answers, start=1)
+        ):
+            fail(f"missing three reference answers in {title}")
         if "Сформулируйте назначение" in body:
             fail(f"generic self-check remains in {title}")
+        count = study_word_count(body)
+        lower, upper = WORD_BOUNDS[detail.depth]
+        if not lower <= count <= upper:
+            fail(f"study prose outside {detail.depth} range in {title}: {count} not in {lower}..{upper}")
+        word_counts.append(count)
+        for source_key in detail.source_keys:
+            source_record = EXTERNAL_SOURCES.get(source_key)
+            if source_record is None or source_record.url not in body:
+                fail(f"missing direct external source {source_key} in {title}")
+        expected_mermaid = 1 if detail.diagram else 0
+        actual_mermaid = body.count("```mermaid")
+        if actual_mermaid != expected_mermaid:
+            fail(f"Mermaid diagram mismatch in {title}: {actual_mermaid} != {expected_mermaid}")
+        mermaid_diagrams += actual_mermaid
+        for paragraph in long_paragraphs(body):
+            paragraph_owners[paragraph].append(title)
         prose = re.sub(r"\$\$.*?\$\$", "", body, flags=re.S)
         prose = re.sub(r"!?\[\[[^]]+\]\]", "", prose)
+        prose = re.sub(r"\[[^]]+\]\([^)]*\)", "", prose)
         prose = re.sub(r"`[^`]*`", "", prose)
         match = BANNED_PROSE_RE.search(prose)
         if match:
             fail(f"unnecessary English calque remains in {title}: {match.group(0)}")
         visual_embeds += len(re.findall(rf"!\[\[{re.escape('90 Attachments/Courses/'+COURSE_NAME)}/[^]]+\.png\]\]", body))
+
+    repeated = {
+        paragraph: owners for paragraph, owners in paragraph_owners.items()
+        if len(set(owners)) > 1
+    }
+    if repeated:
+        example = next(iter(repeated.values()))
+        fail(f"repeated long explanatory paragraph in: {sorted(set(example))}")
+    if mermaid_diagrams != 12:
+        fail(f"expected 12 Mermaid diagrams, got {mermaid_diagrams}")
 
     updated = [
         path for path in KNOWLEDGE.rglob("*.md")
@@ -296,7 +389,12 @@ def check_knowledge() -> dict[str, int]:
     ]
     if len(updated) != 10:
         fail(f"expected ten preserved-note updates, got {len(updated)}")
-    return {"new_canonical_notes": len(actual), "updated_existing_notes": len(updated), "visual_embeds": visual_embeds}
+    return {
+        "new_canonical_notes": len(actual), "expanded_content_notes": len(word_counts),
+        "updated_existing_notes": len(updated), "visual_embeds": visual_embeds,
+        "mermaid_diagrams": mermaid_diagrams, "min_words": min(word_counts),
+        "max_words": max(word_counts),
+    }
 
 
 def check_visuals() -> dict[str, int]:

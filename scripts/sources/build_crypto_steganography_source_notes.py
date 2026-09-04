@@ -14,6 +14,11 @@ ROOT = Path("07 Sources/Courses") / COURSE
 NOTES = ROOT / "Source Notes"
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "knowledge"))
 from build_crypto_steganography_knowledge import TITLE_MAP  # noqa: E402
+from crypto_steganography_enrichment import DETAILS, EXTERNAL_SOURCES  # noqa: E402
+
+
+EXTERNAL_NOTE = "Source - Дополнительные материалы по криптографии и стеганографии"
+EXTERNAL_CHECKED = "2026-09-04"
 
 
 REFERENCE_REPLACEMENTS: tuple[tuple[str, str], ...] = (
@@ -216,6 +221,45 @@ processing_status: processed
 '''
 
 
+def external_source_note() -> str:
+    blocks: list[str] = []
+    for key, record in sorted(
+        EXTERNAL_SOURCES.items(), key=lambda item: (item[1].year, item[1].title)
+    ):
+        targets = [
+            f"[[{TITLE_MAP[title]}]]"
+            for title, detail in DETAILS.items()
+            if key in detail.source_keys
+        ]
+        if not targets:
+            raise RuntimeError(f"Unused external source: {key}")
+        blocks.append(
+            f"## {record.title}\n\n"
+            f"- Авторы или организация: {record.authors}.\n"
+            f"- Год: {record.year}.\n"
+            f"- Вид: {record.kind}.\n"
+            f"- Ссылка: [{record.url}]({record.url}).\n"
+            f"- Проверено: {EXTERNAL_CHECKED}.\n"
+            f"- Для чего использовано: {record.scope}\n"
+            f"- Связанные карточки: {', '.join(targets)}."
+        )
+    return f'''---
+type: source
+area:
+  - Cryptography
+  - Computer Science
+processing_status: processed
+---
+# Дополнительные материалы по криптографии и стеганографии
+
+Эта библиография дополняет материалы курса [[Course - {COURSE}]]. Она содержит только официальные спецификации, первичные научные публикации и авторские публикации методов. Внешние документы не копировались в Vault; карточки пересказывают используемые положения своими словами и сохраняют прямые ссылки.
+
+Дата последней проверки ссылок: {EXTERNAL_CHECKED}.
+
+{chr(10).join(blocks)}
+'''
+
+
 def main() -> int:
     index = json.loads((ROOT / "source-index.json").read_text(encoding="utf-8"))
     records = index["files"]
@@ -257,6 +301,10 @@ def main() -> int:
             f"| [[Source - {stem}]] | {manifest['pages']} | {'; '.join(destinations)} |"
         )
 
+    (NOTES / f"{EXTERNAL_NOTE}.md").write_text(
+        external_source_note(), encoding="utf-8"
+    )
+
     course_note = f'''---
 type: source
 area:
@@ -270,7 +318,7 @@ processing_status: processed
 
 Курс 2024 года связывает классическую криптографию с обработкой цифровых изображений, стеганографическим встраиванием и стегоанализом. Канонические карточки написаны по-русски своими словами; английские названия методов сохранены для поиска.
 
-Корпус содержит 14 санитаризированных PDF: 256 страниц в оригиналах и 242 публичные страницы. Во всех лекциях удалена финальная контактная страница; в лекции 01 дополнительно скрыты контактные значения на страницах 3–4. Исходные файлы на Desktop не изменялись и проверены по SHA-256. Внешние источники и сервисы не использовались.
+Корпус содержит 14 санитаризированных PDF: 256 страниц в оригиналах и 242 публичные страницы. Во всех лекциях удалена финальная контактная страница; в лекции 01 дополнительно скрыты контактные значения на страницах 3–4. Исходные файлы на Desktop не изменялись и проверены по SHA-256. Для углубления карточек использована отдельная библиография официальных спецификаций и первичных публикаций; файлы курса не передавались внешним сервисам.
 
 ## Учебные маршруты
 
@@ -296,10 +344,14 @@ processing_status: processed
 - [[Cryptography]] — криптографический маршрут.
 - [[Computer Science]] — основы цифровых изображений.
 - [[Стеганография]] — самостоятельный маршрут по сокрытию и обнаружению данных.
+- [[{EXTERNAL_NOTE}]] — внешние спецификации и первичные публикации с областью использования.
 - [[Sources]] — библиотека источников.
 '''
     (ROOT / f"Course - {COURSE}.md").write_text(course_note, encoding="utf-8")
-    print(f"Built {len(records)} source notes and one course note; covered {index['public_pages']} public pages")
+    print(
+        f"Built {len(records)} lecture source notes, one external bibliography, "
+        f"and one course note; covered {index['public_pages']} public pages"
+    )
     return 0
 
 
