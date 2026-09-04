@@ -1,0 +1,254 @@
+{
+  "source": "Основы криптографии и стеганографии - Лекция 11.pdf",
+  "format": "pdf",
+  "pages": 54,
+  "backend": "PyMuPDF",
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "PowerPoint Presentation",
+    "author": "Кутьков Юрий Юрьевич",
+    "creator": "Microsoft® PowerPoint® для Microsoft 365",
+    "producer": "Microsoft® PowerPoint® для Microsoft 365",
+    "creationDate": "D:20240416112029+03'00'",
+    "modDate": "D:20240416112029+03'00'"
+  },
+  "sha256": "9df8c8c3a133b6c75c84a5c5cc780139d50f3b1ff1752cab39e927f633aed923",
+  "generated_at": "2026-09-04T13:36:25.463207+00:00",
+  "course": "Основы криптографии и стеганографии",
+  "kind": "lecture",
+  "lecture": 11,
+  "original_filename": "2024_Лекция 11.pdf",
+  "public_filename": "Основы криптографии и стеганографии - Лекция 11.pdf",
+  "original_sha256": "d9f6d239581a27488d3b1843d1599fea782948e5f0c9f06d98afd66161fb2473",
+  "public_sha256": "9df8c8c3a133b6c75c84a5c5cc780139d50f3b1ff1752cab39e927f633aed923",
+  "original_bytes": 2428680,
+  "public_bytes": 2656678,
+  "sanitization": {
+    "original_pages": 55,
+    "public_pages": 54,
+    "redacted_pages": [],
+    "removed_pages": [
+      55
+    ],
+    "redaction_count": 0,
+    "removed_contact_links": 0,
+    "page_mapping": [
+      {
+        "public_page": 1,
+        "original_page": 1
+      },
+      {
+        "public_page": 2,
+        "original_page": 2
+      },
+      {
+        "public_page": 3,
+        "original_page": 3
+      },
+      {
+        "public_page": 4,
+        "original_page": 4
+      },
+      {
+        "public_page": 5,
+        "original_page": 5
+      },
+      {
+        "public_page": 6,
+        "original_page": 6
+      },
+      {
+        "public_page": 7,
+        "original_page": 7
+      },
+      {
+        "public_page": 8,
+        "original_page": 8
+      },
+      {
+        "public_page": 9,
+        "original_page": 9
+      },
+      {
+        "public_page": 10,
+        "original_page": 10
+      },
+      {
+        "public_page": 11,
+        "original_page": 11
+      },
+      {
+        "public_page": 12,
+        "original_page": 12
+      },
+      {
+        "public_page": 13,
+        "original_page": 13
+      },
+      {
+        "public_page": 14,
+        "original_page": 14
+      },
+      {
+        "public_page": 15,
+        "original_page": 15
+      },
+      {
+        "public_page": 16,
+        "original_page": 16
+      },
+      {
+        "public_page": 17,
+        "original_page": 17
+      },
+      {
+        "public_page": 18,
+        "original_page": 18
+      },
+      {
+        "public_page": 19,
+        "original_page": 19
+      },
+      {
+        "public_page": 20,
+        "original_page": 20
+      },
+      {
+        "public_page": 21,
+        "original_page": 21
+      },
+      {
+        "public_page": 22,
+        "original_page": 22
+      },
+      {
+        "public_page": 23,
+        "original_page": 23
+      },
+      {
+        "public_page": 24,
+        "original_page": 24
+      },
+      {
+        "public_page": 25,
+        "original_page": 25
+      },
+      {
+        "public_page": 26,
+        "original_page": 26
+      },
+      {
+        "public_page": 27,
+        "original_page": 27
+      },
+      {
+        "public_page": 28,
+        "original_page": 28
+      },
+      {
+        "public_page": 29,
+        "original_page": 29
+      },
+      {
+        "public_page": 30,
+        "original_page": 30
+      },
+      {
+        "public_page": 31,
+        "original_page": 31
+      },
+      {
+        "public_page": 32,
+        "original_page": 32
+      },
+      {
+        "public_page": 33,
+        "original_page": 33
+      },
+      {
+        "public_page": 34,
+        "original_page": 34
+      },
+      {
+        "public_page": 35,
+        "original_page": 35
+      },
+      {
+        "public_page": 36,
+        "original_page": 36
+      },
+      {
+        "public_page": 37,
+        "original_page": 37
+      },
+      {
+        "public_page": 38,
+        "original_page": 38
+      },
+      {
+        "public_page": 39,
+        "original_page": 39
+      },
+      {
+        "public_page": 40,
+        "original_page": 40
+      },
+      {
+        "public_page": 41,
+        "original_page": 41
+      },
+      {
+        "public_page": 42,
+        "original_page": 42
+      },
+      {
+        "public_page": 43,
+        "original_page": 43
+      },
+      {
+        "public_page": 44,
+        "original_page": 44
+      },
+      {
+        "public_page": 45,
+        "original_page": 45
+      },
+      {
+        "public_page": 46,
+        "original_page": 46
+      },
+      {
+        "public_page": 47,
+        "original_page": 47
+      },
+      {
+        "public_page": 48,
+        "original_page": 48
+      },
+      {
+        "public_page": 49,
+        "original_page": 49
+      },
+      {
+        "public_page": 50,
+        "original_page": 50
+      },
+      {
+        "public_page": 51,
+        "original_page": 51
+      },
+      {
+        "public_page": 52,
+        "original_page": 52
+      },
+      {
+        "public_page": 53,
+        "original_page": 53
+      },
+      {
+        "public_page": 54,
+        "original_page": 54
+      }
+    ]
+  }
+}

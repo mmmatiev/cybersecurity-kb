@@ -1,0 +1,110 @@
+{
+  "source": "Основы криптографии и стеганографии - Лекция 08.pdf",
+  "format": "pdf",
+  "pages": 18,
+  "backend": "PyMuPDF",
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "PowerPoint Presentation",
+    "author": "Кутьков Юрий Юрьевич",
+    "creator": "Microsoft® PowerPoint® для Microsoft 365",
+    "producer": "Microsoft® PowerPoint® для Microsoft 365",
+    "creationDate": "D:20240219150451+03'00'",
+    "modDate": "D:20240219150451+03'00'"
+  },
+  "sha256": "07f006cbb658eafa5c90facbe9683b6172e153e6e5c529573ce81aae88e1aaf0",
+  "generated_at": "2026-09-04T13:36:24.790251+00:00",
+  "course": "Основы криптографии и стеганографии",
+  "kind": "lecture",
+  "lecture": 8,
+  "original_filename": "2024_Лекция 08.pdf",
+  "public_filename": "Основы криптографии и стеганографии - Лекция 08.pdf",
+  "original_sha256": "a269465a820a3cfddbe88319774cde30a3d31fb3ca554bb8849dcc0210fb0aa6",
+  "public_sha256": "07f006cbb658eafa5c90facbe9683b6172e153e6e5c529573ce81aae88e1aaf0",
+  "original_bytes": 894107,
+  "public_bytes": 961584,
+  "sanitization": {
+    "original_pages": 19,
+    "public_pages": 18,
+    "redacted_pages": [],
+    "removed_pages": [
+      19
+    ],
+    "redaction_count": 0,
+    "removed_contact_links": 0,
+    "page_mapping": [
+      {
+        "public_page": 1,
+        "original_page": 1
+      },
+      {
+        "public_page": 2,
+        "original_page": 2
+      },
+      {
+        "public_page": 3,
+        "original_page": 3
+      },
+      {
+        "public_page": 4,
+        "original_page": 4
+      },
+      {
+        "public_page": 5,
+        "original_page": 5
+      },
+      {
+        "public_page": 6,
+        "original_page": 6
+      },
+      {
+        "public_page": 7,
+        "original_page": 7
+      },
+      {
+        "public_page": 8,
+        "original_page": 8
+      },
+      {
+        "public_page": 9,
+        "original_page": 9
+      },
+      {
+        "public_page": 10,
+        "original_page": 10
+      },
+      {
+        "public_page": 11,
+        "original_page": 11
+      },
+      {
+        "public_page": 12,
+        "original_page": 12
+      },
+      {
+        "public_page": 13,
+        "original_page": 13
+      },
+      {
+        "public_page": 14,
+        "original_page": 14
+      },
+      {
+        "public_page": 15,
+        "original_page": 15
+      },
+      {
+        "public_page": 16,
+        "original_page": 16
+      },
+      {
+        "public_page": 17,
+        "original_page": 17
+      },
+      {
+        "public_page": 18,
+        "original_page": 18
+      }
+    ]
+  }
+}

@@ -1,0 +1,1276 @@
+{
+  "course": "Основы криптографии и стеганографии",
+  "source_directory_name": "основы_крипты",
+  "counts": {
+    "lecture": 14
+  },
+  "original_pages": 256,
+  "public_pages": 242,
+  "files": [
+    {
+      "lecture": 1,
+      "original_filename": "2024_Лекция 01.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 01.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 01.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 01",
+      "original_sha256": "b6d32219471ed7562807cc77913f17ae2e49eeb0fe485da7db7bcdf8648027b8",
+      "public_sha256": "b09b82ee20e8e4079ae430f4850b300623a7911dd50495ee4d15a38fb095dd60",
+      "sanitization": {
+        "original_pages": 20,
+        "public_pages": 19,
+        "redacted_pages": [
+          3,
+          4
+        ],
+        "removed_pages": [
+          20
+        ],
+        "redaction_count": 4,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          },
+          {
+            "public_page": 13,
+            "original_page": 13
+          },
+          {
+            "public_page": 14,
+            "original_page": 14
+          },
+          {
+            "public_page": 15,
+            "original_page": 15
+          },
+          {
+            "public_page": 16,
+            "original_page": 16
+          },
+          {
+            "public_page": 17,
+            "original_page": 17
+          },
+          {
+            "public_page": 18,
+            "original_page": 18
+          },
+          {
+            "public_page": 19,
+            "original_page": 19
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 2,
+      "original_filename": "2024_Лекция 02.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 02.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 02.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 02",
+      "original_sha256": "165fc6d7898b2a2a7de807b96f86a2e35e24fd08c3b32d35f6b616acaba4ce1f",
+      "public_sha256": "80965394a27f24fe9b62eb9db521987f514e163a881e36d9b61b3ffa95ab4b3a",
+      "sanitization": {
+        "original_pages": 13,
+        "public_pages": 12,
+        "redacted_pages": [],
+        "removed_pages": [
+          13
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 3,
+      "original_filename": "2024_Лекция 03.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 03.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 03.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 03",
+      "original_sha256": "f544eb7bc8531c46bf3748ebaa7628d322f14b0d68a34457cabdb5ff35b7bd1f",
+      "public_sha256": "43e2364f316af862d4cafdc6f0691a3a88c4e36afdd9c311d0e35c9b8815b166",
+      "sanitization": {
+        "original_pages": 11,
+        "public_pages": 10,
+        "redacted_pages": [],
+        "removed_pages": [
+          11
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 4,
+      "original_filename": "2024_Лекция 04.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 04.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 04.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 04",
+      "original_sha256": "b9e004aa1f34dd8ba625b53a95888b048abafa7288e8620f7ab8d5e7b73c1689",
+      "public_sha256": "df68ec26479a787316a08538244618bf92f131859b3d82864b648c1d5491f4ba",
+      "sanitization": {
+        "original_pages": 7,
+        "public_pages": 6,
+        "redacted_pages": [],
+        "removed_pages": [
+          7
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 5,
+      "original_filename": "2024_Лекция 05.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 05.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 05.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 05",
+      "original_sha256": "67611816d41341bf2385bedc30bd2aa4f079b0e3ae30e9a16862c10044f35ed1",
+      "public_sha256": "c7dd54b7cc0311b576190772421bcb1bd47ad281357ff4ef6ebb914254d633dd",
+      "sanitization": {
+        "original_pages": 9,
+        "public_pages": 8,
+        "redacted_pages": [],
+        "removed_pages": [
+          9
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 6,
+      "original_filename": "2024_Лекция 06.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 06.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 06.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 06",
+      "original_sha256": "08b40b52f37852ac34fef7f11f8e2fc0c0445186be38265afe44835116359e48",
+      "public_sha256": "f042767837941bf87b253fd3448ef7edd75190a2208c1fa4404318b278dc13b3",
+      "sanitization": {
+        "original_pages": 12,
+        "public_pages": 11,
+        "redacted_pages": [],
+        "removed_pages": [
+          12
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 7,
+      "original_filename": "2024_Лекция 07.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 07.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 07.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 07",
+      "original_sha256": "bba935297e9020b5176b79cce2ee293a430fafc6fbb964dd1b9cb363ae367b96",
+      "public_sha256": "5e8f904e0910135160933e7ed22595ce551dcd682ea95392ca4e8d2b57ad9e16",
+      "sanitization": {
+        "original_pages": 8,
+        "public_pages": 7,
+        "redacted_pages": [],
+        "removed_pages": [
+          8
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 8,
+      "original_filename": "2024_Лекция 08.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 08.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 08.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 08",
+      "original_sha256": "a269465a820a3cfddbe88319774cde30a3d31fb3ca554bb8849dcc0210fb0aa6",
+      "public_sha256": "07f006cbb658eafa5c90facbe9683b6172e153e6e5c529573ce81aae88e1aaf0",
+      "sanitization": {
+        "original_pages": 19,
+        "public_pages": 18,
+        "redacted_pages": [],
+        "removed_pages": [
+          19
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          },
+          {
+            "public_page": 13,
+            "original_page": 13
+          },
+          {
+            "public_page": 14,
+            "original_page": 14
+          },
+          {
+            "public_page": 15,
+            "original_page": 15
+          },
+          {
+            "public_page": 16,
+            "original_page": 16
+          },
+          {
+            "public_page": 17,
+            "original_page": 17
+          },
+          {
+            "public_page": 18,
+            "original_page": 18
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 9,
+      "original_filename": "2024_Лекция 09.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 09.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 09.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 09",
+      "original_sha256": "0f3599e35b039677cd62cecfd174ef8c8ad586f2ee665afc20bd65264adf37ff",
+      "public_sha256": "5047f2a95fdf5f493bf53b0a25b328a4aeec68903e3d81f2d8e17d435b925218",
+      "sanitization": {
+        "original_pages": 22,
+        "public_pages": 21,
+        "redacted_pages": [],
+        "removed_pages": [
+          22
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          },
+          {
+            "public_page": 13,
+            "original_page": 13
+          },
+          {
+            "public_page": 14,
+            "original_page": 14
+          },
+          {
+            "public_page": 15,
+            "original_page": 15
+          },
+          {
+            "public_page": 16,
+            "original_page": 16
+          },
+          {
+            "public_page": 17,
+            "original_page": 17
+          },
+          {
+            "public_page": 18,
+            "original_page": 18
+          },
+          {
+            "public_page": 19,
+            "original_page": 19
+          },
+          {
+            "public_page": 20,
+            "original_page": 20
+          },
+          {
+            "public_page": 21,
+            "original_page": 21
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 10,
+      "original_filename": "2024_Лекция 10.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 10.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 10.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 10",
+      "original_sha256": "b33b6eb0689f2167b5cf946a4d9b2d85210c5e8aa1856859517033bdf15b9d64",
+      "public_sha256": "afc97677a6e9ecbea7c37ac1345518136e612d779de3d27ff7933b5241ef334f",
+      "sanitization": {
+        "original_pages": 16,
+        "public_pages": 15,
+        "redacted_pages": [],
+        "removed_pages": [
+          16
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          },
+          {
+            "public_page": 13,
+            "original_page": 13
+          },
+          {
+            "public_page": 14,
+            "original_page": 14
+          },
+          {
+            "public_page": 15,
+            "original_page": 15
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 11,
+      "original_filename": "2024_Лекция 11.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 11.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 11.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 11",
+      "original_sha256": "d9f6d239581a27488d3b1843d1599fea782948e5f0c9f06d98afd66161fb2473",
+      "public_sha256": "9df8c8c3a133b6c75c84a5c5cc780139d50f3b1ff1752cab39e927f633aed923",
+      "sanitization": {
+        "original_pages": 55,
+        "public_pages": 54,
+        "redacted_pages": [],
+        "removed_pages": [
+          55
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          },
+          {
+            "public_page": 13,
+            "original_page": 13
+          },
+          {
+            "public_page": 14,
+            "original_page": 14
+          },
+          {
+            "public_page": 15,
+            "original_page": 15
+          },
+          {
+            "public_page": 16,
+            "original_page": 16
+          },
+          {
+            "public_page": 17,
+            "original_page": 17
+          },
+          {
+            "public_page": 18,
+            "original_page": 18
+          },
+          {
+            "public_page": 19,
+            "original_page": 19
+          },
+          {
+            "public_page": 20,
+            "original_page": 20
+          },
+          {
+            "public_page": 21,
+            "original_page": 21
+          },
+          {
+            "public_page": 22,
+            "original_page": 22
+          },
+          {
+            "public_page": 23,
+            "original_page": 23
+          },
+          {
+            "public_page": 24,
+            "original_page": 24
+          },
+          {
+            "public_page": 25,
+            "original_page": 25
+          },
+          {
+            "public_page": 26,
+            "original_page": 26
+          },
+          {
+            "public_page": 27,
+            "original_page": 27
+          },
+          {
+            "public_page": 28,
+            "original_page": 28
+          },
+          {
+            "public_page": 29,
+            "original_page": 29
+          },
+          {
+            "public_page": 30,
+            "original_page": 30
+          },
+          {
+            "public_page": 31,
+            "original_page": 31
+          },
+          {
+            "public_page": 32,
+            "original_page": 32
+          },
+          {
+            "public_page": 33,
+            "original_page": 33
+          },
+          {
+            "public_page": 34,
+            "original_page": 34
+          },
+          {
+            "public_page": 35,
+            "original_page": 35
+          },
+          {
+            "public_page": 36,
+            "original_page": 36
+          },
+          {
+            "public_page": 37,
+            "original_page": 37
+          },
+          {
+            "public_page": 38,
+            "original_page": 38
+          },
+          {
+            "public_page": 39,
+            "original_page": 39
+          },
+          {
+            "public_page": 40,
+            "original_page": 40
+          },
+          {
+            "public_page": 41,
+            "original_page": 41
+          },
+          {
+            "public_page": 42,
+            "original_page": 42
+          },
+          {
+            "public_page": 43,
+            "original_page": 43
+          },
+          {
+            "public_page": 44,
+            "original_page": 44
+          },
+          {
+            "public_page": 45,
+            "original_page": 45
+          },
+          {
+            "public_page": 46,
+            "original_page": 46
+          },
+          {
+            "public_page": 47,
+            "original_page": 47
+          },
+          {
+            "public_page": 48,
+            "original_page": 48
+          },
+          {
+            "public_page": 49,
+            "original_page": 49
+          },
+          {
+            "public_page": 50,
+            "original_page": 50
+          },
+          {
+            "public_page": 51,
+            "original_page": 51
+          },
+          {
+            "public_page": 52,
+            "original_page": 52
+          },
+          {
+            "public_page": 53,
+            "original_page": 53
+          },
+          {
+            "public_page": 54,
+            "original_page": 54
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 12,
+      "original_filename": "2024_Лекция 12.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 12.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 12.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 12",
+      "original_sha256": "daec0810874a929874a4f19e1b8bf5650e14ab5b83260df92d5002b1e90b2d6b",
+      "public_sha256": "0c5e06d0856a2b572d6713d5a8c9786de701e0b035e9aae4ffb5d69b1f83b7c2",
+      "sanitization": {
+        "original_pages": 19,
+        "public_pages": 18,
+        "redacted_pages": [],
+        "removed_pages": [
+          19
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          },
+          {
+            "public_page": 13,
+            "original_page": 13
+          },
+          {
+            "public_page": 14,
+            "original_page": 14
+          },
+          {
+            "public_page": 15,
+            "original_page": 15
+          },
+          {
+            "public_page": 16,
+            "original_page": 16
+          },
+          {
+            "public_page": 17,
+            "original_page": 17
+          },
+          {
+            "public_page": 18,
+            "original_page": 18
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 13,
+      "original_filename": "2024_Лекция 13.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 13.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 13.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 13",
+      "original_sha256": "438fcbb499a626507a2b1e3ba6293644da77a05003916abed242fcf65e81eb38",
+      "public_sha256": "aa52b9c7f53155ac0cf48a2de5c2465c06d7447491181f733caa2b429b1ada8a",
+      "sanitization": {
+        "original_pages": 16,
+        "public_pages": 15,
+        "redacted_pages": [],
+        "removed_pages": [
+          16
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          },
+          {
+            "public_page": 13,
+            "original_page": 13
+          },
+          {
+            "public_page": 14,
+            "original_page": 14
+          },
+          {
+            "public_page": 15,
+            "original_page": 15
+          }
+        ]
+      }
+    },
+    {
+      "lecture": 14,
+      "original_filename": "2024_Лекция 14.pdf",
+      "public_filename": "Основы криптографии и стеганографии - Лекция 14.pdf",
+      "public_path": "07 Sources/Courses/Основы криптографии и стеганографии/PDF/Основы криптографии и стеганографии - Лекция 14.pdf",
+      "processed_path": "07 Sources/Courses/Основы криптографии и стеганографии/Processed/Основы криптографии и стеганографии - Лекция 14",
+      "original_sha256": "97108aa552247ece415d11fb154e16b2dfe14e85b785e113cb96b19c99010589",
+      "public_sha256": "035551e649e29ec9c4b463f7550a57d70afcb6428bb11431892f24df2d141008",
+      "sanitization": {
+        "original_pages": 29,
+        "public_pages": 28,
+        "redacted_pages": [],
+        "removed_pages": [
+          29
+        ],
+        "redaction_count": 0,
+        "removed_contact_links": 0,
+        "page_mapping": [
+          {
+            "public_page": 1,
+            "original_page": 1
+          },
+          {
+            "public_page": 2,
+            "original_page": 2
+          },
+          {
+            "public_page": 3,
+            "original_page": 3
+          },
+          {
+            "public_page": 4,
+            "original_page": 4
+          },
+          {
+            "public_page": 5,
+            "original_page": 5
+          },
+          {
+            "public_page": 6,
+            "original_page": 6
+          },
+          {
+            "public_page": 7,
+            "original_page": 7
+          },
+          {
+            "public_page": 8,
+            "original_page": 8
+          },
+          {
+            "public_page": 9,
+            "original_page": 9
+          },
+          {
+            "public_page": 10,
+            "original_page": 10
+          },
+          {
+            "public_page": 11,
+            "original_page": 11
+          },
+          {
+            "public_page": 12,
+            "original_page": 12
+          },
+          {
+            "public_page": 13,
+            "original_page": 13
+          },
+          {
+            "public_page": 14,
+            "original_page": 14
+          },
+          {
+            "public_page": 15,
+            "original_page": 15
+          },
+          {
+            "public_page": 16,
+            "original_page": 16
+          },
+          {
+            "public_page": 17,
+            "original_page": 17
+          },
+          {
+            "public_page": 18,
+            "original_page": 18
+          },
+          {
+            "public_page": 19,
+            "original_page": 19
+          },
+          {
+            "public_page": 20,
+            "original_page": 20
+          },
+          {
+            "public_page": 21,
+            "original_page": 21
+          },
+          {
+            "public_page": 22,
+            "original_page": 22
+          },
+          {
+            "public_page": 23,
+            "original_page": 23
+          },
+          {
+            "public_page": 24,
+            "original_page": 24
+          },
+          {
+            "public_page": 25,
+            "original_page": 25
+          },
+          {
+            "public_page": 26,
+            "original_page": 26
+          },
+          {
+            "public_page": 27,
+            "original_page": 27
+          },
+          {
+            "public_page": 28,
+            "original_page": 28
+          }
+        ]
+      }
+    }
+  ]
+}

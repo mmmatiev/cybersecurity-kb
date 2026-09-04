@@ -80,6 +80,11 @@ def clean_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def clean_extracted_text(content: str) -> str:
+    """Normalize generated Markdown without changing the extracted wording."""
+    return "\n".join(line.rstrip() for line in content.splitlines()).rstrip() + "\n"
+
+
 def inspect_pdf_with_pymupdf(source: Path) -> tuple[dict[str, Any], str]:
     try:
         import pymupdf  # type: ignore
@@ -321,7 +326,7 @@ def write_results(
         manifest_path,
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
     )
-    atomic_write(text_path, extracted_text)
+    atomic_write(text_path, clean_extracted_text(extracted_text))
 
 
 def inspect(source: Path) -> tuple[dict[str, Any], str]:

@@ -1,0 +1,62 @@
+{
+  "source": "Основы криптографии и стеганографии - Лекция 04.pdf",
+  "format": "pdf",
+  "pages": 6,
+  "backend": "PyMuPDF",
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "PowerPoint Presentation",
+    "author": "Кутьков Юрий Юрьевич",
+    "creator": "Microsoft® PowerPoint® для Microsoft 365",
+    "producer": "Microsoft® PowerPoint® для Microsoft 365",
+    "creationDate": "D:20240128120236+03'00'",
+    "modDate": "D:20240128120236+03'00'"
+  },
+  "sha256": "df68ec26479a787316a08538244618bf92f131859b3d82864b648c1d5491f4ba",
+  "generated_at": "2026-09-04T13:36:24.217641+00:00",
+  "course": "Основы криптографии и стеганографии",
+  "kind": "lecture",
+  "lecture": 4,
+  "original_filename": "2024_Лекция 04.pdf",
+  "public_filename": "Основы криптографии и стеганографии - Лекция 04.pdf",
+  "original_sha256": "b9e004aa1f34dd8ba625b53a95888b048abafa7288e8620f7ab8d5e7b73c1689",
+  "public_sha256": "df68ec26479a787316a08538244618bf92f131859b3d82864b648c1d5491f4ba",
+  "original_bytes": 415894,
+  "public_bytes": 487590,
+  "sanitization": {
+    "original_pages": 7,
+    "public_pages": 6,
+    "redacted_pages": [],
+    "removed_pages": [
+      7
+    ],
+    "redaction_count": 0,
+    "removed_contact_links": 0,
+    "page_mapping": [
+      {
+        "public_page": 1,
+        "original_page": 1
+      },
+      {
+        "public_page": 2,
+        "original_page": 2
+      },
+      {
+        "public_page": 3,
+        "original_page": 3
+      },
+      {
+        "public_page": 4,
+        "original_page": 4
+      },
+      {
+        "public_page": 5,
+        "original_page": 5
+      },
+      {
+        "public_page": 6,
+        "original_page": 6
+      }
+    ]
+  }
+}
