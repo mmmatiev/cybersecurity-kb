@@ -1,0 +1,467 @@
+{
+  "version": 1,
+  "outputs": {
+    "01 Knowledge/Cryptography/Кластер - Основы криптографии.md": "63106359a45cf6b8a08e1b96cdee2eac3cdf64c4405f0fa7a06d6d3514c63b63",
+    "01 Knowledge/Cryptography/Кластер - Алгебра для криптографии.md": "f2f43c702f46ad64d8ba3ed6834a534ca778555ab0b47607c52303dc8e50834e",
+    "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md": "77717d03eec667aef04b397b8be76dd9a44262bcc79558fe3f375b0d4728d955",
+    "01 Knowledge/Cryptography/Кластер - Классические шифры.md": "84e033612536b21a0b5fba4050749037024ee8c456bbff57d7b451245048d194",
+    "01 Knowledge/Cryptography/Кластер - Блочные шифры.md": "a57ae6f4705b45dcbfd2a05a0c681546f9e64d1a0e4f00f9f542105b99de6d13",
+    "01 Knowledge/Cryptography/Кластер - Асимметричное шифрование и обмен ключами.md": "af0e82356117650af892d0939eb52fb0857ce63b9d7b31ab11035cbd9cea2eae",
+    "01 Knowledge/Cryptography/Кластер - Хеширование, аутентификация и подписи.md": "8f84fb1011416f5f0b17c3c0c6f8da2f1aa6af49cab497510694d93999a670fd",
+    "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md": "1ded66dba46158df3e8b5701d12d5034e217b02677cad202f1457095902d2d44",
+    "01 Knowledge/Networks/Кластер - Сетевые применения криптографии.md": "818c7f782f6da4f9ffc9d0a7c0880278337a35e4d0d862f25867c7b4009c5eed",
+    "01 Knowledge/Cybersecurity/Security Engineering/Кластер - Криптоанализ и атаки.md": "3d8d2bfd043ea924f2207c51263148b2aaa8828111a0c62740bd22e788fe4f14",
+    "01 Knowledge/Cryptography/Кластер - Квантовые вычисления и распределение ключей.md": "98083f69f6e63d495ff80f0c3be7bc0b667dcb3d39f745c49b16075b5b4a1b37",
+    "01 Knowledge/Cryptography/Кластер - Постквантовая криптография.md": "b5854fd23c3ce4ec741ceed4ba4bb3622a9c5eba7524826127f526ae8b20efad",
+    "01 Knowledge/Computer Science/Кластер - Криптография в блокчейне.md": "e85f83c7ea17ce8bcb58dc62e1e294a01a4b66da01c20fb08a728438dcef58da",
+    "01 Knowledge/Computer Science/Кластер - Представление и сжатие изображений.md": "5da29dfe5eca00e3d832db82aa0a744fd52ee11a2630ce9e4cdcc94360111fba",
+    "01 Knowledge/Computer Science/Кластер - Преобразования изображений.md": "34286abdb9419b3904a227d212009497e9153d11695620c2a7ee9d8acdc9fee2",
+    "01 Knowledge/Cybersecurity/Steganography/Кластер - Сокрытие информации и водяные знаки.md": "498e7a55b7e3aa4037a8bc54b4f628a4781cb77697d21d59d1b1d56ff56457f7",
+    "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в пространственной области.md": "0eda06e6ba4ff5d0e05a9db707a21d784c04aac5ca7e38c60e89cb3c7a0ee828",
+    "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в частотной области и JPEG.md": "a894d1d40a9f51a32245c1603aef64ac7dbe5e833b302ea5d7bf60eea4726f1c",
+    "01 Knowledge/Cybersecurity/Steganography/Кластер - Стегоанализ.md": "190b69ab660254615a9b7e94d8d5751e075897edf881267b500848aea22404d4",
+    "01 Knowledge/Cryptography/Криптография и стеганография - Карта тем.canvas": "9775d1af1c709f54a5f719d3e724de1ee3d2a0b2ecb3a71f2aa4e2fb24ff98d3"
+  },
+  "primary_membership": {
+    "History of Cryptography": {
+      "note": "01 Knowledge/Cryptography/History of Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Основы криптографии.md"
+    },
+    "Cryptosystem and Security Goals": {
+      "note": "01 Knowledge/Cryptography/Cryptosystem and Security Goals.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Основы криптографии.md"
+    },
+    "Symmetric-Key Cryptography": {
+      "note": "01 Knowledge/Cryptography/Symmetric-Key Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Основы криптографии.md"
+    },
+    "Asymmetric Cryptography": {
+      "note": "01 Knowledge/Cryptography/Asymmetric Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Основы криптографии.md"
+    },
+    "Stream Ciphers and One-Time Pad": {
+      "note": "01 Knowledge/Cryptography/Stream Ciphers and One-Time Pad.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Основы криптографии.md"
+    },
+    "Совершенная секретность и криптографическая стойкость": {
+      "note": "01 Knowledge/Cryptography/Совершенная секретность и криптографическая стойкость.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Основы криптографии.md"
+    },
+    "Algebraic Structures": {
+      "note": "01 Knowledge/Cryptography/Algebraic Structures.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Алгебра для криптографии.md"
+    },
+    "Permutation Groups": {
+      "note": "01 Knowledge/Cryptography/Permutation Groups.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Алгебра для криптографии.md"
+    },
+    "Rings and Modular Arithmetic": {
+      "note": "01 Knowledge/Cryptography/Rings and Modular Arithmetic.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Алгебра для криптографии.md"
+    },
+    "Polynomial Rings": {
+      "note": "01 Knowledge/Cryptography/Polynomial Rings.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Алгебра для криптографии.md"
+    },
+    "Finite Fields": {
+      "note": "01 Knowledge/Cryptography/Finite Fields.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Алгебра для криптографии.md"
+    },
+    "Elliptic Curves": {
+      "note": "01 Knowledge/Cryptography/Elliptic Curves.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Алгебра для криптографии.md"
+    },
+    "Euclidean Algorithm": {
+      "note": "01 Knowledge/Cryptography/Euclidean Algorithm.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md"
+    },
+    "Euler Totient and Fermat-Euler Theorems": {
+      "note": "01 Knowledge/Cryptography/Euler Totient and Fermat-Euler Theorems.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md"
+    },
+    "Modular Exponentiation": {
+      "note": "01 Knowledge/Cryptography/Modular Exponentiation.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md"
+    },
+    "Chinese Remainder Theorem": {
+      "note": "01 Knowledge/Cryptography/Chinese Remainder Theorem.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md"
+    },
+    "Quadratic Residues and Modular Square Roots": {
+      "note": "01 Knowledge/Cryptography/Quadratic Residues and Modular Square Roots.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md"
+    },
+    "Primality Testing and Miller-Rabin": {
+      "note": "01 Knowledge/Cryptography/Primality Testing and Miller-Rabin.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md"
+    },
+    "Integer Factorization and Pollard Rho": {
+      "note": "01 Knowledge/Cryptography/Integer Factorization and Pollard Rho.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md"
+    },
+    "Discrete Logarithm and Baby-Step Giant-Step": {
+      "note": "01 Knowledge/Cryptography/Discrete Logarithm and Baby-Step Giant-Step.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md"
+    },
+    "Классическая криптография": {
+      "note": "01 Knowledge/Cryptography/Классическая криптография.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Шифры подстановки": {
+      "note": "01 Knowledge/Cryptography/Шифры подстановки.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Квадрат Полибия": {
+      "note": "01 Knowledge/Cryptography/Квадрат Полибия.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Аффинный шифр": {
+      "note": "01 Knowledge/Cryptography/Аффинный шифр.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Шифр Плейфера": {
+      "note": "01 Knowledge/Cryptography/Шифр Плейфера.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Шифр Хилла": {
+      "note": "01 Knowledge/Cryptography/Шифр Хилла.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Шифры перестановки": {
+      "note": "01 Knowledge/Cryptography/Шифры перестановки.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Решётка Кардано": {
+      "note": "01 Knowledge/Cryptography/Решётка Кардано.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Шифр Виженера": {
+      "note": "01 Knowledge/Cryptography/Шифр Виженера.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Классические шифры.md"
+    },
+    "Block Cipher Design": {
+      "note": "01 Knowledge/Cryptography/Block Cipher Design.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md"
+    },
+    "DES and Triple DES": {
+      "note": "01 Knowledge/Cryptography/DES and Triple DES.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md"
+    },
+    "Magma": {
+      "note": "01 Knowledge/Cryptography/Magma.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md"
+    },
+    "Advanced Encryption Standard": {
+      "note": "01 Knowledge/Cryptography/Advanced Encryption Standard.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md"
+    },
+    "Kuznyechik": {
+      "note": "01 Knowledge/Cryptography/Kuznyechik.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md"
+    },
+    "Block Cipher Modes": {
+      "note": "01 Knowledge/Cryptography/Block Cipher Modes.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md"
+    },
+    "GOST R 34.12-2015": {
+      "note": "01 Knowledge/Cryptography/GOST R 34.12-2015.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md"
+    },
+    "GOST R 34.13-2015": {
+      "note": "01 Knowledge/Cryptography/GOST R 34.13-2015.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md"
+    },
+    "RSA": {
+      "note": "01 Knowledge/Cryptography/RSA.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Асимметричное шифрование и обмен ключами.md"
+    },
+    "Rabin Cryptosystem": {
+      "note": "01 Knowledge/Cryptography/Rabin Cryptosystem.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Асимметричное шифрование и обмен ключами.md"
+    },
+    "ElGamal Cryptosystem": {
+      "note": "01 Knowledge/Cryptography/ElGamal Cryptosystem.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Асимметричное шифрование и обмен ключами.md"
+    },
+    "Diffie-Hellman Key Exchange": {
+      "note": "01 Knowledge/Cryptography/Diffie-Hellman Key Exchange.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Асимметричное шифрование и обмен ключами.md"
+    },
+    "Elliptic Curve Cryptography": {
+      "note": "01 Knowledge/Cryptography/Elliptic Curve Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Асимметричное шифрование и обмен ключами.md"
+    },
+    "Cryptographic Hash Functions": {
+      "note": "01 Knowledge/Cryptography/Cryptographic Hash Functions.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Хеширование, аутентификация и подписи.md"
+    },
+    "Streebog": {
+      "note": "01 Knowledge/Cryptography/Streebog.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Хеширование, аутентификация и подписи.md"
+    },
+    "Message Authentication Codes": {
+      "note": "01 Knowledge/Cryptography/Message Authentication Codes.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Хеширование, аутентификация и подписи.md"
+    },
+    "Digital Signatures": {
+      "note": "01 Knowledge/Cryptography/Digital Signatures.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Хеширование, аутентификация и подписи.md"
+    },
+    "Schnorr Signatures": {
+      "note": "01 Knowledge/Cryptography/Schnorr Signatures.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Хеширование, аутентификация и подписи.md"
+    },
+    "GOST R 34.10-2012": {
+      "note": "01 Knowledge/Cryptography/GOST R 34.10-2012.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Хеширование, аутентификация и подписи.md"
+    },
+    "Random Number Generation and Entropy": {
+      "note": "01 Knowledge/Cryptography/Random Number Generation and Entropy.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md"
+    },
+    "Cryptographic Key Management": {
+      "note": "01 Knowledge/Cryptography/Cryptographic Key Management.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md"
+    },
+    "Public Key Infrastructure and X.509": {
+      "note": "01 Knowledge/Cryptography/Public Key Infrastructure and X.509.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md"
+    },
+    "Certificate Enrollment Protocols": {
+      "note": "01 Knowledge/Cryptography/Certificate Enrollment Protocols.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md"
+    },
+    "Hardware Security Modules": {
+      "note": "01 Knowledge/Cryptography/Hardware Security Modules.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md"
+    },
+    "Cryptographic Service Providers": {
+      "note": "01 Knowledge/Cryptography/Cryptographic Service Providers.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md"
+    },
+    "Cryptographic Protection Systems": {
+      "note": "01 Knowledge/Cryptography/Cryptographic Protection Systems.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md"
+    },
+    "Russian Cryptographic Regulation and Certification": {
+      "note": "01 Knowledge/Cybersecurity/Security Engineering/Russian Cryptographic Regulation and Certification.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md"
+    },
+    "Cryptographic Protocols and Authenticated Key Exchange": {
+      "note": "01 Knowledge/Cryptography/Cryptographic Protocols and Authenticated Key Exchange.md",
+      "cluster": "01 Knowledge/Networks/Кластер - Сетевые применения криптографии.md"
+    },
+    "TLS": {
+      "note": "01 Knowledge/Cryptography/TLS.md",
+      "cluster": "01 Knowledge/Networks/Кластер - Сетевые применения криптографии.md"
+    },
+    "SSH": {
+      "note": "01 Knowledge/Networks/SSH.md",
+      "cluster": "01 Knowledge/Networks/Кластер - Сетевые применения криптографии.md"
+    },
+    "IPsec": {
+      "note": "01 Knowledge/Networks/IPsec.md",
+      "cluster": "01 Knowledge/Networks/Кластер - Сетевые применения криптографии.md"
+    },
+    "Anonymous Communication Systems": {
+      "note": "01 Knowledge/Networks/Anonymous Communication Systems.md",
+      "cluster": "01 Knowledge/Networks/Кластер - Сетевые применения криптографии.md"
+    },
+    "Man-in-the-Middle Attack": {
+      "note": "01 Knowledge/Cybersecurity/Network Security/Man-in-the-Middle Attack.md",
+      "cluster": "01 Knowledge/Networks/Кластер - Сетевые применения криптографии.md"
+    },
+    "Cryptanalysis": {
+      "note": "01 Knowledge/Cryptography/Cryptanalysis.md",
+      "cluster": "01 Knowledge/Cybersecurity/Security Engineering/Кластер - Криптоанализ и атаки.md"
+    },
+    "Частотный анализ": {
+      "note": "01 Knowledge/Cybersecurity/Security Engineering/Частотный анализ.md",
+      "cluster": "01 Knowledge/Cybersecurity/Security Engineering/Кластер - Криптоанализ и атаки.md"
+    },
+    "Brute-Force Attack": {
+      "note": "01 Knowledge/Cybersecurity/Security Engineering/Brute-Force Attack.md",
+      "cluster": "01 Knowledge/Cybersecurity/Security Engineering/Кластер - Криптоанализ и атаки.md"
+    },
+    "Linear Cryptanalysis": {
+      "note": "01 Knowledge/Cybersecurity/Security Engineering/Linear Cryptanalysis.md",
+      "cluster": "01 Knowledge/Cybersecurity/Security Engineering/Кластер - Криптоанализ и атаки.md"
+    },
+    "Differential Cryptanalysis": {
+      "note": "01 Knowledge/Cybersecurity/Security Engineering/Differential Cryptanalysis.md",
+      "cluster": "01 Knowledge/Cybersecurity/Security Engineering/Кластер - Криптоанализ и атаки.md"
+    },
+    "Side-Channel Attacks": {
+      "note": "01 Knowledge/Cybersecurity/Infrastructure Security/Side-Channel Attacks.md",
+      "cluster": "01 Knowledge/Cybersecurity/Security Engineering/Кластер - Криптоанализ и атаки.md"
+    },
+    "Quantum Computing for Cryptography": {
+      "note": "01 Knowledge/Computer Science/Quantum Computing for Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Квантовые вычисления и распределение ключей.md"
+    },
+    "Quantum Key Distribution": {
+      "note": "01 Knowledge/Cryptography/Quantum Key Distribution.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Квантовые вычисления и распределение ключей.md"
+    },
+    "BB84": {
+      "note": "01 Knowledge/Cryptography/BB84.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Квантовые вычисления и распределение ключей.md"
+    },
+    "Post-Quantum Cryptography": {
+      "note": "01 Knowledge/Cryptography/Post-Quantum Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Постквантовая криптография.md"
+    },
+    "Hash-Based Signatures": {
+      "note": "01 Knowledge/Cryptography/Hash-Based Signatures.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Постквантовая криптография.md"
+    },
+    "Code-Based Cryptography": {
+      "note": "01 Knowledge/Cryptography/Code-Based Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Постквантовая криптография.md"
+    },
+    "Lattice-Based Cryptography": {
+      "note": "01 Knowledge/Cryptography/Lattice-Based Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Постквантовая криптография.md"
+    },
+    "Multivariate Cryptography": {
+      "note": "01 Knowledge/Cryptography/Multivariate Cryptography.md",
+      "cluster": "01 Knowledge/Cryptography/Кластер - Постквантовая криптография.md"
+    },
+    "Blockchain and Consensus": {
+      "note": "01 Knowledge/Computer Science/Blockchain and Consensus.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Криптография в блокчейне.md"
+    },
+    "Blockchain Cryptography": {
+      "note": "01 Knowledge/Computer Science/Blockchain Cryptography.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Криптография в блокчейне.md"
+    },
+    "Blockchain Attacks": {
+      "note": "01 Knowledge/Cybersecurity/Security Engineering/Blockchain Attacks.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Криптография в блокчейне.md"
+    },
+    "Основы цифровых изображений": {
+      "note": "01 Knowledge/Computer Science/Основы цифровых изображений.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Представление и сжатие изображений.md"
+    },
+    "Цветовые модели изображений": {
+      "note": "01 Knowledge/Computer Science/Цветовые модели изображений.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Представление и сжатие изображений.md"
+    },
+    "Форматы цифровых изображений": {
+      "note": "01 Knowledge/Computer Science/Форматы цифровых изображений.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Представление и сжатие изображений.md"
+    },
+    "Сжатие изображений без потерь": {
+      "note": "01 Knowledge/Computer Science/Сжатие изображений без потерь.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Представление и сжатие изображений.md"
+    },
+    "Сжатие изображений в JPEG": {
+      "note": "01 Knowledge/Computer Science/Сжатие изображений в JPEG.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Представление и сжатие изображений.md"
+    },
+    "Частотные преобразования изображений": {
+      "note": "01 Knowledge/Computer Science/Частотные преобразования изображений.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Преобразования изображений.md"
+    },
+    "ДПФ и ДКП для изображений": {
+      "note": "01 Knowledge/Computer Science/ДПФ и ДКП для изображений.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Преобразования изображений.md"
+    },
+    "Преобразование Уолша—Адамара": {
+      "note": "01 Knowledge/Computer Science/Преобразование Уолша—Адамара.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Преобразования изображений.md"
+    },
+    "Дискретное вейвлет-преобразование": {
+      "note": "01 Knowledge/Computer Science/Дискретное вейвлет-преобразование.md",
+      "cluster": "01 Knowledge/Computer Science/Кластер - Преобразования изображений.md"
+    },
+    "Сокрытие информации": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Сокрытие информации.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Сокрытие информации и водяные знаки.md"
+    },
+    "Цифровая стеганография": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Цифровая стеганография.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Сокрытие информации и водяные знаки.md"
+    },
+    "Цифровые водяные знаки": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Цифровые водяные знаки.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Сокрытие информации и водяные знаки.md"
+    },
+    "Метрики качества стеганографии": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Метрики качества стеганографии.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Сокрытие информации и водяные знаки.md"
+    },
+    "Атаки на цифровые водяные знаки": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Атаки на цифровые водяные знаки.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Сокрытие информации и водяные знаки.md"
+    },
+    "Стеганография в пространственной области": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Стеганография в пространственной области.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в пространственной области.md"
+    },
+    "LSB-стеганография": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/LSB-стеганография.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в пространственной области.md"
+    },
+    "Метод ±1 в стеганографии": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Метод ±1 в стеганографии.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в пространственной области.md"
+    },
+    "Модуляция индекса квантования (QIM)": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Модуляция индекса квантования (QIM).md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в пространственной области.md"
+    },
+    "Метод разности значений пикселей (PVD)": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Метод разности значений пикселей (PVD).md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в пространственной области.md"
+    },
+    "Интерполяция по среднему значению соседних пикселей (NMI)": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Интерполяция по среднему значению соседних пикселей (NMI).md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в пространственной области.md"
+    },
+    "Стеганография в частотной области": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Стеганография в частотной области.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в частотной области и JPEG.md"
+    },
+    "Метод Коха—Жао": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Метод Коха—Жао.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в частотной области и JPEG.md"
+    },
+    "Стеганография в JPEG": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Стеганография в JPEG.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в частотной области и JPEG.md"
+    },
+    "JSteg": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/JSteg.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в частотной области и JPEG.md"
+    },
+    "Методы F3 и F4 в JPEG": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Методы F3 и F4 в JPEG.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в частотной области и JPEG.md"
+    },
+    "Метод F5 в JPEG": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Метод F5 в JPEG.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в частотной области и JPEG.md"
+    },
+    "Стегоанализ": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Стегоанализ.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Стегоанализ.md"
+    },
+    "Визуальный стегоанализ и анализ битовых плоскостей": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Визуальный стегоанализ и анализ битовых плоскостей.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Стегоанализ.md"
+    },
+    "Статистический стегоанализ": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Статистический стегоанализ.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Стегоанализ.md"
+    },
+    "Машинное обучение в стегоанализе": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Машинное обучение в стегоанализе.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Стегоанализ.md"
+    },
+    "Нейросетевой стегоанализ": {
+      "note": "01 Knowledge/Cybersecurity/Steganography/Нейросетевой стегоанализ.md",
+      "cluster": "01 Knowledge/Cybersecurity/Steganography/Кластер - Стегоанализ.md"
+    }
+  }
+}

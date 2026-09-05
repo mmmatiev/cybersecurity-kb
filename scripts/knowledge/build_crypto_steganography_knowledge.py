@@ -13,6 +13,7 @@ from crypto_steganography_enrichment import (
     EXTERNAL_SOURCES,
     Enrichment,
 )
+from build_thematic_clusters import replace_navigation
 
 
 COURSE = "Основы криптографии и стеганографии"
@@ -1202,6 +1203,10 @@ $$
 '''
 
 
+# Keep the generated MOC on the shared thematic route. Content notes are unchanged.
+STEGANOGRAPHY_MOC = replace_navigation("stego", STEGANOGRAPHY_MOC)
+
+
 EXISTING_UPDATES: dict[Path, str] = {
     Path("01 Knowledge/Cryptography/History of Cryptography.md"): f'''## Дополнение из курса «{COURSE}»
 
@@ -1306,11 +1311,19 @@ def main() -> int:
         raise RuntimeError(f"Expected 42 unique content notes, found {len(NOTES)}")
     if note_keys != set(SELF_CHECKS) or note_keys | {"Steganography"} != set(TITLE_MAP):
         raise RuntimeError("Localization maps do not match the generated note set")
+    # Validate the MOC before writing any course content. Keep user additions
+    # outside the navigation block even during a full course regeneration.
+    moc_path = Path("01 Knowledge/Cybersecurity/Steganography/Стеганография.md")
+    updated_moc = STEGANOGRAPHY_MOC
+    if moc_path.exists():
+        existing_moc = moc_path.read_text(encoding="utf-8")
+        if not args.overwrite_generated or GENERATED_MARKER not in existing_moc:
+            raise RuntimeError(f"Refusing to overwrite existing note: {moc_path}")
+        updated_moc = replace_navigation("stego", existing_moc)
     for note in NOTES:
         write_generated(note.path, render(note), args.overwrite_generated)
-
-    moc_path = Path("01 Knowledge/Cybersecurity/Steganography/Стеганография.md")
-    write_generated(moc_path, STEGANOGRAPHY_MOC, args.overwrite_generated)
+    if not moc_path.exists() or updated_moc != moc_path.read_text(encoding="utf-8"):
+        moc_path.write_text(updated_moc, encoding="utf-8")
     for path, block in EXISTING_UPDATES.items():
         update_existing(path, localize_prose(block))
 

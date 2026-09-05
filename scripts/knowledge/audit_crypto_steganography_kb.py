@@ -15,6 +15,7 @@ import pymupdf
 
 from build_crypto_steganography_knowledge import SELF_CHECKS, TITLE_MAP, localize_prose
 from crypto_steganography_enrichment import DETAILS, EXTERNAL_SOURCES
+from audit_thematic_clusters import reachable_via_clusters
 
 
 VAULT = Path(__file__).resolve().parents[2]
@@ -276,6 +277,7 @@ def check_knowledge() -> dict[str, int]:
     if moc is None:
         fail("missing Стеганография MOC")
     moc_text = moc.read_text(encoding="utf-8")
+    moc_targets = reachable_via_clusters(moc_text, canonical)
 
     visual_embeds = 0
     mermaid_diagrams = 0
@@ -336,7 +338,7 @@ def check_knowledge() -> dict[str, int]:
             rf"\[\[{re.escape(SOURCE_PREFIX)} \d{{2}}\]\], стр\. [\d,– ]+\.", body
         ):
             fail(f"missing exact course provenance in {title}")
-        if f"[[{title}]]" not in moc_text and title not in CLASSICAL and title not in IMAGE_FOUNDATIONS:
+        if title not in moc_targets and title not in CLASSICAL and title not in IMAGE_FOUNDATIONS:
             fail(f"Steganography note is not linked from its MOC: {title}")
         expected_questions = SELF_CHECKS[old_title]
         if any(f"{index}. {question}" not in body for index, question in enumerate(expected_questions, start=1)):
