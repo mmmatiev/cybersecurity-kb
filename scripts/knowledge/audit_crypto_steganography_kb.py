@@ -56,7 +56,7 @@ IMAGE_FOUNDATIONS = {TITLE_MAP[title] for title in IMAGE_FOUNDATION_KEYS}
 STEGANOGRAPHY = {TITLE_MAP[title] for title in STEGANOGRAPHY_KEYS}
 EXPECTED_NOTES = CLASSICAL | IMAGE_FOUNDATIONS | STEGANOGRAPHY
 COMMON_HEADINGS = {
-    "Что нужно знать заранее", "Пояснение и границы применения", "Мини-практика",
+    "Что нужно знать заранее", "Пояснение и границы применения",
     "Что запомнить", "Связи", "Самопроверка", "Источники",
 }
 TYPE_HEADINGS = {
@@ -75,7 +75,6 @@ TYPE_HEADINGS = {
         "Ограничения анализа и ошибки",
     },
 }
-WORD_BOUNDS = {"compact": (400, 600), "standard": (600, 850), "deep": (850, 1100)}
 ALLOWED_TYPES = {"concept", "attack", "technique", "moc"}
 ALLOWED_AREAS = {"Computer Science", "Cryptography", "Cybersecurity", "AI & ML"}
 ALLOWED_SECURITY = {"Steganography", "DFIR", "Security Engineering"}
@@ -351,9 +350,11 @@ def check_knowledge() -> dict[str, int]:
         if "Сформулируйте назначение" in body:
             fail(f"generic self-check remains in {title}")
         count = study_word_count(body)
-        lower, upper = WORD_BOUNDS[detail.depth]
-        if not lower <= count <= upper:
-            fail(f"study prose outside {detail.depth} range in {title}: {count} not in {lower}..{upper}")
+        for marker in ('**Исходные данные.**', '**Результат.**', '**Проверка.**', '**Граница применимости.**', '*Происхождение:*'):
+            if marker not in body:
+                fail(f"missing worked-example component in {title}: {marker}")
+        if '## Рабочий разбор' in body or '## Мини-практика' in body:
+            fail(f"generic practice template remains in {title}")
         word_counts.append(count)
         for source_key in detail.source_keys:
             source_record = EXTERNAL_SOURCES.get(source_key)
