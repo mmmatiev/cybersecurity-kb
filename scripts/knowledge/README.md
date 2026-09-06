@@ -16,6 +16,17 @@ python3 -B scripts/knowledge/audit_thematic_clusters.py
 python3 -B -m unittest discover -s scripts/knowledge -p 'test_thematic_clusters.py' -v
 ```
 
+Содержательная редактура карточек дополнительно проверяется так:
+
+```sh
+python3 -B scripts/knowledge/audit_editorial_quality.py
+python3 -B -m unittest discover -s scripts/knowledge -p 'test*examples.py'
+```
+
+Первый скрипт проверяет редакторский контракт 110 карточек, но намеренно не
+выдаёт структурную проверку за доказательство математической правильности.
+Независимые численные расчёты находятся во втором наборе тестов.
+
 Без `--write` сборщик только проверяет актуальность; код возврата 1 означает
 необходимость сборки или конфликт. `--vault-root DIR` позволяет работать с
 отдельной тестовой копией. Повторная сборка не меняет файлы и их время записи.

@@ -303,6 +303,13 @@ def check_notes() -> dict[str, int]:
         if data.get("status") not in {"learning", "review", "stable"}:
             fail(f"missing learning status in {path}")
         headings = set(re.findall(r"(?m)^## (.+)$", body))
+        # These gates prove presence and preservation, not mathematical validity.
+        from reviewed_first_course import EXAMPLES
+        from reviewed_first_notation import NOTATION
+        if EXAMPLES[path.stem].markdown() not in body:
+            fail(f"reviewed example diverged in {path}")
+        if path.stem in NOTATION and NOTATION[path.stem] not in body:
+            fail(f"missing local formula notation in {path}")
         if not REQUIRED_SECTIONS <= headings:
             fail(f"missing study section in {path}: {sorted(REQUIRED_SECTIONS-headings)}")
         if "[[Source - " not in body:

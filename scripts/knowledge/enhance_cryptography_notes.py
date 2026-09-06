@@ -6,6 +6,9 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from reviewed_first_course import EXAMPLES as REVIEWED_EXAMPLES
+from reviewed_first_notation import NOTATION
+
 
 ROOT = Path("01 Knowledge")
 
@@ -301,6 +304,7 @@ def enrich(path: Path) -> None:
     text = path.read_text(encoding="utf-8")
     text = add_frontmatter(text, title)
     note_type = re.search(r"(?m)^type: ([^\n]+)", text).group(1)
+    text = apply_reviewed_content(text, title)
     if title in FORMULAS and "## Ключевая формула" not in text:
         block = f"## Ключевая формула\n\n{FORMULAS[title]}\n\n"
         marker = "## Практический разбор\n"
@@ -320,6 +324,43 @@ def enrich(path: Path) -> None:
             raise RuntimeError(f"Missing source section: {path}")
         text = text.replace(marker, block + marker, 1)
     path.write_text(text, encoding="utf-8")
+
+
+def apply_reviewed_content(text: str, title: str) -> str:
+    """Refresh only explicit editorial blocks; keep seminar/user prose outside them."""
+    begin, end = '<!-- reviewed-example:start -->', '<!-- reviewed-example:end -->'
+    rendered = begin + '\n' + REVIEWED_EXAMPLES[title].markdown() + '\n' + end
+    if begin in text:
+        text = re.sub(re.escape(begin) + r'.*?' + re.escape(end), lambda _: rendered, text, flags=re.S)
+    else:
+        pattern = r'(## Практический разбор\n)(.*?)(?=\n## |\Z)'
+        match = re.search(pattern, text, re.S)
+        if not match:
+            raise RuntimeError(f'Missing example section: {title}')
+        original = match[2].strip()
+        # Preserve substantive old explanations, but not generic instructions posing as a solution.
+        generic = ('Удобная схема разбора:', 'При разборе системы сначала', 'Разбор enrollment ведут',
+                   'Для проверки ручного расчёта полезно', 'Чтобы проверить учебную схему,',
+                   'При проектировании составляют data-flow:', 'При разборе соединения полезно')
+        appendix = '' if original.startswith(generic) else '\n\n### Дополнительное пояснение из конспекта\n\n' + original
+        replacement = match[1] + '\n' + rendered + appendix + '\n'
+        text = text[:match.start()] + replacement + text[match.end():]
+    if title in FORMULAS:
+        begin, end = '<!-- reviewed-notation:start -->', '<!-- reviewed-notation:end -->'
+        block = begin + '\n**Обозначения и условия.** ' + NOTATION[title] + '\n' + end
+        if begin in text:
+            text = re.sub(re.escape(begin) + r'.*?' + re.escape(end), lambda _: block, text, flags=re.S)
+        else:
+            pattern = r'(## Ключевая формула\n.*?)(?=\n## |\Z)'
+            if re.search(pattern, text, re.S):
+                text = re.sub(pattern, lambda m: m[1].rstrip() + '\n\n' + block + '\n', text, count=1, flags=re.S)
+            else:
+                text = text.replace('## Практический разбор\n', '## Ключевая формула\n\n' + FORMULAS[title] + '\n\n' + block + '\n\n## Практический разбор\n', 1)
+    if title == 'Quadratic Residues and Modular Square Roots':
+        text = text.replace('$1246$, $-211$, $1339$ и $-118$', '$118$, $211$, $1246$ и $1339$')
+    if title == 'Schnorr Signatures':
+        text = text.replace('раскрывает d.', 'раскрывает секретный скаляр x.')
+    return text
 
 
 def main() -> int:
