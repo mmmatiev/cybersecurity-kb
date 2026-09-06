@@ -13,6 +13,8 @@ import tempfile
 import zipfile
 from pathlib import Path
 
+from thematic_clusters import organized_note_path
+
 
 VAULT = Path(__file__).resolve().parents[2]
 COURSE_NAME = "Криптографические методы защиты информации"
@@ -169,6 +171,10 @@ DOCX_VISUALS = [
         "source_note": "Source - Тема №7 Постквантовая криптография(1)",
     },
 ]
+
+for visual in (*PDF_VISUALS, *DOCX_VISUALS):
+    original = Path(str(visual["target_note"]))
+    visual["target_note"] = organized_note_path(original, original.stem).as_posix()
 
 
 def parse_args() -> argparse.Namespace:

@@ -10,7 +10,7 @@ from pathlib import Path
 
 from audit_cryptography_kb import ALLOWED_AREAS, ALLOWED_SECURITY, check_vault_integrity, frontmatter
 from build_thematic_clusters import BASE_PATH, MANIFEST, NAVIGATION, VAULT, build, corpus_paths, legacy_path
-from thematic_clusters import BY_ID, CANVAS_PATH, CLUSTERS, primary_membership
+from thematic_clusters import BY_ID, CANVAS_PATH, CLUSTERS, organized_note_path, primary_membership
 
 
 def require(condition: bool, message: str) -> None:
@@ -81,11 +81,11 @@ def check_clusters(root: Path = VAULT) -> dict:
     require(not build(root), "Thematic navigation is stale")
     corpus = corpus_paths(root)
     manifest = json.loads((root / MANIFEST).read_text())
-    require(manifest.get('version') == 2, "Unexpected thematic manifest version")
+    require(manifest.get('version') == 3, "Unexpected thematic manifest version")
     require(set(manifest['primary_membership']) == set(corpus), "Manifest coverage mismatch")
     memberships = primary_membership()
     for c in CLUSTERS:
-        require(c.path.parent.name == '00 Темы', f"Topic is outside 00 Темы: {c.title}")
+        require(c.path.parent.name == c.basename, f"Topic is outside its named folder: {c.title}")
         require(not (root / legacy_path(c)).exists(), f"Legacy topic file remains: {c.title}")
         text = (root / c.path).read_text(encoding='utf-8')
         data, body = frontmatter(text)
@@ -104,7 +104,9 @@ def check_clusters(root: Path = VAULT) -> dict:
         parent_text = next((root / '01 Knowledge').rglob(c.parent + '.md')).read_text()
         require(f'[[{c.basename}|' in parent_text, f"Missing parent link: {c.title}")
     for title, (topic, order) in memberships.items():
-        data, _ = frontmatter((root / corpus[title]).read_text())
+        path = corpus[title]
+        data, _ = frontmatter((root / path).read_text())
+        require(path == organized_note_path(path, title), f"Card is outside its topic folder: {title}")
         require(data.get('topic') == f'[[{topic.basename}]]', f"Wrong topic property: {title}")
         require(str(data.get('study_order')) == str(order), f"Wrong study order: {title}")
         entry = manifest['primary_membership'][title]

@@ -16,7 +16,7 @@ from crypto_steganography_enrichment import (
 from build_thematic_clusters import replace_navigation
 from reviewed_course_math import Formula, FORMULAS as REVIEWED_FORMULAS
 from reviewed_course_examples import EXAMPLES
-from thematic_clusters import primary_membership
+from thematic_clusters import organized_note_path, primary_membership
 
 
 COURSE = "Основы криптографии и стеганографии"
@@ -349,7 +349,8 @@ class Note:
 
     @property
     def path(self) -> Path:
-        return Path(self.folder) / f"{canonical_title(self.title)}.md"
+        title = canonical_title(self.title)
+        return organized_note_path(Path(self.folder) / f"{title}.md", title)
 
 
 NOTES: list[Note] = []
@@ -1156,6 +1157,11 @@ EXISTING_UPDATES: dict[Path, str] = {
 Полный перебор представлен как универсальный метод, не использующий внутреннюю структуру шифра. Его стоимость определяется числом допустимых ключей и скоростью проверки кандидата; поэтому длину ключа оценивают вместе с моделью проверки, параллелизмом и ценностью защищаемых данных.
 
 - {source(7)}, стр. 5.''',
+}
+
+EXISTING_UPDATES = {
+    organized_note_path(path, path.stem): block
+    for path, block in EXISTING_UPDATES.items()
 }
 
 

@@ -202,6 +202,8 @@ Add status, aliases, or tags only when they improve retrieval or workflow. A tem
 
 For a curated learning sequence, `topic` may link one content note to its primary topic MOC and `study_order` may record its position inside that topic. These properties are optional outside an explicitly maintained learning route, use one primary topic only, and do not replace domain folders, `area`, `security`, or ordinary wikilinks.
 
+Curated course cards may be placed in numbered topic subfolders inside their canonical domain or security workstream so the standard Obsidian file explorer remains readable. A cross-domain topic repeats the same numbered folder name in each affected domain instead of moving a card out of the physical-placement rules. Its single topic MOC lives in the topic's primary domain; `topic` and basename-based wikilinks connect the satellite folders to that MOC.
+
 ## Naming and links
 
 - Prefer canonical cybersecurity and technology terminology with human-readable filenames.

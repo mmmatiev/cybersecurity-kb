@@ -13,7 +13,8 @@ from pathlib import Path
 from enhance_cryptography_notes import ALIASES
 from thematic_clusters import (
     BY_ID, CANVAS_EDGES, CANVAS_GROUPS, CANVAS_LEGEND_GEOMETRY,
-    CANVAS_NODE_OFFSETS, CANVAS_PATH, CLUSTERS, primary_membership,
+    CANVAS_NODE_OFFSETS, CANVAS_PATH, CLUSTERS, organized_note_path,
+    primary_membership,
 )
 
 VAULT = Path(__file__).resolve().parents[2]
@@ -279,6 +280,42 @@ def validate_v1_migration(root: Path, manifest: dict) -> None:
         raise RuntimeError("Manual Canvas changes exceed the accepted geometry")
 
 
+def validate_base(root: Path) -> None:
+    path = root / BASE_PATH
+    if not path.is_file():
+        raise RuntimeError(f"Missing topic Base: {BASE_PATH}")
+    text = path.read_text(encoding="utf-8")
+    for snippet in ('file.inFolder("01 Knowledge")', 'type != "moc"', 'topic != null',
+                    'property: topic', 'property: study_order'):
+        if snippet not in text:
+            raise RuntimeError(f"Missing Base configuration: {snippet}")
+
+
+def validate_v2_migration(root: Path, manifest: dict) -> None:
+    """Authorize the folder migration while preserving cards and Obsidian's Base formatting."""
+    old_topics = {
+        (Path("01 Knowledge") / c.domain / "00 Темы" / f"{c.basename}.md").as_posix()
+        for c in CLUSTERS
+    }
+    expected = old_topics | {CANVAS_PATH.as_posix(), BASE_PATH.as_posix()}
+    if set(manifest.get("outputs", {})) != expected:
+        raise RuntimeError("Unexpected version 2 thematic manifest")
+    for path_string in old_topics | {CANVAS_PATH.as_posix()}:
+        path = Path(path_string)
+        target = root / path
+        if not target.is_file() or digest(target.read_text(encoding="utf-8")) != manifest["outputs"][path_string]:
+            raise RuntimeError(f"Manual changes or missing generated file: {path}")
+    validate_base(root)
+    for title, entry in manifest.get("primary_membership", {}).items():
+        source = root / entry["note"]
+        if not source.is_file() or source.stem != title:
+            raise RuntimeError(f"Missing version 2 content note: {title}")
+        cluster, _ = primary_membership()[title]
+        destination = root / organized_note_path(Path(entry["note"]), title)
+        if destination != source and destination.exists():
+            raise RuntimeError(f"Unowned card destination already exists: {destination.relative_to(root)}")
+
+
 def corpus_paths(root: Path) -> dict[str, Path]:
     from build_crypto_steganography_knowledge import NOTES, canonical_title
     expected = set(ALIASES) | {canonical_title(n.title) for n in NOTES}
@@ -306,7 +343,6 @@ def desired_outputs(root: Path) -> dict[Path, str]:
     memberships = primary_membership()
     owned = {c.path: render_cluster(c) for c in CLUSTERS}
     owned[CANVAS_PATH] = serialize(render_canvas())
-    owned[BASE_PATH] = render_base()
     old_manifest_path = root / MANIFEST
     old_manifest = json.loads(old_manifest_path.read_text()) if old_manifest_path.exists() else None
     version = old_manifest.get("version") if old_manifest else None
@@ -315,12 +351,15 @@ def desired_outputs(root: Path) -> dict[Path, str]:
         if (root / BASE_PATH).exists():
             raise RuntimeError(f"Unowned Base destination already exists: {BASE_PATH}")
     elif version == 2:
+        validate_v2_migration(root, old_manifest)
+    elif version == 3:
         if set(old_manifest.get("outputs", {})) != {p.as_posix() for p in owned}:
-            raise RuntimeError("Unexpected version 2 thematic manifest")
+            raise RuntimeError("Unexpected version 3 thematic manifest")
         for path in owned:
             target = root / path
             if not target.is_file() or digest(target.read_text()) != old_manifest["outputs"].get(path.as_posix()):
                 raise RuntimeError(f"Manual changes or missing generated file: {path}")
+        validate_base(root)
     elif old_manifest is not None:
         raise RuntimeError("Unexpected thematic manifest version")
     else:
@@ -329,20 +368,27 @@ def desired_outputs(root: Path) -> dict[Path, str]:
                 raise RuntimeError(f"Unowned existing file: {path}")
 
     outputs = dict(owned)
+    if not (root / BASE_PATH).exists():
+        outputs[BASE_PATH] = render_base()
     for key, (stem, _, _, _) in NAVIGATION.items():
         path = Path("01 Knowledge") / (stem + ".md")
         outputs[path] = replace_navigation(key, (root / path).read_text(encoding="utf-8"))
     for title, (cluster, order) in memberships.items():
-        path = corpus[title]
-        outputs[path] = apply_topic_metadata((root / path).read_text(encoding="utf-8"), cluster, order)
+        source_path = corpus[title]
+        destination = organized_note_path(source_path, title)
+        if destination != source_path and (root / destination).exists():
+            raise RuntimeError(f"Unowned card destination already exists: {destination}")
+        outputs[destination] = apply_topic_metadata(
+            (root / source_path).read_text(encoding="utf-8"), cluster, order
+        )
     home_path = Path("00 Home/Home.md")
     outputs[home_path] = add_home_base_link((root / home_path).read_text(encoding="utf-8"))
     outputs[MANIFEST] = serialize({
-        "version": 2,
+        "version": 3,
         "outputs": {p.as_posix(): digest(text) for p, text in owned.items()},
         "primary_membership": {
             title: {
-                "note": corpus[title].as_posix(),
+                "note": organized_note_path(corpus[title], title).as_posix(),
                 "topic": cluster.path.as_posix(),
                 "study_order": order,
             }
@@ -356,6 +402,13 @@ def build(root: Path, write: bool = False) -> list[Path]:
     manifest_path = root / MANIFEST
     old_manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else None
     stale = [legacy_path(c) for c in CLUSTERS] if old_manifest and old_manifest.get("version") == 1 else []
+    if old_manifest and old_manifest.get("version") == 2:
+        stale += [Path(path) for path in old_manifest["outputs"] if "/00 Темы/" in path]
+        stale += [
+            Path(entry["note"])
+            for title, entry in old_manifest["primary_membership"].items()
+            if Path(entry["note"]) != organized_note_path(Path(entry["note"]), title)
+        ]
     outputs = desired_outputs(root)
     changed = [p for p, content in outputs.items()
                if not (root / p).exists() or (root / p).read_text(encoding="utf-8") != content]
@@ -369,6 +422,9 @@ def build(root: Path, write: bool = False) -> list[Path]:
                 target.write_text(content, encoding="utf-8")
         for p in stale:
             (root / p).unlink()
+        for directory in sorted((root / "01 Knowledge").rglob("00 Темы"), reverse=True):
+            if directory.is_dir() and not any(directory.iterdir()):
+                directory.rmdir()
     return changed
 
 

@@ -34,8 +34,13 @@ class Cluster:
         return f"Кластер - {self.title}"
 
     @property
+    def folder(self) -> Path:
+        """Primary physical topic folder inside the topic's domain."""
+        return Path("01 Knowledge") / self.domain / self.basename
+
+    @property
     def path(self) -> Path:
-        return Path("01 Knowledge") / self.domain / "00 Темы" / f"{self.basename}.md"
+        return self.folder / f"{self.basename}.md"
 
     @property
     def parent(self) -> str:
@@ -282,6 +287,14 @@ def primary_membership() -> dict[str, tuple[Cluster, int]]:
                     raise RuntimeError(f"Duplicate primary topic membership: {title}")
                 result[title] = (cluster, order)
     return result
+
+
+def organized_note_path(path: Path, title: str) -> Path:
+    """Place a card in its topic folder without changing its domain home."""
+    cluster, _ = primary_membership()[title]
+    if path.parent.name == cluster.basename:
+        return path
+    return path.parent / cluster.basename / path.name
 CANVAS_PATH = Path("01 Knowledge/Cryptography/Криптография и стеганография - Карта тем.canvas")
 
 # Columns form two independent learning tracks: cryptography and steganography.
