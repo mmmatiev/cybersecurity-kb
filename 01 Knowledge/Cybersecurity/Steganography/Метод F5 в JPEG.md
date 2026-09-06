@@ -8,6 +8,8 @@ aliases:
   - "F5 JPEG Steganography"
   - "F5 Steganography"
 status: learning
+topic: "[[18 — Встраивание в частотной области и JPEG]]"
+study_order: 6
 ---
 <!-- generated: crypto-stego-course -->
 # Метод F5 в JPEG

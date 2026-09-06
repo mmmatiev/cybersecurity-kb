@@ -1,0 +1,34 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'file.inFolder("01 Knowledge")'
+    - 'type != "moc"'
+    - 'topic != null'
+properties:
+  file.name:
+    displayName: Карточка
+  study_order:
+    displayName: Порядок
+  type:
+    displayName: Тип
+  area:
+    displayName: Область
+  status:
+    displayName: Статус
+views:
+  - type: table
+    name: По темам
+    groupBy:
+      property: topic
+      direction: ASC
+    order:
+      - file.name
+      - study_order
+      - type
+      - area
+      - status
+    sort:
+      - property: study_order
+        direction: ASC
+      - property: file.name
+        direction: ASC

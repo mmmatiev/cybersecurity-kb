@@ -5,6 +5,8 @@ area:
 aliases:
   - "Кузнечик"
 status: learning
+topic: "[[05 — Блочные шифры]]"
+study_order: 5
 ---
 # Kuznyechik
 

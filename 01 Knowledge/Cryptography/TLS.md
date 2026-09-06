@@ -7,6 +7,8 @@ aliases:
   - "Transport Layer Security"
   - "Безопасность транспортного уровня"
 status: review
+topic: "[[09 — Сетевые применения криптографии]]"
+study_order: 2
 ---
 # TLS
 

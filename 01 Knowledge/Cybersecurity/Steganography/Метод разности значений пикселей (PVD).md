@@ -9,6 +9,8 @@ aliases:
   - "PVD Steganography"
   - "Метод разности значений пикселей"
 status: learning
+topic: "[[17 — Встраивание в пространственной области]]"
+study_order: 5
 ---
 <!-- generated: crypto-stego-course -->
 # Метод разности значений пикселей (PVD)

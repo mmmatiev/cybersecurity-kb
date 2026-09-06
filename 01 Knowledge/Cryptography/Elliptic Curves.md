@@ -5,6 +5,8 @@ area:
 aliases:
   - "Эллиптические кривые"
 status: learning
+topic: "[[02 — Алгебра для криптографии]]"
+study_order: 6
 ---
 # Elliptic Curves
 

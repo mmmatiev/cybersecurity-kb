@@ -5,6 +5,8 @@ area:
 aliases:
   - "Квадратичные вычеты и модульные квадратные корни"
 status: learning
+topic: "[[03 — Теория чисел и вычислительные задачи]]"
+study_order: 5
 ---
 # Quadratic Residues and Modular Square Roots
 

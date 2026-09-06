@@ -6,6 +6,8 @@ aliases:
   - "Коды аутентификации сообщений"
   - "MAC"
 status: learning
+topic: "[[07 — Хеширование, аутентификация и подписи]]"
+study_order: 3
 ---
 # Message Authentication Codes
 

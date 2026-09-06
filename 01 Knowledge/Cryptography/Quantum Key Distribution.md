@@ -6,6 +6,8 @@ aliases:
   - "Квантовое распределение ключей"
   - "QKD"
 status: review
+topic: "[[11 — Квантовые вычисления и распределение ключей]]"
+study_order: 2
 ---
 # Quantum Key Distribution
 

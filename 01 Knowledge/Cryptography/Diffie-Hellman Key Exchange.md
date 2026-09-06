@@ -6,6 +6,8 @@ aliases:
   - "Обмен ключами Диффи — Хеллмана"
   - "DH"
 status: learning
+topic: "[[06 — Асимметричное шифрование и обмен ключами]]"
+study_order: 4
 ---
 # Diffie-Hellman Key Exchange
 

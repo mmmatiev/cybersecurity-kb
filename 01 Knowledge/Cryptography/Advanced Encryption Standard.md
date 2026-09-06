@@ -6,6 +6,8 @@ aliases:
   - "AES"
   - "Стандарт расширенного шифрования"
 status: learning
+topic: "[[05 — Блочные шифры]]"
+study_order: 4
 ---
 # Advanced Encryption Standard
 

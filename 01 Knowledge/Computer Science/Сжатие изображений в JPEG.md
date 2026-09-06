@@ -6,6 +6,8 @@ aliases:
   - "JPEG Compression"
   - "Сжатие JPEG"
 status: learning
+topic: "[[14 — Представление и сжатие изображений]]"
+study_order: 5
 ---
 <!-- generated: crypto-stego-course -->
 # Сжатие изображений в JPEG

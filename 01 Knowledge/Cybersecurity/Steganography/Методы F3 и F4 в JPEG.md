@@ -10,6 +10,8 @@ aliases:
   - "F4"
   - "F3 and F4"
 status: learning
+topic: "[[18 — Встраивание в частотной области и JPEG]]"
+study_order: 5
 ---
 <!-- generated: crypto-stego-course -->
 # Методы F3 и F4 в JPEG

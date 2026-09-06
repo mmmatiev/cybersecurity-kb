@@ -6,6 +6,8 @@ aliases:
   - "Дискретный логарифм и Baby-Step Giant-Step"
   - "BSGS"
 status: learning
+topic: "[[03 — Теория чисел и вычислительные задачи]]"
+study_order: 8
 ---
 # Discrete Logarithm and Baby-Step Giant-Step
 

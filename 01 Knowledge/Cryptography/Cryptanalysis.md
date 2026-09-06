@@ -5,6 +5,8 @@ area:
 aliases:
   - "Криптоанализ"
 status: learning
+topic: "[[10 — Криптоанализ и атаки]]"
+study_order: 1
 ---
 # Cryptanalysis
 

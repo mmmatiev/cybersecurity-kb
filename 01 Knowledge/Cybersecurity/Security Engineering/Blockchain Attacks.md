@@ -8,6 +8,8 @@ security:
 aliases:
   - "Атаки на блокчейн"
 status: learning
+topic: "[[13 — Криптография в блокчейне]]"
+study_order: 3
 ---
 # Blockchain Attacks
 

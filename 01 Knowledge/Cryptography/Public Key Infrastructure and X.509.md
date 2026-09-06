@@ -6,6 +6,8 @@ aliases:
   - "Инфраструктура открытых ключей и X.509"
   - "PKI"
 status: learning
+topic: "[[08 — Ключи, сертификаты и криптографическая инфраструктура]]"
+study_order: 3
 ---
 # Public Key Infrastructure and X.509
 

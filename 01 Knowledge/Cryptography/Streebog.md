@@ -6,6 +6,8 @@ aliases:
   - "Стрибог"
   - "ГОСТ Р 34.11-2012"
 status: learning
+topic: "[[07 — Хеширование, аутентификация и подписи]]"
+study_order: 2
 ---
 # Streebog
 

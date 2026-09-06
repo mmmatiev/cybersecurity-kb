@@ -5,6 +5,8 @@ area:
 aliases:
   - "Факторизация и метод Полларда ро"
 status: learning
+topic: "[[03 — Теория чисел и вычислительные задачи]]"
+study_order: 7
 ---
 # Integer Factorization and Pollard Rho
 

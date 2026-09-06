@@ -9,6 +9,8 @@ aliases:
   - "NMI Steganography"
   - "Интерполяция среднего соседей"
 status: learning
+topic: "[[17 — Встраивание в пространственной области]]"
+study_order: 6
 ---
 <!-- generated: crypto-stego-course -->
 # Интерполяция по среднему значению соседних пикселей (NMI)

@@ -6,6 +6,8 @@ aliases:
   - "Аппаратные модули безопасности"
   - "HSM"
 status: learning
+topic: "[[08 — Ключи, сертификаты и криптографическая инфраструктура]]"
+study_order: 5
 ---
 # Hardware Security Modules
 

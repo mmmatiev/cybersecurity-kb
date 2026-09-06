@@ -9,8 +9,8 @@ from itertools import combinations
 from pathlib import Path
 
 from audit_cryptography_kb import ALLOWED_AREAS, ALLOWED_SECURITY, check_vault_integrity, frontmatter
-from build_thematic_clusters import MANIFEST, NAVIGATION, VAULT, build, corpus_paths
-from thematic_clusters import BY_ID, CANVAS_PATH, CLUSTERS
+from build_thematic_clusters import BASE_PATH, MANIFEST, NAVIGATION, VAULT, build, corpus_paths, legacy_path
+from thematic_clusters import BY_ID, CANVAS_PATH, CLUSTERS, primary_membership
 
 
 def require(condition: bool, message: str) -> None:
@@ -26,8 +26,9 @@ def linked_targets(text: str) -> set[str]:
 def reachable_via_clusters(moc_text: str, canonical: dict[str, Path]) -> set[str]:
     """Allow one thematic hop, not arbitrary reachability through unrelated MOCs."""
     targets = linked_targets(moc_text)
+    topic_names = {c.basename for c in CLUSTERS}
     for title in tuple(targets):
-        if title.startswith('Кластер - '):
+        if title in topic_names:
             path = canonical.get(title)
             require(path is not None, f"Missing linked cluster: {title}")
             metadata, body = frontmatter(path.read_text())
@@ -72,7 +73,7 @@ def check_canvas(root: Path, canvas: dict) -> dict:
     for e in edges:
         require(e['fromNode'] in node_ids and e['toNode'] in node_ids and e['fromNode'] != e['toNode'], "Bad Canvas edge")
         require(e['fromSide'] in {'left', 'right', 'top', 'bottom'} and e['toSide'] in {'left', 'right', 'top', 'bottom'}, "Bad Canvas side")
-        require(e['fromEnd'] == 'none' and e['toEnd'] == 'arrow', "Bad Canvas arrow")
+        require(e.get('fromEnd', 'none') == 'none' and e.get('toEnd', 'arrow') == 'arrow', "Bad Canvas arrow")
     return {'canvas_file_nodes': len(file_nodes), 'canvas_groups': len(groups), 'canvas_edges': len(edges)}
 
 
@@ -80,8 +81,12 @@ def check_clusters(root: Path = VAULT) -> dict:
     require(not build(root), "Thematic navigation is stale")
     corpus = corpus_paths(root)
     manifest = json.loads((root / MANIFEST).read_text())
+    require(manifest.get('version') == 2, "Unexpected thematic manifest version")
     require(set(manifest['primary_membership']) == set(corpus), "Manifest coverage mismatch")
+    memberships = primary_membership()
     for c in CLUSTERS:
+        require(c.path.parent.name == '00 Темы', f"Topic is outside 00 Темы: {c.title}")
+        require(not (root / legacy_path(c)).exists(), f"Legacy topic file remains: {c.title}")
         text = (root / c.path).read_text(encoding='utf-8')
         data, body = frontmatter(text)
         require(data['type'] == 'moc' and isinstance(data['area'], list) and 1 <= len(data['area']) <= 2
@@ -90,12 +95,25 @@ def check_clusters(root: Path = VAULT) -> dict:
             require(isinstance(data.get('security'), list) and len(data['security']) == 1
                     and set(data['security']) <= ALLOWED_SECURITY, f"Invalid security metadata: {c.title}")
         require(all(value not in ('', []) for value in data.values()), f"Empty metadata: {c.title}")
-        require(f'# {c.basename}\n' in body, f"Wrong H1: {c.title}")
-        for heading in ('Обзор', 'Что нужно знать заранее', 'Порядок изучения', 'Карточки по подгруппам', 'Связанные кластеры', 'Навигация'):
+        require(c.legacy_basename in data.get('aliases', []), f"Missing legacy alias: {c.title}")
+        require(f'# {c.title}\n' in body, f"Wrong H1: {c.title}")
+        for heading in ('Обзор', 'Что нужно знать заранее', 'Порядок изучения', 'Карточки по подгруппам', 'Связанные темы'):
             require(f'\n## {heading}\n' in body, f"Missing cluster section: {c.title} / {heading}")
+        require('\n## Навигация\n' not in body, f"Redundant navigation section: {c.title}")
+        require('Карточек в основном маршруте:' not in body, f"Redundant card count: {c.title}")
         parent_text = next((root / '01 Knowledge').rglob(c.parent + '.md')).read_text()
         require(f'[[{c.basename}|' in parent_text, f"Missing parent link: {c.title}")
-    results = {'clusters': len(CLUSTERS), 'primary_cards': len(corpus), 'parent_mocs': len(NAVIGATION)}
+    for title, (topic, order) in memberships.items():
+        data, _ = frontmatter((root / corpus[title]).read_text())
+        require(data.get('topic') == f'[[{topic.basename}]]', f"Wrong topic property: {title}")
+        require(str(data.get('study_order')) == str(order), f"Wrong study order: {title}")
+        entry = manifest['primary_membership'][title]
+        require(entry == {'note': corpus[title].as_posix(), 'topic': topic.path.as_posix(), 'study_order': order},
+                f"Wrong manifest membership: {title}")
+    base = (root / BASE_PATH).read_text()
+    for snippet in ('file.inFolder("01 Knowledge")', "type != \"moc\"", "topic != null", 'property: topic', 'property: study_order'):
+        require(snippet in base, f"Missing Base configuration: {snippet}")
+    results = {'topics': len(CLUSTERS), 'primary_cards': len(corpus), 'parent_mocs': len(NAVIGATION), 'base_rows': len(memberships)}
     results.update(check_canvas(root, json.loads((root / CANVAS_PATH).read_text())))
     return results
 

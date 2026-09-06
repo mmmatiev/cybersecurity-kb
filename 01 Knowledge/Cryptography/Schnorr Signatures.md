@@ -5,6 +5,8 @@ area:
 aliases:
   - "Подписи Шнорра"
 status: learning
+topic: "[[07 — Хеширование, аутентификация и подписи]]"
+study_order: 5
 ---
 # Schnorr Signatures
 

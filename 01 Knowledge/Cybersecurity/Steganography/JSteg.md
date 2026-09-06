@@ -7,6 +7,8 @@ security:
 aliases:
   - "JSteg JPEG Steganography"
 status: learning
+topic: "[[18 — Встраивание в частотной области и JPEG]]"
+study_order: 4
 ---
 <!-- generated: crypto-stego-course -->
 # JSteg

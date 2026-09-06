@@ -6,6 +6,8 @@ aliases:
   - "Цифровые подписи"
   - "Электронная подпись"
 status: learning
+topic: "[[07 — Хеширование, аутентификация и подписи]]"
+study_order: 4
 ---
 # Digital Signatures
 

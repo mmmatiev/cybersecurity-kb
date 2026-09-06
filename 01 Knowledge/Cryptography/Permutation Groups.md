@@ -5,6 +5,8 @@ area:
 aliases:
   - "Группы подстановок"
 status: learning
+topic: "[[02 — Алгебра для криптографии]]"
+study_order: 2
 ---
 # Permutation Groups
 

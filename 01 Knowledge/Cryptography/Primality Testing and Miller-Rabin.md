@@ -5,6 +5,8 @@ area:
 aliases:
   - "Тесты простоты и Миллер — Рабин"
 status: learning
+topic: "[[03 — Теория чисел и вычислительные задачи]]"
+study_order: 6
 ---
 # Primality Testing and Miller-Rabin
 

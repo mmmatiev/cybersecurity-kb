@@ -5,6 +5,8 @@ area:
 aliases:
   - "ГОСТ Р 34.12-2015"
 status: learning
+topic: "[[05 — Блочные шифры]]"
+study_order: 7
 ---
 # GOST R 34.12-2015
 

@@ -27,11 +27,15 @@ class Cluster:
 
     @property
     def basename(self) -> str:
+        return f"{self.number:02d} — {self.title}"
+
+    @property
+    def legacy_basename(self) -> str:
         return f"Кластер - {self.title}"
 
     @property
     def path(self) -> Path:
-        return Path("01 Knowledge") / self.domain / f"{self.basename}.md"
+        return Path("01 Knowledge") / self.domain / "00 Темы" / f"{self.basename}.md"
 
     @property
     def parent(self) -> str:
@@ -264,6 +268,20 @@ CLUSTERS = (
 )
 
 BY_ID = {cluster.number: cluster for cluster in CLUSTERS}
+
+
+def primary_membership() -> dict[str, tuple[Cluster, int]]:
+    """Map every canonical card to one topic and its order inside that topic."""
+    result: dict[str, tuple[Cluster, int]] = {}
+    for cluster in CLUSTERS:
+        order = 0
+        for group in cluster.sections:
+            for title, _ in group.entries:
+                order += 1
+                if title in result:
+                    raise RuntimeError(f"Duplicate primary topic membership: {title}")
+                result[title] = (cluster, order)
+    return result
 CANVAS_PATH = Path("01 Knowledge/Cryptography/Криптография и стеганография - Карта тем.canvas")
 
 # Columns form two independent learning tracks: cryptography and steganography.
@@ -274,6 +292,10 @@ CANVAS_GROUPS = (
     ("images", "04 · Изображения", "3", 2140, 0, (14, 15)),
     ("steganography", "05 · Сокрытие и обнаружение", "2", 2820, 0, (16, 17, 18, 19)),
 )
+
+# Preserve the small manual alignment adjustments accepted for the study map.
+CANVAS_LEGEND_GEOMETRY = (30, -280, 3460, 190)
+CANVAS_NODE_OFFSETS = {1: (0, 10)}
 
 # Deliberately sparse: arrows are learning dependencies, not a full link graph.
 CANVAS_EDGES = (

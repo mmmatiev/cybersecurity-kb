@@ -8,6 +8,8 @@ aliases:
   - "LSB Steganography"
   - "LSB-встраивание"
 status: learning
+topic: "[[17 — Встраивание в пространственной области]]"
+study_order: 2
 ---
 <!-- generated: crypto-stego-course -->
 # LSB-стеганография

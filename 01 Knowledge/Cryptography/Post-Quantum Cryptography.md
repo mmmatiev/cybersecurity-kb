@@ -6,6 +6,8 @@ status: review
 aliases:
   - "Постквантовая криптография"
   - "PQC"
+topic: "[[12 — Постквантовая криптография]]"
+study_order: 1
 ---
 # Post-Quantum Cryptography
 

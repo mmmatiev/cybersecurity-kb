@@ -5,6 +5,8 @@ area:
 status: review
 aliases:
   - "Подписи на основе хэш-функций"
+topic: "[[12 — Постквантовая криптография]]"
+study_order: 2
 ---
 # Hash-Based Signatures
 

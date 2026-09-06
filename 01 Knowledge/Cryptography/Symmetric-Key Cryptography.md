@@ -5,6 +5,8 @@ area:
 aliases:
   - "Симметричная криптография"
 status: learning
+topic: "[[01 — Основы криптографии]]"
+study_order: 3
 ---
 # Symmetric-Key Cryptography
 

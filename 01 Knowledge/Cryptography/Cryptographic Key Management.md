@@ -5,6 +5,8 @@ area:
 aliases:
   - "Управление криптографическими ключами"
 status: learning
+topic: "[[08 — Ключи, сертификаты и криптографическая инфраструктура]]"
+study_order: 2
 ---
 # Cryptographic Key Management
 

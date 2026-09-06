@@ -5,6 +5,8 @@ area:
 aliases:
   - "Модульное возведение в степень"
 status: learning
+topic: "[[03 — Теория чисел и вычислительные задачи]]"
+study_order: 3
 ---
 # Modular Exponentiation
 

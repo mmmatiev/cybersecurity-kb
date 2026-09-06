@@ -6,6 +6,8 @@ aliases:
   - "Secure Shell"
   - "Безопасная оболочка"
 status: learning
+topic: "[[09 — Сетевые применения криптографии]]"
+study_order: 3
 ---
 # SSH
 

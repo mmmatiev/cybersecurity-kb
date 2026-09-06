@@ -5,6 +5,8 @@ area:
 aliases:
   - "Кольца многочленов"
 status: learning
+topic: "[[02 — Алгебра для криптографии]]"
+study_order: 4
 ---
 # Polynomial Rings
 

@@ -9,6 +9,8 @@ aliases:
   - "QIM"
   - "Модуляция индекса квантования"
 status: learning
+topic: "[[17 — Встраивание в пространственной области]]"
+study_order: 4
 ---
 <!-- generated: crypto-stego-course -->
 # Модуляция индекса квантования (QIM)

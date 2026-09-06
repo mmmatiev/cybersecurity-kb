@@ -5,6 +5,8 @@ area:
 aliases:
   - "Протоколы управления сертификатами"
 status: learning
+topic: "[[08 — Ключи, сертификаты и криптографическая инфраструктура]]"
+study_order: 4
 ---
 # Certificate Enrollment Protocols
 

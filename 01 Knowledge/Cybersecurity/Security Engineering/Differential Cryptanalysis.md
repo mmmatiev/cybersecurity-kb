@@ -7,6 +7,8 @@ security:
 aliases:
   - "Дифференциальный криптоанализ"
 status: learning
+topic: "[[10 — Криптоанализ и атаки]]"
+study_order: 5
 ---
 # Differential Cryptanalysis
 

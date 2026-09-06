@@ -18,6 +18,7 @@ Personal knowledge base for technology, cybersecurity study, practice and resear
 - [[Cloud]]
 - [[AI & ML]]
 - [[Cryptography]]
+- [[00 Home/Карточки по темам.base|Карточки по темам]]
 
 ## Cybersecurity
 

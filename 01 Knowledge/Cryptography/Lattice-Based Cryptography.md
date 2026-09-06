@@ -5,6 +5,8 @@ area:
 status: review
 aliases:
   - "Решёточная криптография"
+topic: "[[12 — Постквантовая криптография]]"
+study_order: 4
 ---
 # Lattice-Based Cryptography
 

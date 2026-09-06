@@ -7,6 +7,8 @@ security:
 aliases:
   - "Линейный криптоанализ"
 status: learning
+topic: "[[10 — Криптоанализ и атаки]]"
+study_order: 4
 ---
 # Linear Cryptanalysis
 

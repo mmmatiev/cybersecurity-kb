@@ -5,6 +5,8 @@ area:
 aliases:
   - "Построение блочных шифров"
 status: learning
+topic: "[[05 — Блочные шифры]]"
+study_order: 1
 ---
 # Block Cipher Design
 

@@ -7,6 +7,8 @@ security:
 aliases:
   - "Атаки по сторонним каналам"
 status: learning
+topic: "[[10 — Криптоанализ и атаки]]"
+study_order: 6
 ---
 # Side-Channel Attacks
 

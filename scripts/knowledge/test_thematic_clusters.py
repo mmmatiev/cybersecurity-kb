@@ -10,9 +10,10 @@ from pathlib import Path
 
 from audit_thematic_clusters import check_canvas, check_clusters, reachable_via_clusters
 from build_thematic_clusters import (
-    END, MANIFEST, NAVIGATION, START_RE, VAULT, build, corpus_paths, replace_navigation,
+    BASE_PATH, END, MANIFEST, NAVIGATION, START_RE, VAULT, build, corpus_paths,
+    legacy_path, replace_navigation,
 )
-from thematic_clusters import CANVAS_PATH, CLUSTERS
+from thematic_clusters import BY_ID, CANVAS_PATH, CLUSTERS, primary_membership
 
 
 class ThematicTests(unittest.TestCase):
@@ -20,6 +21,7 @@ class ThematicTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(prefix='kb-clusters-test-')
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
+        shutil.copytree(VAULT / '00 Home', self.root / '00 Home')
         shutil.copytree(VAULT / '01 Knowledge', self.root / '01 Knowledge')
         shutil.copytree(VAULT / 'scripts/knowledge', self.root / 'scripts/knowledge', ignore=shutil.ignore_patterns('__pycache__'))
 
@@ -30,7 +32,16 @@ class ThematicTests(unittest.TestCase):
 
     def test_complete_unique_membership(self):
         self.assertEqual(len(corpus_paths(self.root)), 110)
-        self.assertEqual(check_clusters(self.root)['clusters'], 19)
+        self.assertEqual(check_clusters(self.root)['topics'], 19)
+
+    def test_topic_metadata_and_base(self):
+        corpus = corpus_paths(self.root)
+        self.assertTrue((self.root / BASE_PATH).is_file())
+        for title, (topic, order) in primary_membership().items():
+            text = (self.root / corpus[title]).read_text()
+            self.assertIn(f'topic: "[[{topic.basename}]]"', text)
+            self.assertIn(f'study_order: {order}', text)
+        self.assertTrue(all(not (self.root / legacy_path(topic)).exists() for topic in CLUSTERS))
 
     def test_idempotent_and_read_only_check(self):
         before = self.hashes()
@@ -83,7 +94,7 @@ class ThematicTests(unittest.TestCase):
 
     def test_unowned_collision_stops(self):
         (self.root / MANIFEST).unlink()
-        with self.assertRaisesRegex(RuntimeError, 'unowned'):
+        with self.assertRaisesRegex(RuntimeError, '[Uu]nowned'):
             build(self.root, write=True)
 
     def test_bad_markers_and_preimage_stop(self):
@@ -113,7 +124,7 @@ class ThematicTests(unittest.TestCase):
 
     def test_navigation_requires_actual_cluster_link(self):
         canonical = {p.stem: p for p in (self.root / '01 Knowledge').rglob('*.md')}
-        title = 'Кластер - Встраивание в частотной области и JPEG'
+        title = BY_ID[18].basename
         self.assertIn('JSteg', reachable_via_clusters(f'[[{title}|JPEG]]', canonical))
         self.assertNotIn('JSteg', reachable_via_clusters('[[Cryptography]]', canonical))
         self.assertNotIn('JSteg', reachable_via_clusters('Нет ссылки.', canonical))

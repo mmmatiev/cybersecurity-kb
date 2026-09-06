@@ -9,6 +9,8 @@ aliases:
   - "Атака человек посередине"
   - "MITM"
 status: learning
+topic: "[[09 — Сетевые применения криптографии]]"
+study_order: 6
 ---
 # Man-in-the-Middle Attack
 

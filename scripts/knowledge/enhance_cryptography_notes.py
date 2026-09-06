@@ -8,6 +8,7 @@ from pathlib import Path
 
 from reviewed_first_course import EXAMPLES as REVIEWED_EXAMPLES
 from reviewed_first_notation import NOTATION
+from thematic_clusters import primary_membership
 
 
 ROOT = Path("01 Knowledge")
@@ -273,6 +274,11 @@ def add_frontmatter(text: str, title: str) -> str:
     if not re.search(r"(?m)^status:", frontmatter):
         status = "review" if title in REVIEW else "learning"
         frontmatter += f"\nstatus: {status}"
+    frontmatter = re.sub(r"(?m)^topic:.*\n?", "", frontmatter)
+    frontmatter = re.sub(r"(?m)^study_order:.*\n?", "", frontmatter)
+    cluster, study_order = primary_membership()[title]
+    frontmatter = frontmatter.rstrip()
+    frontmatter += f'\ntopic: "[[{cluster.basename}]]"\nstudy_order: {study_order}'
     return f"---\n{frontmatter}\n---\n" + text[match.end():]
 
 

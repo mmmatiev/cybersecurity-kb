@@ -5,6 +5,8 @@ area:
 aliases:
   - "Кодовая криптография"
 status: review
+topic: "[[12 — Постквантовая криптография]]"
+study_order: 3
 ---
 # Code-Based Cryptography
 

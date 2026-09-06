@@ -6,6 +6,8 @@ aliases:
   - "Криптографические протоколы и аутентифицированный обмен ключами"
   - "AKE"
 status: learning
+topic: "[[09 — Сетевые применения криптографии]]"
+study_order: 1
 ---
 # Cryptographic Protocols and Authenticated Key Exchange
 

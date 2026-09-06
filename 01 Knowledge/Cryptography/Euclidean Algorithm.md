@@ -6,6 +6,8 @@ aliases:
   - "Алгоритм Евклида"
   - "Расширенный алгоритм Евклида"
 status: learning
+topic: "[[03 — Теория чисел и вычислительные задачи]]"
+study_order: 1
 ---
 # Euclidean Algorithm
 

@@ -6,6 +6,8 @@ aliases:
   - "Средства криптографической защиты информации"
   - "СКЗИ"
 status: learning
+topic: "[[08 — Ключи, сертификаты и криптографическая инфраструктура]]"
+study_order: 7
 ---
 # Cryptographic Protection Systems
 

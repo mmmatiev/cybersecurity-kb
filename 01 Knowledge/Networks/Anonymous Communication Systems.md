@@ -5,6 +5,8 @@ area:
 aliases:
   - "Анонимные системы связи"
 status: learning
+topic: "[[09 — Сетевые применения криптографии]]"
+study_order: 5
 ---
 # Anonymous Communication Systems
 

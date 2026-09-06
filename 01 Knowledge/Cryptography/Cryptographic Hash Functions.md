@@ -5,6 +5,8 @@ area:
 aliases:
   - "Криптографические хэш-функции"
 status: learning
+topic: "[[07 — Хеширование, аутентификация и подписи]]"
+study_order: 1
 ---
 # Cryptographic Hash Functions
 

@@ -5,6 +5,8 @@ area:
 aliases:
   - "Многомерная криптография"
 status: review
+topic: "[[12 — Постквантовая криптография]]"
+study_order: 5
 ---
 # Multivariate Cryptography
 

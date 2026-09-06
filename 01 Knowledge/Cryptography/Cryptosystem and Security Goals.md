@@ -5,6 +5,8 @@ area:
 aliases:
   - "Криптосистема и цели безопасности"
 status: learning
+topic: "[[01 — Основы криптографии]]"
+study_order: 2
 ---
 # Cryptosystem and Security Goals
 

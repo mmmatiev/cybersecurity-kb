@@ -6,6 +6,8 @@ area:
 aliases:
   - "Криптография блокчейна"
 status: learning
+topic: "[[13 — Криптография в блокчейне]]"
+study_order: 2
 ---
 # Blockchain Cryptography
 

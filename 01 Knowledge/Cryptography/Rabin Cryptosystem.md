@@ -5,6 +5,8 @@ area:
 aliases:
   - "Криптосистема Рабина"
 status: learning
+topic: "[[06 — Асимметричное шифрование и обмен ключами]]"
+study_order: 2
 ---
 # Rabin Cryptosystem
 

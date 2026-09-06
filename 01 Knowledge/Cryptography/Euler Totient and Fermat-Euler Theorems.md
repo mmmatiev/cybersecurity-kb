@@ -5,6 +5,8 @@ area:
 aliases:
   - "Функция Эйлера и теоремы Ферма — Эйлера"
 status: learning
+topic: "[[03 — Теория чисел и вычислительные задачи]]"
+study_order: 2
 ---
 # Euler Totient and Fermat-Euler Theorems
 

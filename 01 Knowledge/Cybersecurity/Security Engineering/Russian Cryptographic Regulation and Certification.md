@@ -7,6 +7,8 @@ security:
 status: review
 aliases:
   - "Российское регулирование и сертификация криптографии"
+topic: "[[08 — Ключи, сертификаты и криптографическая инфраструктура]]"
+study_order: 8
 ---
 # Russian Cryptographic Regulation and Certification
 

@@ -6,6 +6,8 @@ aliases:
   - "Поточные шифры и одноразовый блокнот"
   - "OTP"
 status: learning
+topic: "[[01 — Основы криптографии]]"
+study_order: 5
 ---
 # Stream Ciphers and One-Time Pad
 

@@ -6,6 +6,8 @@ aliases:
   - "Криптографические провайдеры"
   - "CSP"
 status: learning
+topic: "[[08 — Ключи, сертификаты и криптографическая инфраструктура]]"
+study_order: 6
 ---
 # Cryptographic Service Providers
 

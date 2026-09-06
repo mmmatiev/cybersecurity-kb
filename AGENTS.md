@@ -200,6 +200,8 @@ A note under `01 Knowledge/Cybersecurity` also includes:
 
 Add status, aliases, or tags only when they improve retrieval or workflow. A template is a starting structure, not a questionnaire.
 
+For a curated learning sequence, `topic` may link one content note to its primary topic MOC and `study_order` may record its position inside that topic. These properties are optional outside an explicitly maintained learning route, use one primary topic only, and do not replace domain folders, `area`, `security`, or ordinary wikilinks.
+
 ## Naming and links
 
 - Prefer canonical cybersecurity and technology terminology with human-readable filenames.

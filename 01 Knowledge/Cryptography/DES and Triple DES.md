@@ -6,6 +6,8 @@ aliases:
   - "DES и Triple DES"
   - "3DES"
 status: learning
+topic: "[[05 — Блочные шифры]]"
+study_order: 2
 ---
 # DES and Triple DES
 

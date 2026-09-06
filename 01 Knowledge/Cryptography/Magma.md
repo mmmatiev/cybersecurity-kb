@@ -5,6 +5,8 @@ area:
 aliases:
   - "Магма"
 status: learning
+topic: "[[05 — Блочные шифры]]"
+study_order: 3
 ---
 # Magma
 

@@ -5,6 +5,8 @@ area:
 aliases:
   - "Алгебраические структуры"
 status: learning
+topic: "[[02 — Алгебра для криптографии]]"
+study_order: 1
 ---
 # Algebraic Structures
 

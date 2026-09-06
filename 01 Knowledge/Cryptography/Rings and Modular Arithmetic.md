@@ -5,6 +5,8 @@ area:
 aliases:
   - "Кольца и модульная арифметика"
 status: learning
+topic: "[[02 — Алгебра для криптографии]]"
+study_order: 3
 ---
 # Rings and Modular Arithmetic
 

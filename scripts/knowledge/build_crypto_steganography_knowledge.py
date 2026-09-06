@@ -16,6 +16,7 @@ from crypto_steganography_enrichment import (
 from build_thematic_clusters import replace_navigation
 from reviewed_course_math import Formula, FORMULAS as REVIEWED_FORMULAS
 from reviewed_course_examples import EXAMPLES
+from thematic_clusters import primary_membership
 
 
 COURSE = "Основы криптографии и стеганографии"
@@ -388,6 +389,9 @@ def render(note: Note) -> str:
         yaml.extend(f'  - "{value}"' for value in aliases)
     if note.status:
         yaml.append(f"status: {note.status}")
+    cluster, study_order = primary_membership()[title]
+    yaml.append(f'topic: "[[{cluster.basename}]]"')
+    yaml.append(f"study_order: {study_order}")
     yaml.append("---")
 
     summary = localize_prose(note.summary, introduce=note.title)

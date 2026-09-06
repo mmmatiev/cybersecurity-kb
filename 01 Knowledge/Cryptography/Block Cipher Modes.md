@@ -5,6 +5,8 @@ area:
 aliases:
   - "Режимы работы блочных шифров"
 status: learning
+topic: "[[05 — Блочные шифры]]"
+study_order: 6
 ---
 # Block Cipher Modes
 

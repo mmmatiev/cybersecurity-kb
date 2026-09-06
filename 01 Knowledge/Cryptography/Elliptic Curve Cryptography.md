@@ -6,6 +6,8 @@ aliases:
   - "Криптография на эллиптических кривых"
   - "ECC"
 status: learning
+topic: "[[06 — Асимметричное шифрование и обмен ключами]]"
+study_order: 5
 ---
 # Elliptic Curve Cryptography
 

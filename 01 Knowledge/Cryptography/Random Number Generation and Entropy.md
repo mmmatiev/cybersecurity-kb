@@ -6,6 +6,8 @@ aliases:
   - "Генерация случайных чисел и энтропия"
   - "ГСЧ"
 status: learning
+topic: "[[08 — Ключи, сертификаты и криптографическая инфраструктура]]"
+study_order: 1
 ---
 # Random Number Generation and Entropy
 

@@ -5,6 +5,8 @@ area:
 aliases:
   - "Асимметричная криптография"
 status: learning
+topic: "[[01 — Основы криптографии]]"
+study_order: 4
 ---
 # Asymmetric Cryptography
 

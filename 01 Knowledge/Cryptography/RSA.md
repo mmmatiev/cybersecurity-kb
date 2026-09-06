@@ -5,6 +5,8 @@ area:
 aliases:
   - "Криптосистема RSA"
 status: learning
+topic: "[[06 — Асимметричное шифрование и обмен ключами]]"
+study_order: 1
 ---
 # RSA
 

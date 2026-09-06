@@ -8,6 +8,8 @@ aliases:
   - "JPEG Steganography"
   - "Стеганография JPEG"
 status: learning
+topic: "[[18 — Встраивание в частотной области и JPEG]]"
+study_order: 3
 ---
 <!-- generated: crypto-stego-course -->
 # Стеганография в JPEG

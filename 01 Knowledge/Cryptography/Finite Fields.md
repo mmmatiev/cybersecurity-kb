@@ -6,6 +6,8 @@ aliases:
   - "Конечные поля"
   - "Поля Галуа"
 status: learning
+topic: "[[02 — Алгебра для криптографии]]"
+study_order: 5
 ---
 # Finite Fields
 

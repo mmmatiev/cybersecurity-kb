@@ -53,8 +53,8 @@
     {
       "id": "legend",
       "type": "text",
-      "x": 0,
-      "y": -270,
+      "x": 30,
+      "y": -280,
       "width": 3460,
       "height": 190,
       "text": "# Криптография и стеганография · карта тем\n\n**Слева — криптография. Справа — изображения и стеганография.** Это два самостоятельных маршрута. Каждый узел открывает страницу темы с подгруппами и карточками. Стрелки показывают отдельные учебные зависимости, а не все связи базы. Для деталей приблизьте нужную группу и откройте её страницу."
@@ -62,18 +62,18 @@
     {
       "id": "cluster-01",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Основы криптографии.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/01 — Основы криптографии.md",
       "subpath": "#Обзор",
       "color": "5",
       "x": 30,
-      "y": 70,
+      "y": 80,
       "width": 580,
       "height": 300
     },
     {
       "id": "cluster-02",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Алгебра для криптографии.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/02 — Алгебра для криптографии.md",
       "subpath": "#Обзор",
       "color": "5",
       "x": 30,
@@ -84,7 +84,7 @@
     {
       "id": "cluster-03",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Теория чисел и вычислительные задачи.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/03 — Теория чисел и вычислительные задачи.md",
       "subpath": "#Обзор",
       "color": "5",
       "x": 30,
@@ -95,7 +95,7 @@
     {
       "id": "cluster-04",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Классические шифры.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/04 — Классические шифры.md",
       "subpath": "#Обзор",
       "color": "5",
       "x": 30,
@@ -106,7 +106,7 @@
     {
       "id": "cluster-05",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Блочные шифры.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/05 — Блочные шифры.md",
       "subpath": "#Обзор",
       "color": "6",
       "x": 710,
@@ -117,7 +117,7 @@
     {
       "id": "cluster-06",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Асимметричное шифрование и обмен ключами.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/06 — Асимметричное шифрование и обмен ключами.md",
       "subpath": "#Обзор",
       "color": "6",
       "x": 710,
@@ -128,7 +128,7 @@
     {
       "id": "cluster-07",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Хеширование, аутентификация и подписи.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/07 — Хеширование, аутентификация и подписи.md",
       "subpath": "#Обзор",
       "color": "6",
       "x": 710,
@@ -139,7 +139,7 @@
     {
       "id": "cluster-10",
       "type": "file",
-      "file": "01 Knowledge/Cybersecurity/Security Engineering/Кластер - Криптоанализ и атаки.md",
+      "file": "01 Knowledge/Cybersecurity/Security Engineering/00 Темы/10 — Криптоанализ и атаки.md",
       "subpath": "#Обзор",
       "color": "6",
       "x": 710,
@@ -150,7 +150,7 @@
     {
       "id": "cluster-08",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Ключи, сертификаты и криптографическая инфраструктура.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/08 — Ключи, сертификаты и криптографическая инфраструктура.md",
       "subpath": "#Обзор",
       "color": "4",
       "x": 1390,
@@ -161,7 +161,7 @@
     {
       "id": "cluster-09",
       "type": "file",
-      "file": "01 Knowledge/Networks/Кластер - Сетевые применения криптографии.md",
+      "file": "01 Knowledge/Networks/00 Темы/09 — Сетевые применения криптографии.md",
       "subpath": "#Обзор",
       "color": "4",
       "x": 1390,
@@ -172,7 +172,7 @@
     {
       "id": "cluster-13",
       "type": "file",
-      "file": "01 Knowledge/Computer Science/Кластер - Криптография в блокчейне.md",
+      "file": "01 Knowledge/Computer Science/00 Темы/13 — Криптография в блокчейне.md",
       "subpath": "#Обзор",
       "color": "4",
       "x": 1390,
@@ -183,7 +183,7 @@
     {
       "id": "cluster-11",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Квантовые вычисления и распределение ключей.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/11 — Квантовые вычисления и распределение ключей.md",
       "subpath": "#Обзор",
       "color": "4",
       "x": 1390,
@@ -194,7 +194,7 @@
     {
       "id": "cluster-12",
       "type": "file",
-      "file": "01 Knowledge/Cryptography/Кластер - Постквантовая криптография.md",
+      "file": "01 Knowledge/Cryptography/00 Темы/12 — Постквантовая криптография.md",
       "subpath": "#Обзор",
       "color": "4",
       "x": 1390,
@@ -205,7 +205,7 @@
     {
       "id": "cluster-14",
       "type": "file",
-      "file": "01 Knowledge/Computer Science/Кластер - Представление и сжатие изображений.md",
+      "file": "01 Knowledge/Computer Science/00 Темы/14 — Представление и сжатие изображений.md",
       "subpath": "#Обзор",
       "color": "3",
       "x": 2170,
@@ -216,7 +216,7 @@
     {
       "id": "cluster-15",
       "type": "file",
-      "file": "01 Knowledge/Computer Science/Кластер - Преобразования изображений.md",
+      "file": "01 Knowledge/Computer Science/00 Темы/15 — Преобразования изображений.md",
       "subpath": "#Обзор",
       "color": "3",
       "x": 2170,
@@ -227,7 +227,7 @@
     {
       "id": "cluster-16",
       "type": "file",
-      "file": "01 Knowledge/Cybersecurity/Steganography/Кластер - Сокрытие информации и водяные знаки.md",
+      "file": "01 Knowledge/Cybersecurity/Steganography/00 Темы/16 — Сокрытие информации и водяные знаки.md",
       "subpath": "#Обзор",
       "color": "2",
       "x": 2850,
@@ -238,7 +238,7 @@
     {
       "id": "cluster-17",
       "type": "file",
-      "file": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в пространственной области.md",
+      "file": "01 Knowledge/Cybersecurity/Steganography/00 Темы/17 — Встраивание в пространственной области.md",
       "subpath": "#Обзор",
       "color": "2",
       "x": 2850,
@@ -249,7 +249,7 @@
     {
       "id": "cluster-18",
       "type": "file",
-      "file": "01 Knowledge/Cybersecurity/Steganography/Кластер - Встраивание в частотной области и JPEG.md",
+      "file": "01 Knowledge/Cybersecurity/Steganography/00 Темы/18 — Встраивание в частотной области и JPEG.md",
       "subpath": "#Обзор",
       "color": "2",
       "x": 2850,
@@ -260,7 +260,7 @@
     {
       "id": "cluster-19",
       "type": "file",
-      "file": "01 Knowledge/Cybersecurity/Steganography/Кластер - Стегоанализ.md",
+      "file": "01 Knowledge/Cybersecurity/Steganography/00 Темы/19 — Стегоанализ.md",
       "subpath": "#Обзор",
       "color": "2",
       "x": 2850,
@@ -275,90 +275,70 @@
       "fromNode": "cluster-02",
       "toNode": "cluster-03",
       "fromSide": "bottom",
-      "toSide": "top",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "top"
     },
     {
       "id": "edge-05-10",
       "fromNode": "cluster-05",
       "toNode": "cluster-10",
       "fromSide": "right",
-      "toSide": "right",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "right"
     },
     {
       "id": "edge-06-08",
       "fromNode": "cluster-06",
       "toNode": "cluster-08",
       "fromSide": "right",
-      "toSide": "left",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "left"
     },
     {
       "id": "edge-08-09",
       "fromNode": "cluster-08",
       "toNode": "cluster-09",
       "fromSide": "bottom",
-      "toSide": "top",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "top"
     },
     {
       "id": "edge-11-12",
       "fromNode": "cluster-11",
       "toNode": "cluster-12",
       "fromSide": "bottom",
-      "toSide": "top",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "top"
     },
     {
       "id": "edge-14-15",
       "fromNode": "cluster-14",
       "toNode": "cluster-15",
       "fromSide": "bottom",
-      "toSide": "top",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "top"
     },
     {
       "id": "edge-14-16",
       "fromNode": "cluster-14",
       "toNode": "cluster-16",
       "fromSide": "right",
-      "toSide": "left",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "left"
     },
     {
       "id": "edge-16-17",
       "fromNode": "cluster-16",
       "toNode": "cluster-17",
       "fromSide": "bottom",
-      "toSide": "top",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "top"
     },
     {
       "id": "edge-15-18",
       "fromNode": "cluster-15",
       "toNode": "cluster-18",
       "fromSide": "right",
-      "toSide": "left",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "left"
     },
     {
       "id": "edge-18-19",
       "fromNode": "cluster-18",
       "toNode": "cluster-19",
       "fromSide": "bottom",
-      "toSide": "top",
-      "fromEnd": "none",
-      "toEnd": "arrow"
+      "toSide": "top"
     }
   ]
 }

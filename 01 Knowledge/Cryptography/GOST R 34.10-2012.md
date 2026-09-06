@@ -5,6 +5,8 @@ area:
 aliases:
   - "ГОСТ Р 34.10-2012"
 status: learning
+topic: "[[07 — Хеширование, аутентификация и подписи]]"
+study_order: 6
 ---
 # GOST R 34.10-2012
 

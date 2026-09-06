@@ -5,6 +5,8 @@ area:
 aliases:
   - "История криптографии"
 status: learning
+topic: "[[01 — Основы криптографии]]"
+study_order: 1
 ---
 # History of Cryptography
 

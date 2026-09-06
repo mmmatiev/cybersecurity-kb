@@ -5,6 +5,8 @@ area:
 aliases:
   - "Криптосистема Эль-Гамаля"
 status: learning
+topic: "[[06 — Асимметричное шифрование и обмен ключами]]"
+study_order: 3
 ---
 # ElGamal Cryptosystem
 

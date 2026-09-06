@@ -6,6 +6,8 @@ aliases:
   - "IP Security"
   - "Безопасность IP"
 status: learning
+topic: "[[09 — Сетевые применения криптографии]]"
+study_order: 4
 ---
 # IPsec
 

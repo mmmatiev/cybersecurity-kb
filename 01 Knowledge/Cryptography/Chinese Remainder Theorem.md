@@ -6,6 +6,8 @@ aliases:
   - "Китайская теорема об остатках"
   - "CRT"
 status: learning
+topic: "[[03 — Теория чисел и вычислительные задачи]]"
+study_order: 4
 ---
 # Chinese Remainder Theorem
 

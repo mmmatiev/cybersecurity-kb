@@ -6,6 +6,8 @@ area:
 status: review
 aliases:
   - "Квантовые вычисления для криптографии"
+topic: "[[11 — Квантовые вычисления и распределение ключей]]"
+study_order: 1
 ---
 # Quantum Computing for Cryptography
 
